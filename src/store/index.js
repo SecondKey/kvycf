@@ -52,6 +52,9 @@ export default new Vuex.Store({
     //#region 页面布局
     Layout_EnterPage_ChangeChoisePage(state, index) {
       state.LayOut_EnterPage_NowChoisePage = index
+    },
+    Layout_SetCompanyProgress(state, index) {
+      state.Data_SignUp_Company_Progress = index
     }
     //#endregion
   },

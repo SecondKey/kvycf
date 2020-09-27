@@ -158,7 +158,7 @@ export default {
   },
   methods: {
     ToCompanyPage() {
-      this.$router.push('/EnterSignUpPage/EnterCompanyPage')
+      this.$router.push('/EnterSignUpPage/EnterCompanyPage/EnterCompanyPageR1')
       this.$store.commit('Layout_EnterPage_ChangeChoisePage', '2')
     },
     ToServicePage() {

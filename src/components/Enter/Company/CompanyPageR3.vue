@@ -1,29 +1,49 @@
 <template>
-  <div>
-    <el-menu
-      :default-active="activeIndex2"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b"
-    >
-      <el-menu-item index="1">处理中心</el-menu-item>
-      <el-submenu index="2">
-        <template slot="title">我的工作台</template>
-        <el-menu-item index="2-1">选项1</el-menu-item>
-        <el-menu-item index="2-2">选项2</el-menu-item>
-        <el-menu-item index="2-3">选项3</el-menu-item>
-        <el-submenu index="2-4">
-          <template slot="title">选项4</template>
-          <el-menu-item index="2-4-1">选项1</el-menu-item>
-          <el-menu-item index="2-4-2">选项2</el-menu-item>
-          <el-menu-item index="2-4-3">选项3</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="3" disabled>消息中心</el-menu-item>
-    </el-menu>
+  <div style="height:700px">
+    <el-row class="cardDiv" span="50px">
+      <button class="cardButton">
+        <el-card :body-style="{ padding: '0px' }" class="cardSelf">
+          <div class="cardHead">超值一年版</div>
+          <img src="../../../img/元宝.png" class="cardImg" />
+          <el-table
+            :data="C1_Data"
+            style="width: 100%;margin-top:-10px;scrollbar-width: none;"
+          >
+            <el-table-column prop="pp" width="160"> </el-table-column>
+            <el-table-column prop="data" width="60"> </el-table-column>
+          </el-table>
+          <div class="money">19999元</div>
+        </el-card>
+      </button>
+      <button class="cardButton">
+        <el-card :body-style="{ padding: '0px' }" class="cardSelf">
+          <div class="cardHead">十年旗舰版</div>
+          <img src="../../../img/钻石.png" class="cardImg" />
+          <el-table
+            :data="C2_Data"
+            style="width: 100%;margin-top:-10px;scrollbar-width: none;"
+          >
+            <el-table-column prop="pp" width="160"> </el-table-column>
+            <el-table-column prop="data" width="60"> </el-table-column>
+          </el-table>
+          <div class="money">49999元</div>
+        </el-card>
+      </button>
+      <button class="cardButton">
+        <el-card :body-style="{ padding: '0px' }" class="cardSelf">
+          <div class="cardHead">至尊永久版</div>
+          <img src="../../../img/皇冠.png" class="cardImg" />
+          <el-table
+            :data="C3_Data"
+            style="width: 100%;margin-top:-10px;scrollbar-width: none;"
+          >
+            <el-table-column prop="pp" width="160"> </el-table-column>
+            <el-table-column prop="data" width="60"> </el-table-column>
+          </el-table>
+          <div class="money">169999元</div>
+        </el-card>
+      </button>
+    </el-row>
   </div>
 </template>
 
@@ -31,17 +51,90 @@
 export default {
   data() {
     return {
-      activeIndex: '0',
-      activeIndex2: '0'
+      C1_Data: [
+        {
+          pp: '客服数量',
+          data: '30'
+        },
+        {
+          pp: '管理员数量',
+          data: '3'
+        },
+        {
+          pp: '储存空间',
+          data: '50G'
+        }
+      ],
+      C2_Data: [
+        {
+          pp: '客服数量',
+          data: '100'
+        },
+        {
+          pp: '管理员数量',
+          data: '10'
+        },
+        {
+          pp: '储存空间',
+          data: '500G'
+        }
+      ],
+      C3_Data: [
+        {
+          pp: '客服数量',
+          data: '不限'
+        },
+        {
+          pp: '管理员数量',
+          data: '100'
+        },
+        {
+          pp: '储存空间',
+          data: '10T'
+        }
+      ]
     }
   },
-
-  methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath)
-    }
-  }
+  methods: {}
 }
 </script>
 
-<style></style>
+<style>
+.cardDiv {
+  width: 900px;
+  text-align: center;
+}
+.cardButton {
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  width: 240px;
+  height: 380px;
+  border: none;
+  outline: none;
+  background-color: #00000000;
+}
+.cardSelf {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.cardImg {
+  width: 80px;
+  height: 80px;
+}
+.cardHead {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.money {
+  font-size: 40px;
+  font-weight: 800;
+  color: red;
+  font-style: oblique;
+}
+.el-table tbody tr:hover > td {
+  background-color: white !important;
+}
+</style>
