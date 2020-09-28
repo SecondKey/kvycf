@@ -1,6 +1,6 @@
 <template>
-  <div class="page4">聊天记录
-      <div class="box7"></div>
+  <div class="liaotianjilu-page2">聊天记录
+      <div class="liaotianjilu-box3"></div>
   </div>
 </template>
 
@@ -11,16 +11,16 @@ export default {
 </script>
 
 <style>
-.page4{
+.liaotianjilu-page2{
   width: 1500px;
   height: 1100px;
   background-color: greenyellow;
   font-size: 2em;
 }
-.box7{
+.liaotianjilu-box3{
     width: 1450px;
     height: 800px;
-    position: fixed;
+    position: absolute;
     top: 60px;
     left: 25px;
     background-color: brown;
