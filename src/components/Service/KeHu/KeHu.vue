@@ -1,5 +1,5 @@
 <template>
-    <div class="page2"></div>
+    <div class="kefu-page"></div>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ export default {}
 </script>
 
 <style>
-.page2 {
+.kefu-page{
   width: 1500px;
   height: 1100px;
   background-color: blue;

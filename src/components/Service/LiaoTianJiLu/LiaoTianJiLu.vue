@@ -1,11 +1,11 @@
 <template>
-    <div class="page3">聊天目录
-    <div class="box5">
+    <div class="liaotianjilu-page">聊天目录
+    <div class="liaotianjilu-box1">
         <div class="el-icon-iconName">
         <el-button type="primary">搜索<i class="el-icon-search el-icon--right"></i></el-button>
     </div>
     </div>
-    <div class="box6"></div>
+    <div class="liaotianjilu-box2"></div>
     </div>
 </template>
 
@@ -14,18 +14,18 @@ export default {}
 </script>
 
 <style>
-.page3 {
+.liaotianjilu-page {
   width: 1500px;
   height: 1100px;
   background-color: blue;
   font-size: 3em;
 }
-.box5{
+.liaotianjilu-box1{
     position: absolute;
     top: 10px;
     right: 50px;
 }
-.box6{
+.liaotianjilu-box2{
     width: 1450px;
     height: 1000px;
     position: absolute;
