@@ -111,8 +111,11 @@ export default {
   width: 240px;
   height: 380px;
   border: none;
-  outline: none;
+  outline: none transparent;
   background-color: #00000000;
+}
+.cardButton:hover > .cardSelf {
+  outline: solid yellow;
 }
 .cardSelf {
   width: 100%;
