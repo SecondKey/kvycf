@@ -40,12 +40,69 @@ export default new Vuex.Store({
     //#region 申请加入团队
     Data_SignUp_JoinUs_Position: 0, //要应聘的岗位
     Data_SignUp_JoinUs_Name: '', //真实姓名
-    Data_SignUp_JoinUs_IDNum: '' //身份证号
+    Data_SignUp_JoinUs_IDNum: '', //身份证号
     //#endregion
     //#endregion
     //#endregion
     //#region 模拟数据
-
+    //#region EnterPage所有数据
+    SData_Enter_ServiceInfo: [
+      {
+        name: '客服数量',
+        s1: '30人',
+        s2: '100人',
+        s3: '不限'
+      },
+      {
+        name: '单客服最大接入用户',
+        s1: '5人',
+        s2: '10人',
+        s3: '30人 '
+      },
+      {
+        name: '管理员数量',
+        s1: '3人',
+        s2: '10人',
+        s3: '100人'
+      },
+      {
+        name: '客服数量',
+        s1: '30人',
+        s2: '100人',
+        s3: '不限'
+      },
+      {
+        name: '客服数量',
+        s1: '30人',
+        s2: '100人',
+        s3: '不限'
+      },
+      {
+        name: '客服数量',
+        s1: '30人',
+        s2: '100人',
+        s3: '不限'
+      },
+      {
+        name: '客服数量',
+        s1: '30人',
+        s2: '100人',
+        s3: '不限'
+      },
+      {
+        name: '客服数量',
+        s1: '30人',
+        s2: '100人',
+        s3: '不限'
+      },
+      {
+        name: '客服数量',
+        s1: '30人',
+        s2: '100人',
+        s3: '不限'
+      }
+    ]
+    //#endregion
     //#endregion
   },
   mutations: {

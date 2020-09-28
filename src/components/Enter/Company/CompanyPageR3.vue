@@ -1,7 +1,7 @@
 <template>
-  <div style="height:700px">
+  <div style="height:1400px">
     <el-row class="cardDiv" span="50px">
-      <button class="cardButton">
+      <button class="cardButton" @click="SelectCard('money1', 1)">
         <el-card :body-style="{ padding: '0px' }" class="cardSelf">
           <div class="cardHead">超值一年版</div>
           <img src="../../../img/元宝.png" class="cardImg" />
@@ -12,10 +12,10 @@
             <el-table-column prop="pp" width="160"> </el-table-column>
             <el-table-column prop="data" width="60"> </el-table-column>
           </el-table>
-          <div class="money">19999元</div>
+          <div class="money" id="money1">19999元</div>
         </el-card>
       </button>
-      <button class="cardButton">
+      <button class="cardButton" @click="SelectCard('money2', 2)">
         <el-card :body-style="{ padding: '0px' }" class="cardSelf">
           <div class="cardHead">十年旗舰版</div>
           <img src="../../../img/钻石.png" class="cardImg" />
@@ -26,10 +26,10 @@
             <el-table-column prop="pp" width="160"> </el-table-column>
             <el-table-column prop="data" width="60"> </el-table-column>
           </el-table>
-          <div class="money">49999元</div>
+          <div class="money" id="money2">49999元</div>
         </el-card>
       </button>
-      <button class="cardButton">
+      <button class="cardButton" @click="SelectCard('money3', 3)">
         <el-card :body-style="{ padding: '0px' }" class="cardSelf">
           <div class="cardHead">至尊永久版</div>
           <img src="../../../img/皇冠.png" class="cardImg" />
@@ -40,10 +40,22 @@
             <el-table-column prop="pp" width="160"> </el-table-column>
             <el-table-column prop="data" width="60"> </el-table-column>
           </el-table>
-          <div class="money">169999元</div>
+          <div class="money" id="money3">169999元</div>
         </el-card>
       </button>
     </el-row>
+
+    <el-button
+      type="success"
+      id="SelectCardButton"
+      :disabled="isChoised"
+      style="margin-top:50px;width:300px;height:60px"
+    >
+      确认选择
+    </el-button>
+    <div class="cardInfoDiv">
+      <div style="font-size:40px;margin-top:10px">服务详情</div>
+    </div>
   </div>
 </template>
 
@@ -92,10 +104,22 @@ export default {
           pp: '储存空间',
           data: '10T'
         }
-      ]
+      ],
+      choiseCard: 0,
+      isChoised: true
     }
   },
-  methods: {}
+  methods: {
+    SelectCard(name, index) {
+      document.getElementById('money1').style.background = 'transparent'
+      document.getElementById('money2').style.background = 'transparent'
+      document.getElementById('money3').style.background = 'transparent'
+
+      document.getElementById(name).style.background = 'yellow'
+      this.choiseCard = index
+      this.isChoised = false
+    }
+  }
 }
 </script>
 
@@ -111,11 +135,12 @@ export default {
   width: 240px;
   height: 380px;
   border: none;
-  outline: none transparent;
+  outline: none;
+  outline: unset;
   background-color: #00000000;
 }
 .cardButton:hover > .cardSelf {
-  outline: solid yellow;
+  outline: solid red 5px;
 }
 .cardSelf {
   width: 100%;
@@ -132,12 +157,23 @@ export default {
   font-weight: 600;
 }
 .money {
+  line-height: 60px;
   font-size: 40px;
   font-weight: 800;
   color: red;
   font-style: oblique;
+  background-color: transparent;
 }
+
 .el-table tbody tr:hover > td {
-  background-color: white !important;
+  background-color: transparent !important;
+}
+
+.cardInfoDiv {
+  margin-top: 50px;
+  widows: 800px;
+  height: 500px;
+  border: solid #00000077;
+  text-align: center;
 }
 </style>
