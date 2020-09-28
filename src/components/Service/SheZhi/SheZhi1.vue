@@ -1,19 +1,22 @@
 <template>
   <div class="shezhi1-page"><h3>黑名单设置</h3>
-      <div class="shezhi1-box">设置表格</div>
+      <SheZhi1Item class="shezhi1-box">设置表格</SheZhi1Item>
   </div>
 </template>
 
 <script>
+import SheZhiI1tem from './SheZhi1Item'
 export default {
-
+    components:{
+        'SheZhiItem':SheZhi1Item
+    },
 }
 </script>
 
 <style>
 .shezhi1-page{
     width: 1500px;
-    height: 1000px;
+    height: 1180px;
     background-color: brown;
     }
 .shezhi1-box{
@@ -21,7 +24,7 @@ export default {
     height: 1000px;
     background-color: chartreuse;
     position: absolute;
-    top: 50px;
+    top: 100px;
     left: 50px;
 }
 </style>

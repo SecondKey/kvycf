@@ -25,12 +25,12 @@ export default {
 <style>
 .huihua-page{
     width: 1500px;
-    height: 1200px;
+    height: 1180px;
     background-color: greenyellow;
 }
 .huihua-box1{
     width: 220px;
-    height: 700px;
+    height: 1100px;
     background-color: hotpink;
     position: absolute;
     top: 70px;
@@ -38,7 +38,7 @@ export default {
 }
 .huihua-box2{
     width: 900px;
-    height: 700px;
+    height: 1100px;
     background-color: green;
     position: absolute;
     top: 70px;
@@ -46,7 +46,7 @@ export default {
 }
 .huihua-box3{
     width: 250px;
-    height: 300px;
+    height: 480px;
     background-color: cadetblue;
     position: absolute;
     top: 70px;
@@ -54,10 +54,10 @@ export default {
 }
 .huihua-box4{
     width: 250px;
-    height: 385px;
+    height: 600px;
     background-color: blue;
     position: absolute;
-    top: 390px;
+    top: 570px;
     left: 1210px;
 }
 </style>

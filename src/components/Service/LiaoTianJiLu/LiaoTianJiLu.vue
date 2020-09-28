@@ -1,36 +1,48 @@
 <template>
-    <div class="liaotianjilu-page">聊天目录
-    <div class="liaotianjilu-box1">
-        <div class="el-icon-iconName">
-        <el-button type="primary">搜索<i class="el-icon-search el-icon--right"></i></el-button>
-    </div>
-    </div>
-    <div class="liaotianjilu-box2"></div>
+    <div class="liaotianjilu-page">
+    <h3 style="position:absolute;top:55px;left:70px">聊天目录</h3>
+    <LiaoTianJiLuItem1 class="liaotianjilu-box1"></LiaoTianJiLuItem1>
+    <LiaoTianJiLuItem2 class="liaotianjilu-box2"> </LiaoTianJiLuItem2>
     </div>
 </template>
 
 <script>
-export default {}
+import LiaoTianJiLuItem1 from './LiaoTianJiLuItem1'
+import LiaoTianJiLuItem2 from './LiaoTianJiLuItem2'
+export default {
+    components:{
+        'LiaoTianJiLuItem1':LiaoTianJiLuItem1,
+        'LiaoTianJiLuItem2':LiaoTianJiLuItem2
+    },
+}
 </script>
 
 <style>
 .liaotianjilu-page {
-  width: 1500px;
-  height: 1100px;
+  width: 1470px;
+  height: 1180px;
   background-color: blue;
-  font-size: 3em;
+
 }
 .liaotianjilu-box1{
+    width: 100px;
+    height: 30px;
     position: absolute;
-    top: 10px;
-    right: 50px;
+    top: 70px;
+    right: 60px;
+    border-radius: 2px;
+    background-color: chartreuse;
+    /* display: inline-block; */
 }
 .liaotianjilu-box2{
-    width: 1450px;
-    height: 1000px;
+    width: 1400px;
+    height: 1070px;
     position: absolute;
-    top: 80px;
-    left: 25px;
+    top: 105px;
+    left: 70px;
     background-color: hotpink;
+}
+.liaotianjilu-h2{
+    display: inline;
 }
 </style>

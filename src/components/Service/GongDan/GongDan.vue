@@ -19,8 +19,8 @@ export default {
 
 <style>
     .gongdan-page{
-        width: 1500px;
-    height: 1200px;
+    width: 1500px;
+    height: 1180px;
     background-color: green;
     }
     .gongdan-box1{
@@ -32,8 +32,8 @@ export default {
         left: 70px;
     }
     .gongdan-box2{
-        width: 1100px;
-        height: 645px;
+        width: 1130px;
+        height: 1120px;
         position: absolute;
         background-color: cornflowerblue;
         top: 70px;

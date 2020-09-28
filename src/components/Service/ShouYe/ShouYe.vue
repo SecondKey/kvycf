@@ -27,8 +27,8 @@ export default {
 
 <style>
 .shouye-page {
-  width: 1500px;
-  height: 1100px;
+  width: 1470px;
+  height: 1180px;
   background-color: rgb(226, 23, 23);
 }
 .shouye-box1 {
