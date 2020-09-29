@@ -7,7 +7,8 @@
     <el-table-column
       prop="date"
       label="通知"
-      width="180">
+      width="180"
+      header-align="center">
     </el-table-column>
   </el-table>
 </template></div>
@@ -40,8 +41,5 @@ export default {
 <style>
 .el-table td{
   text-indent: 2em;
-}
-.el-table th{
-  text-align: center;
-}
+  } 
 </style>
