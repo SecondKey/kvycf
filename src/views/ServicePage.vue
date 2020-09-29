@@ -83,7 +83,7 @@ export default {
   .ServicePage_el-aside {
       width: 64px!important;
       height:100%;
-      background-color:  rgb(239, 240, 247);
+      background-color: rgb(239, 240, 247);
       margin-top: 60px;
       padding-top: 20px;
       text-align: center;
@@ -211,7 +211,6 @@ export default {
           width:110px;
           margin-top: 60px;
           float:right;
-          right: -120px;
           font-size: 17px;
           background-color: rgb(225, 234, 235);
           
