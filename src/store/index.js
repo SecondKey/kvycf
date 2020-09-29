@@ -8,32 +8,25 @@ export default new Vuex.Store({
     //#region 页面布局
     LayOut_EnterPage_NowChoisePage: '1',
     //#endregion
+
     //#region 信息数据
-    //#region 登录注册
+    //#region 注册
     Data_VerificationCode: '7364',
 
-    //#region 公司注册
     Data_SignUp_Company_Progress: 0, //公司注册进度
     Data_SignUp_Company_ID: 0, //公司注册时公司的id
 
     Data_SignUp_Service_Progress: 0, //客服注册进度
     //#endregion
-    //#region 客服注册
-    Data_SignUp_Service_CompanyNum: 0, //要注册的公司
-    Data_SignUp_Service_Name: '', //客服真实名称
-    Data_SignUp_Service_IDNum: '', //身份证号
-    Data_SignUp_Service_NName: '', //客服昵称
-    Data_SignUp_Service_Email: '', //邮箱
-    Data_SignUp_Service_Tel: '', //电话
+
+    //#region 登录
+    Data_Login_Conpany: 0,
+    Data_Login_Type: 'Admin',
+    Data_Login_ID: 0,
     //#endregion
-    //#region 申请加入团队
-    Data_SignUp_JoinUs_Position: 0, //要应聘的岗位
-    Data_SignUp_JoinUs_Name: '', //真实姓名
-    Data_SignUp_JoinUs_IDNum: '', //身份证号
+
     //#endregion
-    //#endregion
-    //#endregion
-    //#region 模拟数据加S
+    //#region 模拟数据 加S
     //#region EnterPage所有数据
     SData_Enter_ServiceInfo: [
       {
@@ -90,13 +83,40 @@ export default new Vuex.Store({
         scheme: 3, //选择的服务
         admin: [
           {
+            id: 0,
             name: 'admin',
             account: '凯文云' + 'admin',
             pwd: '123456',
             email: ''
+          },
+          {
+            id: 1,
+            name: '郑凯文',
+            account: 'kevin',
+            pwd: '238268',
+            email: '1725433499@qq.com'
           }
         ], //管理员
-        service: [], //客服人员
+        service: [
+          {
+            id: 0,
+            name: '小五',
+            tName: '古明地觉',
+            account: '55555',
+            pwd: '555555',
+            tel: '555',
+            email: '555555@hotmail.com'
+          },
+          {
+            id: 1,
+            name: 'VicFang',
+            tName: '房镇',
+            account: '19980910',
+            pwd: '19890202',
+            tel: '88888888',
+            email: '88888888@qq.com'
+          }
+        ], //客服人员
         nService: [] //正在注册的客服人员
       }
     ]
@@ -116,7 +136,7 @@ export default new Vuex.Store({
     },
     //#endregion
 
-    //#region 登录注册
+    //#region 注册
     //添加一个公司
     Company_SignUp(state, CompanyInfo) {
       state.Data_SignUp_Company_ID = state.SData_Company.length
@@ -129,6 +149,7 @@ export default new Vuex.Store({
         scheme: 0,
         admin: [
           {
+            id: 0,
             name: 'admin',
             account: CompanyInfo.name + 'admin',
             pwd: '123456',
@@ -146,14 +167,25 @@ export default new Vuex.Store({
     },
     //公司添加了一个管理员
     CompanyInfo_SignUp_AddAdmin(state, data) {
+      data.newAdmin.id = state.SData_Company[data.id].admin.length
       state.SData_Company[data.id].admin.push(data.newAdmin)
     },
-    //注册一个管理员
+    //注册一个客服
     Service_SignUp(state, data) {
-      console.log(state.SData_Company[1])
       state.SData_Company[data.id].nService.push(data.newService)
-    }
+    },
     //#endregion
+    //#region 登录
+    Login_AdminLogin(state, data) {
+      Data_Login_Conpany = data.cid
+      Data_Login_Type = 'Admin'
+      Data_Login_ID = data.id
+    },
+    Login_ServiceLogin(state, data) {
+      Data_Login_Conpany = data.cid
+      Data_Login_Type = 'Service'
+      Data_Login_ID = data.id
+    }
   },
   actions: {},
   modules: {}

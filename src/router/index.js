@@ -31,6 +31,10 @@ import Service_KeHu from '../components/Service/KeHu/KeHu'
 import Service_LiaoTianJiLu from '../components/Service/LiaoTianJiLu/LiaoTianJiLu'
 import Service_SheZhi from '../components/Service/SheZhi/SheZhi'
 import Service_ShouYe from '../components/Service/ShouYe/ShouYe'
+//#endregion'
+
+//#region 管理员页面
+import AdminPage from '../views/AdminPage'
 //#endregion
 
 Vue.use(VueRouter)
@@ -174,6 +178,13 @@ const routes = [
         component: Service_GongDan
       }
     ]
+  },
+  //#endregion
+  //#region Admin路由
+  {
+    path: '/AdminPage',
+    name: 'AdminPage',
+    component: AdminPage
   }
   //#endregion
 ]

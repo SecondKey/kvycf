@@ -118,7 +118,6 @@ export default {
 
   methods: {
     CompanySelect(val) {
-      console.log(val)
       this.Sid = val
     },
     CheckYzm() {
