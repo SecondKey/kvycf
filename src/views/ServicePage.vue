@@ -14,32 +14,21 @@
         </div>
         <div class="ServicePage_nav-item">
             <i id="icon" class="el-icon-s-custom"></i>
-            <div class="ServicePage_tip">访客</div>
+            <div class="ServicePage_tip">客户</div>
         </div>
         <div class="ServicePage_nav-item">
             <i id="icon" class="el-icon-s-unfold"></i>
             <div class="ServicePage_tip">历史</div>
         </div>
         <div class="ServicePage_nav-item">
-            <i id="icon" class="el-icon-s-custom"></i>
-            <div class="ServicePage_tip">客户</div>
-        </div>
-        <div class="ServicePage_nav-item">
             <i id="icon" class="el-icon-s-order"></i>
             <div class="ServicePage_tip">工单</div>
-        </div>
-        <div class="ServicePage_nav-item">
-            <i id="icon" class="el-icon-s-marketing"></i>
-            <div class="ServicePage_tip">统计</div>
         </div>
         <div class="ServicePage_nav-item">
             <i id="icon" class="el-icon-s-tools"></i>
             <div class="ServicePage_tip"> 设置 </div>
         </div>
-        <div class="ServicePage_nav-item">
-            <i id="icon" class="el-icon-switch-button"></i>
-            <div class="ServicePage_tip">退出</div>
-        </div>
+
   </el-aside>
   
 <el-header class="ServicePage_el-header">
@@ -55,7 +44,7 @@
         </div>
     </div>
     </el-header>
-    <el-main class="ServicePage_main"  style="overflow:unset">
+    <el-main class="ServicePage_main" style="overflow:unset">
 
         <router-view></router-view>
 
@@ -84,21 +73,24 @@ export default {
 
 <style>
 .ServicePage_el-container{
-    height: 1200px;
-    width:1500px;
+    height: 1264px;
+    width:100%;
+    background-color: rgb(180, 212, 231);
     }
   .ServicePage_el-aside {
-  width: 64px!important;
-  height: 1200px;
-  background-color: rgb(106, 126, 236);
-  text-align: center;
-  position: absolute;
+      width: 64px!important;
+      height:100%;
+      background-color:  rgb(239, 240, 247);
+      text-align: center;
+      position: fixed;
   }
 .ServicePage_logo{
     text-align:center;
+    margin-top: 15px;
+    margin-bottom: 15px;
     width: 64px;
     height: 64px;
-    background-color: rgb(106, 126, 236);
+    background-color:  rgb(239, 240, 247);
   }
   .ServicePage_img{
       margin-left: 8px;
@@ -106,8 +98,8 @@ export default {
     height: 48px;
     border-radius: 50%;
 
-    background-color: #c69ce2;
-    color: #fff;
+    background-color: #e8d2f7;
+    color: rgb(86, 130, 252);
 
     text-align: center;
     line-height: 48px;
@@ -129,12 +121,22 @@ export default {
     top: 0px;
     width: 64px;
     height: 56px;
-  font-size: 18px;
+    margin-bottom: 25px;
+  font-size: 20px;
   font-weight: 1200;
   text-align: center;
   line-height: 56px;
   color: #fff;
   position: relative;
+}
+#icon{
+    width: 35px;
+    height: 35px;
+    font-size: 1.5em;
+    color: rgb(31, 36, 34);
+}
+.ServicePage_main{
+    color: azure;
 }
 .ServicePage_tip{
     position: absolute;
@@ -168,17 +170,17 @@ export default {
   
   .ServicePage_el-header {
       width: 100%;
-      height: 64px;
+      height: 100%px;
       margin-left: 64px;
       padding-right: 150px;
-      background-color: #bcd1f3;
+      background-color: #222d3f;
       color: #333;
     line-height: 60px;
     text-align: right;
     font-size: 12px;
     top: 0px;
-      position: absolute;
-
+    position: fixed;
+    z-index:999;
   }
   .ServicePage_customer-info{
             margin:0;
@@ -189,17 +191,16 @@ export default {
             right: 0;
             }
   .ServicePage_head{
+    width: 100px;
+    height: 60px;
       margin-right: 64px;
     border-width: 0px;
     position: absolute;
     right: 0px;
     top: 0px;
-    width: 130px;
-    height: 60px;
     line-height: 64px;
     background-color: rgb(225, 234, 235) ;
     border: none;
-    border-radius: 2px;
         }
     .hop .ServicePage_tip{
      font-size: 15px;
@@ -207,25 +208,27 @@ export default {
       top: -16px;
       }
       .ServicePage_status{
+    width:80px;
+    margin-top: 60px;
     display:none;
+    padding-right: 40px;
     background-color: #fff;
-    position:absolute;
-    width:120px;
-    margin: 64px;
-    padding-right: 10px;
-    right: 0;
-    z-index:999
+    z-index:999;
+    margin-left: -20px;
     }
+ 
+
     .ServicePage_customer-info:hover .ServicePage_status{
        display: block;
     }
-
 
 .ServicePage_main{
     background-color: rgb(180, 212, 231);
     width:1500px!important;
     height:1200px!important;
-    overflow: hidden;
+    position:absolute;
+    top:60px;
+    left:64px;
 }
 
 
