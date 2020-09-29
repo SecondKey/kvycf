@@ -18,8 +18,8 @@ export default {
 
 <style>
 .shezhi2-page{
-    width: 1500px;
-    height: 1180px;
+    width: 1410px;
+    height: 1160px;
     background-color: rgb(31, 28, 206);
     }
 .shezhi2-box1{

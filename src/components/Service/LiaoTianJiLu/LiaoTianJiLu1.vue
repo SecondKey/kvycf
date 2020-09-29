@@ -15,8 +15,8 @@ export default {
 
 <style>
 .liaotianjilu1-page{
-  width: 1500px;
-  height: 1180px;
+  width: 1410px;
+  height: 1160px;
   background-color: greenyellow;
   font-size: 2em;
 }

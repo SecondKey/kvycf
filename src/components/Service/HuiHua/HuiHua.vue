@@ -24,40 +24,40 @@ export default {
 
 <style>
 .huihua-page{
-    width: 1500px;
-    height: 1180px;
+    width: 1410px;
+    height: 1160px;
     background-color: greenyellow;
 }
 .huihua-box1{
-    width: 220px;
+    width: 240px;
     height: 1100px;
     background-color: hotpink;
     position: absolute;
-    top: 70px;
-    left: 70px;
+    top: 50px;
+    left: 40px;
 }
 .huihua-box2{
-    width: 900px;
+    width: 850px;
     height: 1100px;
     background-color: green;
     position: absolute;
-    top: 70px;
-    left: 300px;
+    top: 50px;
+    left: 290px;
 }
 .huihua-box3{
-    width: 250px;
+    width: 240px;
     height: 480px;
     background-color: cadetblue;
     position: absolute;
-    top: 70px;
-    left: 1210px;
+    top: 50px;
+    left: 1150px;
 }
 .huihua-box4{
-    width: 250px;
+    width: 240px;
     height: 600px;
     background-color: blue;
     position: absolute;
-    top: 570px;
-    left: 1210px;
+    top: 550px;
+    left: 1150px;
 }
 </style>
