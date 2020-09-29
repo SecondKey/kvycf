@@ -15,16 +15,16 @@ export default {
 
 <style>
 .kefu-page{
-  width: 1500px;
-  height: 1180px;
+  width: 1410px;
+  height: 1160px;
   background-color: blue;
 }
 .kehu-box{
-  width: 1400px;
-  height: 1100px;
+  width: 1380px;
+  height: 1120px;
   background-color: blueviolet;
   position: absolute;
-  top: 70px;
-  left: 70px;
+  top: 50px;
+  left: 40px;
 }
 </style>

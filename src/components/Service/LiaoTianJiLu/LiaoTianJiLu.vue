@@ -19,8 +19,8 @@ export default {
 
 <style>
 .liaotianjilu-page {
-  width: 1470px;
-  height: 1180px;
+  width: 1410px;
+  height: 1160px;
   background-color: blue;
 
 }
@@ -29,14 +29,14 @@ export default {
     height: 30px;
     position: absolute;
     top: 70px;
-    right: 60px;
+    right: 110px;
     border-radius: 2px;
     background-color: chartreuse;
     /* display: inline-block; */
 }
 .liaotianjilu-box2{
-    width: 1400px;
-    height: 1070px;
+    width: 1320px;
+    height: 1060px;
     position: absolute;
     top: 105px;
     left: 70px;

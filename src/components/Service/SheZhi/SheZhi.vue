@@ -18,12 +18,12 @@ export default {
 
 <style>
 .shezhi-page{
-    width: 1500px;
-    height: 1180px;
+    width: 1410px;
+    height: 1160px;
     background-color: violet;
     }
 .shezhi-box1{
-    width: 700px;
+    width: 650px;
     height: 1100px;
     background-color: blue;
     position: absolute;
@@ -31,11 +31,11 @@ export default {
     left: 70px;
 }
 .shezhi-box2{
-    width: 700px;
+    width: 650px;
     height: 1100px;
     background-color: yellow;
     position: absolute;
     top: 70px;
-    left: 780px;
+    left: 730px;
 }
 </style>
