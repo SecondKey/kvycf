@@ -65,7 +65,8 @@ export default {
       activeIndex: '1',
       currentView: ''
     }
-    }
+  }
+}
 </script>
 
 <style>

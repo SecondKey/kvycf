@@ -187,7 +187,7 @@ export default {
       this.$store.commit('Layout_EnterPage_ChangeChoisePage', '3')
     },
     ToJoinUsPage() {
-      this.$router.push('/EnterSignUpPage/EnterJoinUsPage')
+      this.$router.push('/EnterSignUpPage/EnterJoinUsPage/EnterJoinUsPageR1')
       this.$store.commit('Layout_EnterPage_ChangeChoisePage', '4')
     },
     ServiceLogin() {

@@ -1,17 +1,36 @@
 <template>
-  <div style="height:303px;">
-    <div class="waitForDO">
-      <i
-        class="el-icon-success"
-        style="font-size:50px ;margin-top:30px;color:green"
-      ></i>
-      <div style="font-size:30px;font-width:500;margin-top:20px">
-        注册成功，{{ count }}秒后自动返回主页
-      </div>
-      <el-button type="info" style="margin-top:30px" @click="NextProcess"
-        >返回主页</el-button
-      >
-    </div>
+  <div class="signUpInputDiv" style="height:450px">
+    <el-form label-width="120px">
+      <el-form-item label="选择职位">
+        <el-select v-model="value" placeholder="请选择" style="width:230px">
+          <el-option
+            v-for="item in options"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value"
+          >
+          </el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item label="姓名">
+        <el-input></el-input>
+      </el-form-item>
+      <el-form-item label="身份证号">
+        <el-input></el-input>
+      </el-form-item>
+      <el-form-item label="联系电话">
+        <el-input></el-input>
+      </el-form-item>
+      <el-form-item label="邮箱">
+        <el-input></el-input>
+      </el-form-item>
+    </el-form>
+    <el-button
+      type="primary"
+      style="width:350px;margin-top:50px"
+      @click="NextProcess"
+      >提交</el-button
+    >
   </div>
 </template>
 
@@ -19,32 +38,30 @@
 export default {
   data() {
     return {
-      count: '' //倒计时
+      options: [
+        {
+          value: '选项1',
+          label: '前端开发'
+        },
+        {
+          value: '选项2',
+          label: '后端开发'
+        },
+        {
+          value: '选项3',
+          label: '运维'
+        },
+        {
+          value: '选项4',
+          label: '客服培训'
+        }
+      ],
+      value: ''
     }
   },
   methods: {
     NextProcess() {
-      this.count = 1
-    }
-  },
-  created: function() {
-    const TIME_COUNT = 5
-    if (!this.timer) {
-      this.count = TIME_COUNT
-      this.show = false
-      this.timer = setInterval(() => {
-        if (this.count > 1 && this.count <= TIME_COUNT) {
-          this.count--
-        } else {
-          this.show = true
-          clearInterval(this.timer)
-          this.timer = null
-          //跳转的页面写在此处
-          this.$router.push({ path: '/' })
-          this.$store.commit('Layout_SetCompanyProgress', 0)
-          this.$store.commit('Layout_EnterPage_ChangeChoisePage', '1')
-        }
-      }, 1000)
+      this.$router.push('/EnterSignUpPage/EnterJoinUsPage/EnterJoinUsPageR2')
     }
   }
 }

@@ -95,6 +95,13 @@ export default new Vuex.Store({
             account: 'kevin',
             pwd: '238268',
             email: '1725433499@qq.com'
+          },
+          {
+            id: 2,
+            name: '余峤枫',
+            account: 'qiaofeng',
+            pwd: '990519',
+            email: '2278228786@qq.com'
           }
         ], //管理员
         service: [
@@ -115,6 +122,15 @@ export default new Vuex.Store({
             pwd: '19890202',
             tel: '88888888',
             email: '88888888@qq.com'
+          },
+          {
+            id: 2,
+            name: '余峤枫测试客服',
+            tName: '余峤枫',
+            account: '1825610',
+            pwd: '990519',
+            tel: '18256104698',
+            email: '2278228786@qq.com'
           }
         ], //客服人员
         nService: [] //正在注册的客服人员

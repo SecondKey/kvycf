@@ -39,7 +39,7 @@
         </el-menu-item>
         <el-menu-item
           index="4"
-          route="/EnterSignUpPage/EnterJoinUsPage"
+          route="/EnterSignUpPage/EnterJoinUsPage/EnterJoinUsPageR1"
           class="item"
         >
           加入我们
