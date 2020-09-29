@@ -37,6 +37,8 @@ import Service_ShouYe from '../components/Service/ShouYe/ShouYe'
 import AdminPage from '../views/AdminPage'
 //#endregion
 
+
+
 Vue.use(VueRouter)
 
 const routes = [
