@@ -6,11 +6,11 @@
         style="font-size:50px ;margin-top:30px;color:green"
       ></i>
       <div style="font-size:30px;font-width:500;margin-top:20px">
-        注册成功！
+        注册成功，{{ count }}秒后自动返回主页
       </div>
-      <div style="font-size:30px;font-width:500;margin-top:20px">
-        {{ count }}秒后自动返回主页
-      </div>
+      <el-button type="info" style="margin-top:30px" @click="NextProcess"
+        >返回主页</el-button
+      >
     </div>
   </div>
 </template>
@@ -41,6 +41,7 @@ export default {
           this.timer = null
           //跳转的页面写在此处
           this.$router.push({ path: '/' })
+          this.$store.commit('Layout_SetCompanyProgress', 0)
           this.$store.commit('Layout_EnterPage_ChangeChoisePage', '1')
         }
       }, 1000)

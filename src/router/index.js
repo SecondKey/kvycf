@@ -17,9 +17,10 @@ import EnterCompanyPageR5 from '../components/Enter/Company/CompanyPageR5'
 import EnterServicePage from '../components/Enter/Service/ServicePage'
 import EnterServicePageR1 from '../components/Enter/Service/ServicePageR1'
 import EnterServicePageR2 from '../components/Enter/Service/ServicePageR2'
-import EnterServicePageR3 from '../components/Enter/Service/ServicePageR3'
 
 import EnterJoinUsPage from '../components/Enter/JoinUs/JoinUsPage'
+import EnterJoinUsPageR1 from '../components/Enter/JoinUs/JoinUsPageR1'
+import EnterJoinUsPageR2 from '../components/Enter/JoinUs/JoinUsPageR2'
 //#endregion
 //#region 客服页面
 import ServicePage from '../views/ServicePage'
@@ -38,7 +39,7 @@ const routes = [
   //#region EnterPage路由
   {
     path: '/',
-    name: 'AdminPage',
+    name: 'EnterPage',
     component: EnterPage,
     children: [
       //进入时主业
@@ -102,11 +103,6 @@ const routes = [
                 path: '/EnterSignUpPage/EnterServicePage/EnterServicePageR2',
                 name: 'EnterServicePageR2',
                 component: EnterServicePageR2
-              },
-              {
-                path: '/EnterSignUpPage/EnterServicePage/EnterServicePageR3',
-                name: 'EnterServicePageR3',
-                component: EnterServicePageR3
               }
             ]
           },
@@ -116,7 +112,19 @@ const routes = [
           {
             path: '/EnterSignUpPage/EnterJoinUsPage',
             name: 'EnterJoinUsPage',
-            component: EnterJoinUsPage
+            component: EnterJoinUsPage,
+            children: [
+              {
+                path: '/EnterSignUpPage/EnterJoinUsPage/EnterJoinUsPageR1',
+                name: 'EnterJoinUsPageR1',
+                component: EnterJoinUsPageR1
+              },
+              {
+                path: '/EnterSignUpPage/EnterJoinUsPage/EnterJoinUsPageR2',
+                name: 'EnterJoinUsPageR2',
+                component: EnterJoinUsPageR2
+              }
+            ]
           }
           //#endregion
         ]
@@ -131,7 +139,7 @@ const routes = [
     component: ServicePage,
     children: [
       {
-        path: '/ServicePage/',
+        path: '/ServicePage',
         name: 'Service_ShouYe',
         component: Service_ShouYe
       },

@@ -1,9 +1,9 @@
 <template>
-  <div style="height:1400px">
+  <div style="height:1050px">
     <el-row class="cardDiv" span="50px">
       <button class="cardButton" @click="SelectCard('money1', 1)">
         <el-card :body-style="{ padding: '0px' }" class="cardSelf">
-          <div class="cardHead">超值一年版</div>
+          <div id="cardHead1" class="cardHead">超值一年版</div>
           <img src="../../../img/元宝.png" class="cardImg" />
           <el-table
             :data="C1_Data"
@@ -49,12 +49,26 @@
       type="success"
       id="SelectCardButton"
       :disabled="isChoised"
-      style="margin-top:50px;width:300px;height:60px"
+      style="margin-top:50px;width:300px;height:62px"
+      @click="NextProcess"
     >
       确认选择
     </el-button>
     <div class="cardInfoDiv">
       <div style="font-size:40px;margin-top:10px">服务详情</div>
+      <el-table
+        :data="this.$store.state.SData_Enter_ServiceInfo"
+        stripe
+        border
+        style="width: 100%;margin-top:9px"
+      >
+        <el-table-column prop="name" width="450px"> </el-table-column>
+        <el-table-column prop="s1" label="一年版" width="150px">
+        </el-table-column>
+        <el-table-column prop="s2" label="十年版" width="150px">
+        </el-table-column>
+        <el-table-column prop="s3" label="永久版"> </el-table-column>
+      </el-table>
     </div>
   </div>
 </template>
@@ -118,6 +132,14 @@ export default {
       document.getElementById(name).style.background = 'yellow'
       this.choiseCard = index
       this.isChoised = false
+    },
+    NextProcess() {
+      this.$store.commit('CompanyInfo_SignUp_ChoiseScheme', {
+        id: this.$store.state.Data_SignUp_Company_ID,
+        card: this.choiseCard
+      })
+      this.$router.push('/EnterSignUpPage/EnterCompanyPage/EnterCompanyPageR4')
+      this.$store.commit('Layout_SetCompanyProgress', 3)
     }
   }
 }
@@ -172,7 +194,7 @@ export default {
 .cardInfoDiv {
   margin-top: 50px;
   widows: 800px;
-  height: 500px;
+  height: 450px;
   border: solid #00000077;
   text-align: center;
 }

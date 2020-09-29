@@ -1,6 +1,6 @@
 <template>
   <div style="height:303px;">
-    <div class="waitForCheck">
+    <div class="waitForDO">
       <i class="el-icon-user" style="font-size:50px ;margin-top:30px"></i>
       <div style="font-size:30px;font-width:500;margin-top:20px">
         数据正在审核，请耐心等待

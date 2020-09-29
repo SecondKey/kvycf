@@ -15,7 +15,7 @@
       <el-step title="公司注册"></el-step>
       <el-step title="数据审核"></el-step>
       <el-step title="选择服务"></el-step>
-      <el-step title="添加客服"></el-step>
+      <el-step title="添加管理员"></el-step>
       <el-step title="完成"></el-step>
     </el-steps>
     <router-view class="signUpInnerPage"></router-view>

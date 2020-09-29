@@ -14,27 +14,16 @@ export default new Vuex.Store({
 
     //#region 公司注册
     Data_SignUp_Company_Progress: 0, //公司注册进度
+    Data_SignUp_Company_ID: 0, //公司注册时公司的id
 
-    Data_SignUp_Company_Name: '', //公司名称
-    Data_SignUp_Company_PrincipalName: '', //公司负责人名称
-    Data_SignUp_Company_tel: '', //公司联系人电话
-    Data_SignUp_Company_Emil: '', //公司联系人邮箱
-
-    Data_SignUp_Company_Scheme: 2, //公司选择的解决方案
-
-    Data_SignUp_Company_Admin_Name: '', //添加的管理员的名字
-    Data_SignUp_Company_Admin_Account: '', //添加管理员的账号
-    Data_SignUp_Company_Admin_Pwd: '', //添加管理员的密码
-    Data_SignUp_Company_Admin_Tel: '', //添加的管理员的电话
-    Data_SignUp_Company_Admin_Emil: '', //添加管理员的邮箱
+    Data_SignUp_Service_Progress: 0, //客服注册进度
     //#endregion
     //#region 客服注册
-    Data_SignUp_Service_Progress: 0, //客服注册进度
     Data_SignUp_Service_CompanyNum: 0, //要注册的公司
     Data_SignUp_Service_Name: '', //客服真实名称
     Data_SignUp_Service_IDNum: '', //身份证号
     Data_SignUp_Service_NName: '', //客服昵称
-    Data_SignUp_Service_Emil: '', //邮箱
+    Data_SignUp_Service_Email: '', //邮箱
     Data_SignUp_Service_Tel: '', //电话
     //#endregion
     //#region 申请加入团队
@@ -44,7 +33,7 @@ export default new Vuex.Store({
     //#endregion
     //#endregion
     //#endregion
-    //#region 模拟数据
+    //#region 模拟数据加S
     //#region EnterPage所有数据
     SData_Enter_ServiceInfo: [
       {
@@ -66,40 +55,49 @@ export default new Vuex.Store({
         s3: '100人'
       },
       {
-        name: '客服数量',
+        name: '单日最大工作时长',
+        s1: '8h',
+        s2: '16h',
+        s3: '2h'
+      },
+      {
+        name: '专业客服培训',
+        s1: '否',
+        s2: '是',
+        s3: '是'
+      },
+      {
+        name: '服务器实时维护',
         s1: '30人',
         s2: '100人',
         s3: '不限'
       },
       {
-        name: '客服数量',
-        s1: '30人',
-        s2: '100人',
-        s3: '不限'
-      },
+        name: '数据存储空间',
+        s1: '50G',
+        s2: '500G',
+        s3: '10T'
+      }
+    ],
+
+    SData_Company: [
       {
-        name: '客服数量',
-        s1: '30人',
-        s2: '100人',
-        s3: '不限'
-      },
-      {
-        name: '客服数量',
-        s1: '30人',
-        s2: '100人',
-        s3: '不限'
-      },
-      {
-        name: '客服数量',
-        s1: '30人',
-        s2: '100人',
-        s3: '不限'
-      },
-      {
-        name: '客服数量',
-        s1: '30人',
-        s2: '100人',
-        s3: '不限'
+        id: 0,
+        name: '凯文云', //公司名称
+        principalName: '郑凯文', //负责人名称
+        tel: '1234567', //电话
+        email: '12345678@qq.com', //邮箱
+        scheme: 3, //选择的服务
+        admin: [
+          {
+            name: 'admin',
+            account: '凯文云' + 'admin',
+            pwd: '123456',
+            email: ''
+          }
+        ], //管理员
+        service: [], //客服人员
+        nService: [] //正在注册的客服人员
       }
     ]
     //#endregion
@@ -112,6 +110,48 @@ export default new Vuex.Store({
     },
     Layout_SetCompanyProgress(state, index) {
       state.Data_SignUp_Company_Progress = index
+    },
+    Layout_SetServiceProgress(state, index) {
+      state.Data_SignUp_Service_Progress = index
+    },
+    //#endregion
+
+    //#region 登录注册
+    //添加一个公司
+    Company_SignUp(state, CompanyInfo) {
+      state.Data_SignUp_Company_ID = state.SData_Company.length
+      let newCompany = {
+        id: state.SData_Company.length,
+        name: CompanyInfo.name,
+        principalName: CompanyInfo.principalName,
+        tel: CompanyInfo.tel,
+        email: CompanyInfo.email,
+        scheme: 0,
+        admin: [
+          {
+            name: 'admin',
+            account: CompanyInfo.name + 'admin',
+            pwd: '123456',
+            email: ''
+          }
+        ],
+        service: [],
+        nService: []
+      }
+      state.SData_Company.push(newCompany)
+    },
+    //公司选择了一种服务
+    CompanyInfo_SignUp_ChoiseScheme(state, data) {
+      state.SData_Company[data.id].scheme = data.card
+    },
+    //公司添加了一个管理员
+    CompanyInfo_SignUp_AddAdmin(state, data) {
+      state.SData_Company[data.id].admin.push(data.newAdmin)
+    },
+    //注册一个管理员
+    Service_SignUp(state, data) {
+      console.log(state.SData_Company[1])
+      state.SData_Company[data.id].nService.push(data.newService)
     }
     //#endregion
   },

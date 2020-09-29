@@ -1,29 +1,98 @@
 <template>
-  <div>
-    <el-menu
-      :default-active="activeIndex2"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b"
+  <div class="signUpInputDiv" style="height:700px">
+    <el-form label-width="120px">
+      <el-form-item label="企业编号">
+        <el-select
+          v-model="SCName"
+          filterable
+          placeholder="请选择"
+          style="width:230px"
+          @change="CompanySelect"
+        >
+          <el-option
+            v-for="item in $store.state.SData_Company"
+            :key="item.id"
+            :label="item.name"
+            :value="item.id"
+          >
+          </el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item label="客服名称">
+        <el-input v-model="SName"></el-input>
+      </el-form-item>
+      <el-form-item label="真实名称">
+        <el-input v-model="STName"></el-input>
+      </el-form-item>
+      <el-form-item label="输入账号">
+        <el-input v-model="SAcc"></el-input>
+      </el-form-item>
+      <el-form-item label="输入密码">
+        <el-input v-model="SPwd"></el-input>
+      </el-form-item>
+      <el-form-item label="电话">
+        <el-input v-model="STel"></el-input>
+      </el-form-item>
+      <el-form-item label="邮箱">
+        <el-input v-model="SEmail"></el-input>
+      </el-form-item>
+      <el-form-item label="验证码">
+        <el-popover
+          ref="popover"
+          placement="bottom"
+          width="400px"
+          trigger="focus"
+        >
+          <img src="../../../img/yzm.png" style="width:200px;height:80px" />
+        </el-popover>
+        <el-input v-popover:popover v-model="SCode"></el-input>
+      </el-form-item>
+    </el-form>
+    <el-button type="text" @click="clauseVisible = true"
+      >《相关法律条款》</el-button
     >
-      <el-menu-item index="1">处理中心</el-menu-item>
-      <el-submenu index="2">
-        <template slot="title">我的工作台</template>
-        <el-menu-item index="2-1">选项1</el-menu-item>
-        <el-menu-item index="2-2">选项2</el-menu-item>
-        <el-menu-item index="2-3">选项3</el-menu-item>
-        <el-submenu index="2-4">
-          <template slot="title">选项4</template>
-          <el-menu-item index="2-4-1">选项1</el-menu-item>
-          <el-menu-item index="2-4-2">选项2</el-menu-item>
-          <el-menu-item index="2-4-3">选项3</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="3" disabled>消息中心</el-menu-item>
-    </el-menu>
+    <div></div>
+    <el-checkbox v-model="readClause">我已阅读相关条款</el-checkbox>
+
+    <el-button
+      type="primary"
+      style="width:350px;margin-top:50px"
+      @click="CheckYzm"
+      :disabled="!readClause"
+      >提交</el-button
+    >
+
+    <el-dialog
+      title="请确认信息正确"
+      :visible.sync="infoVisible"
+      width="400px"
+      center=""
+    >
+      <span style="text-align:center">
+        <div style="font-size:20px">客服名称：{{ SName }}</div>
+        <div style="font-size:20px">真实名称：{{ STName }}</div>
+        <div style="font-size:20px">账户：{{ SAcc }}</div>
+        <div style="font-size:20px">密码：{{ SPwd }}</div>
+        <div style="font-size:20px">电话：{{ STel }}</div>
+        <div style="font-size:20px">邮箱：{{ SEmail }}</div>
+      </span>
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="ToNextPage">确 定</el-button>
+      </span>
+    </el-dialog>
+
+    <el-dialog
+      title="法律条款："
+      :visible.sync="clauseVisible"
+      width="400px"
+      center
+    >
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="clauseVisible = false"
+          >确 定</el-button
+        >
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -31,15 +100,57 @@
 export default {
   data() {
     return {
-      activeIndex: '0',
-      activeIndex2: '0'
+      clauseVisible: false,
+      infoVisible: false,
+      readClause: false,
+
+      SCName: '',
+      Sid: 0,
+      SName: '',
+      STName: '',
+      SAcc: '',
+      SPwd: '',
+      STel: '',
+      SEmail: '',
+      SCode: ''
     }
   },
 
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath)
+    CompanySelect(val) {
+      console.log(val)
+      this.Sid = val
+    },
+    CheckYzm() {
+      if (this.SCode == this.$store.state.Data_VerificationCode) {
+        this.infoVisible = true
+      } else {
+        this.$message.error({
+          message: '验证码错误',
+          center: true
+        })
+      }
+    },
+
+    ToNextPage() {
+      this.clauseVisible = false
+      this.$store.commit('Service_SignUp', {
+        id: this.$store.state.Data_SignUp_Company_ID,
+        newService: {
+          name: this.SName,
+          tName: this.STName,
+          account: this.SAcc,
+          pwd: this.SPwd,
+          tel: this.STel,
+          email: this.SEmail
+        }
+      })
+      this.$router.push('/EnterSignUpPage/EnterServicePage/EnterServicePageR2')
+      this.$store.commit('Layout_SetServiceProgress', 1)
     }
+  },
+  created: function() {
+    this.$store.commit('Layout_SetServiceProgress', 0)
   }
 }
 </script>

@@ -18,7 +18,6 @@
 .mask {
   margin: auto;
   width: 900px;
-  min-height: 100%;
   background-color: #ffffffcc;
   text-align: center;
 }
@@ -59,10 +58,10 @@
 
 .signUpInputDiv {
   width: 350px;
-  text-align: left;
+  text-align: center;
 }
 
-.waitForCheck {
+.waitForDO {
   margin: auto;
   width: 500px;
   height: 250px;

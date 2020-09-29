@@ -1,29 +1,42 @@
 <template>
-  <div>
-    <el-menu
-      :default-active="activeIndex2"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b"
+  <div class="signUpInputDiv" style="height:400px">
+    <el-form label-width="120px">
+      <el-form-item label="管理员名称">
+        <el-input v-model="adminName"></el-input>
+      </el-form-item>
+      <el-form-item label="输入账号">
+        <el-input v-model="adminAcc"></el-input>
+      </el-form-item>
+      <el-form-item label="输入密码">
+        <el-input v-model="adminPwd"></el-input>
+      </el-form-item>
+      <el-form-item label="邮箱">
+        <el-input v-model="adminEmail"></el-input>
+      </el-form-item>
+    </el-form>
+    <el-button
+      type="primary"
+      style="width:350px;margin-top:50px"
+      @click="clauseVisible = true"
+      >提交</el-button
     >
-      <el-menu-item index="1">处理中心</el-menu-item>
-      <el-submenu index="2">
-        <template slot="title">我的工作台</template>
-        <el-menu-item index="2-1">选项1</el-menu-item>
-        <el-menu-item index="2-2">选项2</el-menu-item>
-        <el-menu-item index="2-3">选项3</el-menu-item>
-        <el-submenu index="2-4">
-          <template slot="title">选项4</template>
-          <el-menu-item index="2-4-1">选项1</el-menu-item>
-          <el-menu-item index="2-4-2">选项2</el-menu-item>
-          <el-menu-item index="2-4-3">选项3</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="3" disabled>消息中心</el-menu-item>
-    </el-menu>
+
+    <el-dialog
+      title="请确认信息正确"
+      :visible.sync="clauseVisible"
+      width="400px"
+      center=""
+    >
+      <span style="text-align:center">
+        <div style="font-size:20px">管理员名称：{{ adminName }}</div>
+        <div style="font-size:20px">管理员账户：{{ adminAcc }}</div>
+        <div style="font-size:20px">管理员密码：{{ adminPwd }}</div>
+        <div style="font-size:20px">邮箱：{{ adminEmail }}</div>
+      </span>
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="ToNextPage">确 定</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -31,14 +44,28 @@
 export default {
   data() {
     return {
-      activeIndex: '0',
-      activeIndex2: '0'
+      clauseVisible: false,
+
+      adminName: '',
+      adminAcc: '',
+      adminPwd: '',
+      adminEmail: ''
     }
   },
-
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath)
+    ToNextPage() {
+      this.clauseVisible = false
+      this.$store.commit('CompanyInfo_SignUp_AddAdmin', {
+        id: this.$store.state.Data_SignUp_Company_ID,
+        newAdmin: {
+          name: this.adminName,
+          account: this.adminAcc,
+          pwd: this.adminPwd,
+          email: this.adminEmail
+        }
+      })
+      this.$router.push('/EnterSignUpPage/EnterCompanyPage/EnterCompanyPageR5')
+      this.$store.commit('Layout_SetCompanyProgress', 5)
     }
   }
 }

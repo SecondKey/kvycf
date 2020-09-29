@@ -134,7 +134,7 @@
         <label class="loginYzmButton"
           >看不清，换一张<i class="el-icon-refresh-left"></i
         ></label>
-        <el-button type="primary" class="enterButton" style="margin-top:30px">
+        <el-button type="success" class="enterButton" style="margin-top:30px">
           <div class="enterButtonText">登录</div>
         </el-button>
       </div>

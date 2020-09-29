@@ -7,11 +7,16 @@
       <img class="targetImg" src="../../../img/LOGO.png" />
     </div>
     <div class="joininHead">客服注册</div>
-    <el-steps :active="signinProgress" align-center class="progress">
+    <el-steps
+      :active="$store.state.Data_SignUp_Service_Progress"
+      align-center
+      class="progress"
+    >
       <el-step title="填写申请"></el-step>
       <el-step title="等待审核"></el-step>
       <el-step title="完成"></el-step>
     </el-steps>
+    <router-view class="signUpInnerPage"></router-view>
   </div>
 </template>
 
