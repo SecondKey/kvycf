@@ -27,7 +27,6 @@
         </div>
 
   </el-aside>
-      
 
 <el-header class="ServicePage_el-header">
     
@@ -49,11 +48,11 @@
     </el-header>
 
 <el-main class="ServicePage_main" style="overflow:unset">
-
     <router-view></router-view>
     </el-main>
 </el-container>
 </template>
+
 <script>
 import CompanyPage from '@/components/Enter/Company/CompanyPage.vue'
 import CompanyPageR1 from '@/components/Enter/Company/CompanyPageR1.vue'
@@ -71,7 +70,8 @@ export default {
             this.currentView = tabItem;
         }
     }
-}
+    }
+    
 </script>
 
 <style>
@@ -208,7 +208,7 @@ export default {
          top: -16px;
       }
       .ServicePage_status{
-          width:110px;
+          width:90px;
           margin-top: 60px;
           float:right;
           font-size: 17px;

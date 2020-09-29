@@ -30,7 +30,7 @@
         </div>
   <div class="AdminPage_customer-info">
         <div class="AdminPage_head">
-            <img src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png" class="AdminPage_hop">
+            <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=165135370,3673158281&fm=15&gp=0.jpg" class="AdminPage_hop">
             <span class="customer-name">凯文管理员</span><img src="" class="AdminPage_tip">
         </div>
         <div class="AdminPage_status">
@@ -177,7 +177,7 @@ export default {
         margin-top: 10px;
         width: 39px;
         height: 39px;
-
+        border-radius: 50%;
     }
     .customer-name{
         font-size: 17px;
