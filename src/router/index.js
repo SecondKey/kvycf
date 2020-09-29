@@ -38,7 +38,7 @@ const routes = [
   //#region EnterPage路由
   {
     path: '/',
-    name: 'AdminPage',
+    name: 'EnterPage',
     component: EnterPage,
     children: [
       //进入时主业
