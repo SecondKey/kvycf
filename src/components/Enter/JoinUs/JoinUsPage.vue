@@ -7,6 +7,7 @@
       <img class="targetImg" src="../../../img/LOGO.png" />
     </div>
     <div class="joininHead">加入凯文云客服团队</div>
+    <router-view class="signUpInnerPage"></router-view>
   </div>
 </template>
 
