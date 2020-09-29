@@ -53,7 +53,12 @@
         <el-button
           type="primary"
           class="enterButton"
-          @click="ServiceLogin = true"
+          @click="
+            ServiceLoginPage = true
+            ServiceAcc = ''
+            ServicePwd = ''
+            ServiceVerify = ''
+          "
         >
           <div class="enterButtonText">
             客服登录<i class="el-icon-right"></i>
@@ -63,7 +68,12 @@
         <el-button
           type="success"
           class="enterButton"
-          @click="AdminLogin = true"
+          @click="
+            AdminLoginPage = true
+            AdminAcc = ''
+            AdminPwd = ''
+            AdminVerify = ''
+          "
         >
           <div class="enterButtonText">
             管理员登录<i class="el-icon-right"></i>
@@ -73,7 +83,7 @@
     </div>
     <el-drawer
       title="客服登录"
-      :visible.sync="ServiceLogin"
+      :visible.sync="ServiceLoginPage"
       :with-header="false"
       style="z-index:990"
     >
@@ -100,14 +110,19 @@
         <label class="loginYzmButton"
           >看不清，换一张<i class="el-icon-refresh-left"></i
         ></label>
-        <el-button type="primary" class="enterButton" style="margin-top:30px">
+        <el-button
+          type="primary"
+          class="enterButton"
+          style="margin-top:30px"
+          @click="ServiceLogin"
+        >
           <div class="enterButtonText">登录</div>
         </el-button>
       </div>
     </el-drawer>
     <el-drawer
       title="管理员登录"
-      :visible.sync="AdminLogin"
+      :visible.sync="AdminLoginPage"
       :with-header="false"
       style="z-index:990"
     >
@@ -116,27 +131,33 @@
         <div class="enterTitle" style="font-size:30px">管理员登录入口</div>
         <el-input
           class="loginInput"
-          v-model="ServiceAcc"
+          v-model="AdminAcc"
           placeholder="请输入管理员账号"
         ></el-input>
         <el-input
           class="loginInput"
-          v-model="ServicePwd"
+          v-model="AdminPwd"
           placeholder="请输入账号密码"
           show-password
         ></el-input>
         <el-input
           class="loginInput"
-          v-model="ServiceVerify"
+          v-model="AdminVerify"
           placeholder="请输入验证码"
         ></el-input>
         <img src="../../img/yzm.png" class="loginYzm" />
         <label class="loginYzmButton"
           >看不清，换一张<i class="el-icon-refresh-left"></i
         ></label>
-        <el-button type="primary" class="enterButton" style="margin-top:30px">
+        <el-button
+          type="success"
+          class="enterButton"
+          style="margin-top:30px"
+          @click="AdminLogin"
+        >
           <div class="enterButtonText">登录</div>
         </el-button>
+        
       </div>
     </el-drawer>
   </div>
@@ -146,11 +167,12 @@
 export default {
   data() {
     return {
-      ServiceLogin: false,
-      AdminLogin: false,
+      ServiceLoginPage: false,
       ServiceAcc: '',
       ServicePwd: '',
       ServiceVerify: '',
+
+      AdminLoginPage: false,
       AdminAcc: '',
       AdminPwd: '',
       AdminVerify: ''
@@ -158,16 +180,90 @@ export default {
   },
   methods: {
     ToCompanyPage() {
-      this.$router.push('/EnterSignUpPage/EnterCompanyPage')
+      this.$router.push('/EnterSignUpPage/EnterCompanyPage/EnterCompanyPageR1')
       this.$store.commit('Layout_EnterPage_ChangeChoisePage', '2')
     },
     ToServicePage() {
-      this.$router.push('/EnterSignUpPage/EnterServicePage')
+      this.$router.push('/EnterSignUpPage/EnterServicePage/EnterServicePageR1')
       this.$store.commit('Layout_EnterPage_ChangeChoisePage', '3')
     },
     ToJoinUsPage() {
-      this.$router.push('/EnterSignUpPage/EnterJoinUsPage')
+      this.$router.push('/EnterSignUpPage/EnterJoinUsPage/EnterJoinUsPageR1')
       this.$store.commit('Layout_EnterPage_ChangeChoisePage', '4')
+    },
+    ServiceLogin() {
+      if (this.ServiceVerify == this.$store.state.Data_VerificationCode) {
+        for (let comp in this.$store.state.SData_Company) {
+          for (let serv in this.$store.state.SData_Company[comp].service) {
+            if (
+              this.$store.state.SData_Company[comp].service[serv].account ==
+                this.ServiceAcc &&
+              this.$store.state.SData_Company[comp].service[serv].pwd ==
+                this.ServicePwd
+            ) {
+              this.$message({
+                message:
+                  '客服' +
+                  this.$store.state.SData_Company[comp].service[serv].name +
+                  ' 登录成功',
+                center: true
+              })
+              this.$router.push('/ServicePage')
+              this.$store.commit('Login_ServiceLogin', {
+                cid: comp,
+                di: serv
+              })
+              return
+            }
+          }
+        }
+        this.$message.error({
+          message: '账号或错误',
+          center: true
+        })
+      } else {
+        this.$message.error({
+          message: '验证码错误',
+          center: true
+        })
+      }
+    },
+    AdminLogin() {
+      if (this.AdminVerify == this.$store.state.Data_VerificationCode) {
+        for (let comp in this.$store.state.SData_Company) {
+          for (let admin in this.$store.state.SData_Company[comp].admin) {
+            if (
+              this.$store.state.SData_Company[comp].admin[admin].account ==
+                this.AdminAcc &&
+              this.$store.state.SData_Company[comp].admin[admin].pwd ==
+                this.AdminPwd
+            ) {
+              this.$message({
+                message:
+                  '管理员' +
+                  this.$store.state.SData_Company[comp].admin[admin].name +
+                  ' 登录成功',
+                center: true
+              })
+              this.$router.push('/AdminPage')
+              this.$store.commit('Login_AdminLogin', {
+                cid: comp,
+                di: serv
+              })
+              return
+            }
+          }
+        }
+        this.$message.error({
+          message: '账号或错误',
+          center: true
+        })
+      } else {
+        this.$message.error({
+          message: '验证码错误',
+          center: true
+        })
+      }
     }
   }
 }

@@ -7,11 +7,15 @@
       <img class="targetImg" src="../../../img/LOGO.png" />
     </div>
     <div class="joininHead">企业注册</div>
-    <el-steps :active="signinProgress" align-center class="progress">
+    <el-steps
+      :active="$store.state.Data_SignUp_Company_Progress"
+      align-center
+      class="progress"
+    >
       <el-step title="公司注册"></el-step>
-      <el-step title="等待审核"></el-step>
+      <el-step title="数据审核"></el-step>
       <el-step title="选择服务"></el-step>
-      <el-step title="添加客服"></el-step>
+      <el-step title="添加管理员"></el-step>
       <el-step title="完成"></el-step>
     </el-steps>
     <router-view class="signUpInnerPage"></router-view>
@@ -20,12 +24,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      signinProgress: 0
-    }
-  },
-
   methods: {
     next() {
       if (this.active++ > 2) this.active = 0

@@ -17,9 +17,10 @@ import EnterCompanyPageR5 from '../components/Enter/Company/CompanyPageR5'
 import EnterServicePage from '../components/Enter/Service/ServicePage'
 import EnterServicePageR1 from '../components/Enter/Service/ServicePageR1'
 import EnterServicePageR2 from '../components/Enter/Service/ServicePageR2'
-import EnterServicePageR3 from '../components/Enter/Service/ServicePageR3'
 
 import EnterJoinUsPage from '../components/Enter/JoinUs/JoinUsPage'
+import EnterJoinUsPageR1 from '../components/Enter/JoinUs/JoinUsPageR1'
+import EnterJoinUsPageR2 from '../components/Enter/JoinUs/JoinUsPageR2'
 //#endregion
 //#region 客服页面
 import ServicePage from '../views/ServicePage'
@@ -30,6 +31,10 @@ import Service_KeHu from '../components/Service/KeHu/KeHu'
 import Service_LiaoTianJiLu from '../components/Service/LiaoTianJiLu/LiaoTianJiLu'
 import Service_SheZhi from '../components/Service/SheZhi/SheZhi'
 import Service_ShouYe from '../components/Service/ShouYe/ShouYe'
+//#endregion'
+
+//#region 管理员页面
+import AdminPage from '../views/AdminPage'
 //#endregion
 
 
@@ -104,11 +109,6 @@ const routes = [
                 path: '/EnterSignUpPage/EnterServicePage/EnterServicePageR2',
                 name: 'EnterServicePageR2',
                 component: EnterServicePageR2
-              },
-              {
-                path: '/EnterSignUpPage/EnterServicePage/EnterServicePageR3',
-                name: 'EnterServicePageR3',
-                component: EnterServicePageR3
               }
             ]
           },
@@ -118,7 +118,19 @@ const routes = [
           {
             path: '/EnterSignUpPage/EnterJoinUsPage',
             name: 'EnterJoinUsPage',
-            component: EnterJoinUsPage
+            component: EnterJoinUsPage,
+            children: [
+              {
+                path: '/EnterSignUpPage/EnterJoinUsPage/EnterJoinUsPageR1',
+                name: 'EnterJoinUsPageR1',
+                component: EnterJoinUsPageR1
+              },
+              {
+                path: '/EnterSignUpPage/EnterJoinUsPage/EnterJoinUsPageR2',
+                name: 'EnterJoinUsPageR2',
+                component: EnterJoinUsPageR2
+              }
+            ]
           }
           //#endregion
         ]
@@ -133,7 +145,7 @@ const routes = [
     component: ServicePage,
     children: [
       {
-        path: '/ServicePage/',
+        path: '/ServicePage',
         name: 'Service_ShouYe',
         component: Service_ShouYe
       },
@@ -168,6 +180,13 @@ const routes = [
         component: Service_GongDan
       }
     ]
+  },
+  //#endregion
+  //#region Admin路由
+  {
+    path: '/AdminPage',
+    name: 'AdminPage',
+    component: AdminPage
   }
   //#endregion
 ]
