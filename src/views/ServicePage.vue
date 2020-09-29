@@ -229,6 +229,4 @@ export default {
     top:60px;
     left:64px;
 }
-
- 
 </style>
