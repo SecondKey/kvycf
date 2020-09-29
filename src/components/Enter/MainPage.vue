@@ -79,8 +79,6 @@
             管理员登录<i class="el-icon-right"></i>
           </div>
         </el-button>
-        <router-link to="/ServicePage/KeHu">跳转客户</router-link>
-        <router-link to="/ServicePage/SheZhi">跳转设置</router-link>
       </div>
     </div>
     <el-drawer
