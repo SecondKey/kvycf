@@ -69,6 +69,8 @@
             管理员登录<i class="el-icon-right"></i>
           </div>
         </el-button>
+        <router-link to="/ServicePage/KeHu">跳转客户</router-link>
+        <router-link to="/ServicePage/SheZhi">跳转设置</router-link>
       </div>
     </div>
     <el-drawer
@@ -137,6 +139,7 @@
         <el-button type="primary" class="enterButton" style="margin-top:30px">
           <div class="enterButtonText">登录</div>
         </el-button>
+        
       </div>
     </el-drawer>
   </div>
