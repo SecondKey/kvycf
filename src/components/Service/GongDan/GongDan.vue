@@ -1,34 +1,42 @@
 <template>
-    <div class="page6">
-        <div class="box12">工单目录表格</div>
-        <div class="box13">工单内容</div>
+    <div class="gongdan-page">
+        <GongDanItem1 class="gongdan-box1">工单目录表格</GongDanItem1>
+        <GongDanItem2 class="gongdan-box2">工单内容</GongDanItem2>
     </div>
 </template>
 
 <script>
-export default {}
+import GongDanItem1 from './GongDanItem1'
+import GongDanItem2 from './GongDanItem2'
+export default {
+    components:{
+        'GongDanItem1':GongDanItem1,
+        'GongDanItem2':GongDanItem2
+
+    },
+}
 </script>
 
 <style>
-    .page6{
-        width: 1500px;
-    height: 1200px;
+    .gongdan-page{
+    width: 1410px;
+    height: 1160px;
     background-color: green;
     }
-    .box12{
+    .gongdan-box1{
         width: 300px;
-        height: 700px;
+        height: 400px;
         position: absolute;
         background-color: chocolate;
-        top: 20px;
-        left: 20px;
+        top: 70px;
+        left: 50px;
     }
-    .box13{
-        width: 1100px;
-        height: 1200px;
+    .gongdan-box2{
+        width: 1030px;
+        height: 1070px;
         position: absolute;
         background-color: cornflowerblue;
-        top: 20px;
-        left: 350px;
+        top: 70px;
+        left: 370px;
     }
 </style>

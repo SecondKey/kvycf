@@ -1,52 +1,63 @@
 <template>
-    <div class="page5">
-        <div class="box8">会话人表格</div>
-        <div class="box9">会话内容</div>
-        <div class="box10">会话人信息</div>
-        <div class="box11">常用语</div>
+    <div class="huihua-page">
+        <HuiHuaItem1 class="huihua-box1">会话人表格</HuiHuaItem1>
+        <HuiHuaItem2 class="huihua-box2">会话内容</HuiHuaItem2>
+        <HuiHuaItem3 class="huihua-box3">会话人信息</HuiHuaItem3>
+        <HuiHuaItem4 class="huihua-box4">常用语</HuiHuaItem4>
     </div>
 </template>
 
 <script>
-export default {}
+import HuiHuaItem1 from './HuiHuaItem1'
+import HuiHuaItem2 from './HuiHuaItem2'
+import HuiHuaItem3 from './HuiHuaItem3'
+import HuiHuaItem4 from './HuiHuaItem4'
+export default {
+    components:{
+        'HuiHuaItem1':HuiHuaItem1,
+        'HuiHuaItem2':HuiHuaItem2,
+        'HuiHuaItem3':HuiHuaItem3,
+        'HuiHuaItem4':HuiHuaItem4
+    },
+}
 </script>
 
 <style>
-.page5{
-    width: 1500px;
-    height: 1200px;
+.huihua-page{
+    width: 1410px;
+    height: 1160px;
     background-color: greenyellow;
 }
-.box8{
-    width: 220px;
-    height: 900px;
+.huihua-box1{
+    width: 240px;
+    height: 1100px;
     background-color: hotpink;
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 50px;
+    left: 40px;
 }
-.box9{
-    width: 920px;
-    height: 900px;
+.huihua-box2{
+    width: 850px;
+    height: 1100px;
     background-color: green;
     position: absolute;
-    top: 25px;
-    left: 265px;
+    top: 50px;
+    left: 290px;
 }
-.box10{
-    width: 250px;
-    height: 400px;
+.huihua-box3{
+    width: 240px;
+    height: 480px;
     background-color: cadetblue;
     position: absolute;
-    top: 25px;
-    left: 1200px;
+    top: 50px;
+    left: 1150px;
 }
-.box11{
-    width: 250px;
-    height: 485px;
+.huihua-box4{
+    width: 240px;
+    height: 600px;
     background-color: blue;
     position: absolute;
-    top: 440px;
-    left: 1200px;
+    top: 550px;
+    left: 1150px;
 }
 </style>
