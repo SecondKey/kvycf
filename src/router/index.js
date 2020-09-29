@@ -32,6 +32,8 @@ import Service_SheZhi from '../components/Service/SheZhi/SheZhi'
 import Service_ShouYe from '../components/Service/ShouYe/ShouYe'
 //#endregion
 
+
+
 Vue.use(VueRouter)
 
 const routes = [
