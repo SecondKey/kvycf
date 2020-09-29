@@ -32,13 +32,15 @@ import Service_SheZhi from '../components/Service/SheZhi/SheZhi'
 import Service_ShouYe from '../components/Service/ShouYe/ShouYe'
 //#endregion
 
+
+
 Vue.use(VueRouter)
 
 const routes = [
   //#region EnterPage路由
   {
     path: '/',
-    name: 'AdminPage',
+    name: 'EnterPage',
     component: EnterPage,
     children: [
       //进入时主业
