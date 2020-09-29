@@ -1,6 +1,6 @@
 <template> 
 <el-container class="ServicePage_el-container">
-  <el-aside class="ServicePage_el-aside"  style="overflow:unset">
+  <el-aside class="ServicePage_el-aside"  style="overflow:unset;width: 64px;">
         <div class="ServicePage_nav-item">
             <i id="icon" class="el-icon-s-home"></i>
             <div class="ServicePage_tip">首页</div>
@@ -47,7 +47,7 @@
     </div>
     </el-header>
 
-<el-main class="ServicePage_main" style="overflow:unset">
+<el-main class="ServicePage_el-main" style="overflow:unset">
     <router-view></router-view>
     </el-main>
 </el-container>
@@ -81,7 +81,6 @@ export default {
     background-color: rgb(180, 212, 231);
     }
   .ServicePage_el-aside {
-      width: 64px!important;
       height:100%;
       background-color: rgb(239, 240, 247);
       margin-top: 60px;
@@ -101,12 +100,12 @@ export default {
 .ServicePage_nav-item {
     width: 56px;
     height: 56px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    font-size: 35px;
-    font-weight: 1200;
+    margin-bottom: 25px;
+    margin-top: 25px;
+
+    font-size: 40px;
+    font-weight: bolder;
     text-align: center;
-    line-height: 56px;
     color: rgb(16, 109, 163);
   position: relative;
 }
@@ -221,7 +220,7 @@ export default {
        display: block;
     }
 
-.ServicePage_main{
+.ServicePage_el-main{
     background-color: rgb(180, 212, 231);
     width:1500px!important;
     height:1200px!important;
