@@ -1,21 +1,20 @@
 <template>
   <div>
     <div class="header">
-      <div class="block">
-        <el-date-picker
-          v-model="value1"
-          type="datetime"
-          placeholder="选择日期时间"
-        >
-        </el-date-picker>
-      </div>
+    <div class="block">
+    <el-date-picker
+      v-model="value1"
+      type="date"
+      placeholder="选择日期">
+    </el-date-picker>
+  </div>
       <div class="search">
-        <el-input placeholder="请输入关键词搜索" v-model="input">
+        <el-input placeholder="请输入关键词搜索" v-model="input2">
           <template slot="append">搜索</template>
         </el-input>
       </div>
         <div class="add">
-       <el-button type="text" >批量修改状态</el-button></div>
+       <el-button type="text" @click="testclick">批量修改状态</el-button></div>
         <div class="add1">
         <el-button type="text" >导出工单</el-button></div>
 <div class="add2">
@@ -96,13 +95,14 @@
 
         </div>
     </div>
-    <el-table :data="customers" border style="width: 100%">
-      <el-table-column fixed prop="name" label="客户名称" width="140" align="center"> </el-table-column>
-      <el-table-column prop="realname" label="真实姓名" width="140" align="center"> </el-table-column>
-      <el-table-column prop="tel" label="电话" width="140" align="center"></el-table-column>
-      <el-table-column prop="email" label="邮箱" width="140" align="center"> </el-table-column>
-      <el-table-column prop="level" label="客户等级" width="140" align="center"> </el-table-column>
-      <el-table-column prop="origin" label="客户来源" width="140" align="center"> </el-table-column>
+    <el-table :data="this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany]
+        .order"  border style="width: 100%">
+      <el-table-column fixed prop="id" label="工单ID" width="140" align="center"> </el-table-column>
+      <el-table-column prop="title" label="工单标题" width="140" align="center"> </el-table-column>
+      <el-table-column prop="client" label="客户ID" width="140" align="center"> </el-table-column>
+      <el-table-column prop="category" label="分类" width="140" align="center"> </el-table-column>
+      <el-table-column prop="priority" label="优先级" width="140" align="center"> </el-table-column>
+       <el-table-column prop="createTime" label="创建时间" width="140" align="center"></el-table-column>
       <el-table-column fixed="right" label="操作" width="140" >
         <el-button type="text"  style="float:left">查看详情</el-button>
         <el-button type="text" @click="open1" style="float:left">接单</el-button>
@@ -121,8 +121,8 @@
 
 <script>
 export default {
+  
   methods: {
-    
     handleClick(row) {
       console.log(row);
     },
@@ -144,6 +144,7 @@ export default {
 
   data() {
     return {
+      customers:[],
        options: [{
           value: '选项1',
           label: '请选择'
@@ -171,96 +172,37 @@ export default {
         },
         formLabelWidth: '100px',
       customers: [
-        {
-          name: "河北省秦皇岛市客户",
-          realname: "林芳",
-          tel: "18845678900",
-          email: "1190887@163.com",
-          level: "普通用户",
-          origin: "客户录入",
-        },
-        {
-          name: "河北省秦皇岛市客户",
-          realname: "林芳",
-          tel: "18845678900",
-          email: "1190887@163.com",
-          level: "普通用户",
-          origin: "客户录入",
-        }  ,
-        {
-          name: "河北省秦皇岛市客户",
-          realname: "林芳",
-          tel: "18845678900",
-          email: "1190887@163.com",
-          level: "普通用户",
-          origin: "客户录入",
-        }  ,
-        {
-          name: "河北省秦皇岛市客户",
-          realname: "林芳",
-          tel: "18845678900",
-          email: "1190887@163.com",
-          level: "普通用户",
-          origin: "客户录入",
-        }  ,
-        {
-          name: "河北省秦皇岛市客户",
-          realname: "林芳",
-          tel: "18845678900",
-          email: "1190887@163.com",
-          level: "普通用户",
-          origin: "客户录入",
-        }  ,
-           {
-          name: "河北省秦皇岛市客户",
-          realname: "林芳",
-          tel: "18845678900",
-          email: "1190887@163.com",
-          level: "普通用户",
-          origin: "客户录入",
-        }  ,
-           {
-          name: "河北省秦皇岛市客户",
-          realname: "林芳",
-          tel: "18845678900",
-          email: "1190887@163.com",
-          level: "普通用户",
-          origin: "客户录入",
-        }  ,
-           {
-          name: "河北省秦皇岛市客户",
-          realname: "林芳",
-          tel: "18845678900",
-          email: "1190887@163.com",
-          level: "普通用户",
-          origin: "客户录入",
-        }  ,
-           {
-          name: "河北省秦皇岛市客户",
-          realname: "林芳",
-          tel: "18845678900",
-          email: "1190887@163.com",
-          level: "普通用户",
-          origin: "客户录入",
-        }  ,
-           {
-          name: "河北省秦皇岛市客户",
-          realname: "林芳",
-          tel: "18845678900",
-          email: "1190887@163.com",
-          level: "普通用户",
-          origin: "客户录入",
-        }  ,
-           {
-          name: "河北省秦皇岛市客户",
-          realname: "林芳",
-          tel: "18845678900",
-          email: "1190887@163.com",
-          level: "普通用户",
-          origin: "客户录入",
-        }  ,
         
-      ]
+        
+      ],
+       pickerOptions: {
+          disabledDate(time) {
+            return time.getTime() > Date.now();
+          },
+          shortcuts: [{
+            text: '今天',
+            onClick(picker) {
+              picker.$emit('pick', new Date());
+            }
+          }, {
+            text: '昨天',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24);
+              picker.$emit('pick', date);
+            }
+          }, {
+            text: '一周前',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          }]
+        },
+        value1: '',
+        input2: '',
+        textarea: ''
     }
   }
   
@@ -276,6 +218,12 @@ export default {
 </script>
 
 <style>
+.el-select .el-input {
+    width: 130px;
+  }
+  .input-with-select .el-input-group__prepend {
+    background-color: #fff;
+  }
 .el-icon-arrow-down {
   font-size: 12px;
 }
