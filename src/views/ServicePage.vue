@@ -2,77 +2,73 @@
 <el-container class="ServicePage_el-container">
   <el-aside class="ServicePage_el-aside"  style="overflow:unset;width: 64px;">
         <div class="ServicePage_nav-item">
-           <router-link to="/ShouYe"><i id="icon" class="el-icon-s-home"></i></router-link>
+           <router-link to="/ServicePage"><i id="icon" class="el-icon-s-home"></i></router-link>
             <div class="ServicePage_tip">首页</div>
         </div>
         <div class="ServicePage_nav-item">
-            <router-link to="/HuiHua"><i id="icon" class="el-icon-s-comment"></i></router-link>
+            <router-link to="/ServicePage/HuiHua"><i id="icon" class="el-icon-s-comment"></i></router-link>
             <div class="ServicePage_tip">会话</div>
         </div>
         <div class="ServicePage_nav-item">
-            <router-link to="/KeHu"><i id="icon" class="el-icon-s-custom"></i></router-link>
+            <router-link to="/ServicePage/KeHu"><i id="icon" class="el-icon-s-custom"></i></router-link>
             <div class="ServicePage_tip">客户</div>
         </div>
         <div class="ServicePage_nav-item">
-            <router-link to="/LiShi"><i id="icon" class="el-icon-s-unfold"></i></router-link>
-            <div class="ServicePage_tip">历史</div>
+            <router-link to="/ServicePage/LiaoTianJiLu"><i id="icon" class="el-icon-s-unfold"></i></router-link>
+            <div class="ServicePage_tip">聊天记录</div>
         </div>
         <div class="ServicePage_nav-item">
-            <router-link to="/GongDan"><i id="icon" class="el-icon-s-order"></i></router-link>
+            <router-link to="/ServicePage/GongDan"><i id="icon" class="el-icon-s-order"></i></router-link>
             <div class="ServicePage_tip">工单</div>
         </div>
         <div class="ServicePage_nav-item">
-            <router-link to="/components/Service/SheZhi/SheZhi"><i id="icon" class="el-icon-s-tools"></i></router-link>
+            <router-link to="/ServicePage/SheZhi"><i id="icon" class="el-icon-s-tools"></i></router-link>
             <div class="ServicePage_tip"> 设置 </div>
         </div>
 
   </el-aside>
 
 <el-header class="ServicePage_el-header">
-    
     <div class="ServicePage_logo">
         <div class="ServicePage_img">Logo</div>
-        </div>
-
-  <div class="ServicePage_customer-info">
-
-        <div class="ServicePage_head">
-            <img src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png" class="ServicePage_hop">
-            <span class="customer-name">凯文客服</span><img src="" class="ServicePage_tip">
-        </div>
-        <div class="ServicePage_status">
-            <li class="ServicePage_statu">在线</li>
-            <li class="ServicePage_statu">离线</li>
-        </div>
     </div>
-    </el-header>
+
+<div  class="ServicePage_menu-head">
+<el-menu :default-active="activeIndex" class="ServicePage_el-menu-demo" mode="horizontal" @select="handleSelect">
+ <el-submenu index="1">
+    <template slot="title">凯文客服</template>
+    <img src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png" class="ServicePage_hop">
+    <el-menu-item class="ServicePage_el-menu-item" index="2-1" style="width: 20px;">个人中心</el-menu-item>
+    <el-menu-item index="2-2">权限管理</el-menu-item>
+    <el-menu-item index="2-3">退出</el-menu-item>
+    </el-submenu>
+</el-menu>
+</div>
+
+</el-header>
 
 <el-main class="ServicePage_el-main" style="overflow:unset">
+
     <router-view></router-view>
-    </el-main>
+</el-main>
 
 </el-container>
 </template>
 
 <script>
-import CompanyPage from '@/components/Enter/Company/CompanyPage.vue'
-import CompanyPageR1 from '@/components/Enter/Company/CompanyPageR1.vue'
-
-export default {
-    name:'Header',
-    components:{CompanyPage,CompanyPageR1},
-    data(){
-        return{
-            activeIndex: '1',
-            currentView:''
-        }
+  export default {
+    data() {
+      return {
+        activeIndex: '1',
+        activeIndex2: '1'
+      };
     },
-    methods:{
-        tabChange(tabItem) {
-            this.currentView = tabItem;
-        }
+    methods: {
+      handleSelect(key, keyPath) {
+        console.log(key, keyPath);
+      }
     }
-    }
+  }
     
 </script>
 
@@ -91,32 +87,29 @@ export default {
       position: fixed;
       z-index:999;
   }
-  i{
-    border-width: 0px;
-    left: 22px;
-    top: 116px;
-    width: 25px;
-    height: 22px;
-    display: flex;
-}
-.ServicePage_nav-item {
+  .ServicePage_nav-item {
     width: 56px;
     height: 56px;
-    margin-bottom: 25px;
-    margin-top: 25px;
-
+    padding-top: 25px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     font-size: 40px;
     font-weight: bolder;
-    text-align: center;
     color: rgb(16, 109, 163);
-  position: relative;
+    position: relative;
+}
+  i{
+    width: 25px;
+    height: 22px;
+    left: 25px;
+    margin-left: -7px;
+    display: flex;
 }
 
 .ServicePage_tip{
     height: 35px;
-    width: 40px;
+    width: 45px;
     left: 80px;
-
     background: rgb(235, 223, 223);
     font-size: 15px;
     line-height: 35px;
@@ -175,16 +168,8 @@ export default {
 
 }
 
-  .ServicePage_customer-info{
-            width: 157px;
-            height:60px;
-            margin:0;
-            position: relative;
-            float: right;
-            right: 0;
-            }
-  .ServicePage_head{
-    width: 110px;
+.ServicePage_menu-head{
+    width: 150px;
     height: 60px;
     border-width: 0px;
     position: absolute;
@@ -193,41 +178,29 @@ export default {
     line-height: 64px;
     background-color: rgb(225, 234, 235) ;
     border: none;
-        }
-    .ServicePage_hop{
-        margin-top: 10px;
-        width: 35px;
-        height: 35px;
+}
+  .ServicePage_el-menu-demo{
+    width: 150px;
+    height: 60px;
 
+    position: absolute;
+  }
+    .ServicePage_hop{
+      width:45px ;
+      height:45px ;
     }
-    .customer-name{
-        font-size: 17px;
-    }
-     .ServicePage_tip{
-         font-size: 15px;
-         position: relative;
-         top: -16px;
-      }
-      .ServicePage_status{
-          width:90px;
-          margin-top: 60px;
-          float:right;
-          font-size: 17px;
-          background-color: rgb(225, 234, 235);
-          
-          z-index:999;
-          display:none;
-    }
-    .ServicePage_customer-info:hover .ServicePage_status{
-       display: block;
-    }
+  .ServicePage_el-menu-item{
+      width: 20px;
+  }
 
 .ServicePage_el-main{
     background-color: rgb(180, 212, 231);
     width:1500px!important;
     height:1200px!important;
     position:absolute;
-    top:60px;
-    left:64px;
+    top:41px;
+    left:46px;
 }
+
+
 </style>
