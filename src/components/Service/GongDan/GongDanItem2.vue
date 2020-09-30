@@ -200,7 +200,8 @@ export default {
             }
           }]
         },
-        value1: '',
+        value1: '',                                                                                                                                                                                                                                                                                                                                                         
+ 
         input2: '',
         textarea: ''
     }

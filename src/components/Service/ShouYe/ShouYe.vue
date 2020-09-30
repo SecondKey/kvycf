@@ -37,7 +37,7 @@ export default {
   position: absolute;
   top: 100px;
   left: 500px;
-  background-color: blue;
+  background-color: rgb(115, 115, 126);
   
 }
 .shouye-box2 {
@@ -46,7 +46,7 @@ export default {
   position: absolute;
   top: 500px;
   left: 200px;
-  background-color: blue;
+  background-color:aqua;
 }
 .shouye-box3 {
   width: 200px;
@@ -54,7 +54,7 @@ export default {
   position: absolute;
   top: 500px;
   left: 500px;
-  background-color: green;
+  background-color:thistle
 }
 .shouye-box4 {
   width: 200px;
@@ -62,7 +62,7 @@ export default {
   position: absolute;
   top: 500px;
   left: 800px;
-  background-color: darkseagreen;
+  background-color:skyblue;
 }
 .shouye-box5 {
   width: 200px;
@@ -70,6 +70,6 @@ export default {
   position: absolute;
   top: 500px;
   left: 1100px;
-  background-color: midnightblue;
+  background-color:snow;
 }
 </style>
