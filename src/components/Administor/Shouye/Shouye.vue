@@ -1,24 +1,24 @@
 <template>
 
-    <div class="Shouye-frame">
-  <div class="Shouye-block">
-    <span class="Shouye-demonstration">通知</span>
-    <el-carousel class="Shouye-el-carousel" height="150px">
-      <el-carousel-item  class="Shouye-el-carousel-item" v-for="item in 4" :key="item">
-        <h4 class="Shouye-small">{{item}}</h4>
+    <div class="ShouYe-frame">
+  <div class="ShouYe-block">
+    <span class="ShouYe-demonstration">通知</span>
+    <el-carousel class="ShouYe-el-carousel" height="150px">
+      <el-carousel-item  class="ShouYe-el-carousel-item" v-for="item in 4" :key="item">
+        <h4 class="ShouYe-small">{{item}}</h4>
       </el-carousel-item>
     </el-carousel>
 </div>
 
-<div class="Shouye-count-box">
-      <div class="Shouye-count-item" v-for="item in navItems" :key="item.title">
-          <div class="Shouye-title">{{item.title}}</div>
-          <div class="Shouye-count">{{item.count}}</div>
-          <div class="Shouye-perc">较昨日上涨{{item.perc}}</div>
+<div class="ShouYe-count-box">
+      <div class="ShouYe-count-item" v-for="item in navItems" :key="item.title">
+          <div class="ShouYe-title">{{item.title}}</div>
+          <div class="ShouYe-count">{{item.count}}</div>
+          <div class="ShouYe-perc">较昨日上涨{{item.perc}}</div>
       </div>
   </div>
 
-  <div class="Shouye-monitor">
+  <div class="ShouYe-monitor">
 <div>
 
 </div>
@@ -61,21 +61,21 @@ export default {
 
 <style>
 
-   .Shouye-frame{
+   .ShouYe-frame{
     width: 1292px;
     height: 1800px;
     }
-  .Shouye-block{
+  .ShouYe-block{
     width: 500px;
     height: 450;
 }
-  .Shouye-demonstration{
+  .ShouYe-demonstration{
     font-size: 30px;
     display:block;
    text-align:center;
 }
 
-.Shouye-el-carousel__item h4 {
+.ShouYe-el-carousel__item h4 {
     color: #475669;
     font-size: 30px;
     opacity: 0.75;
@@ -84,16 +84,16 @@ export default {
     text-align:center;
   }
 
-  .Shouye-el-carousel__item:nth-child(2n) {
+  .ShouYe-el-carousel__item:nth-child(2n) {
      background-color: #99a9bf;
   }
   
-  .Shouye-el-carousel__item:nth-child(2n+1) {
+  .ShouYe-el-carousel__item:nth-child(2n+1) {
      background-color: #d3dce6;
   }
 
 
- .Shouye-count-box{
+ .ShouYe-count-box{
         height: 203px;
         width: 1292px;
         background: rgb(142, 169, 199);
@@ -106,7 +106,7 @@ export default {
         display: flex;
         justify-content:space-between;
     }
-    .Shouye-count-item{
+    .ShouYe-count-item{
         height: 120px;
         width: 500px;
         border: 1px;
@@ -116,22 +116,22 @@ export default {
         padding-top: 40px;
     }
 
-    .Shouye-title{
+    .ShouYe-title{
         margin: 1px;
         font: 1em sans-serif;
         color: #000;
 
     }
-    .Shouye-count{
+    .ShouYe-count{
         font-size: 2em;
         font-weight: 800;
     }
-    .Shouye-perc{
+    .ShouYe-perc{
         font-size: 0.8;
         opacity: 0.6;
     }
 
-   .Shouye-monitor{
+   .ShouYe-monitor{
        width: 1400px;
        height: 1000px;
        margin-top: 10px;
