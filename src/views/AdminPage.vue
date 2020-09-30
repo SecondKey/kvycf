@@ -2,23 +2,23 @@
 <el-container class="AdminPage_el-container">
   <el-aside class="AdminPage_el-aside"  style="overflow:unset">
         <div class="AdminPage_nav-item">
-            <i id="icon" class="el-icon-s-home"></i>
+            <router-link to="/ShouYe"><i id="icon" class="el-icon-s-home"></i></router-link>
             <div class="AdminPage_tip">首页</div>
         </div>
         <div class="AdminPage_nav-item">
-            <i id="icon" class="el-icon-s-custom"></i>
+            <router-link to="/KeHu"><i id="icon" class="el-icon-s-custom"></i></router-link>
             <div class="AdminPage_tip">客户</div>
         </div>
         <div class="AdminPage_nav-item">
-            <i id="icon" class="el-icon-s-unfold"></i>
-            <div class="AdminPage_tip">历史</div>
+            <router-link to="/LiaoTianJiLu"><i id="icon" class="el-icon-s-unfold"></i></router-link>
+            <div class="AdminPage_tip">聊天记录</div>
         </div>
         <div class="AdminPage_nav-item">
-            <i id="icon" class="el-icon-s-order"></i>
+            <router-link to="/GongDan"><i id="icon" class="el-icon-s-order"></i></router-link>
             <div class="AdminPage_tip">工单</div>
         </div>
         <div class="AdminPage_nav-item">
-            <i id="icon" class="el-icon-s-tools"></i>
+            <router-link to="/SheZhi"><i id="icon" class="el-icon-s-tools"></i></router-link>
             <div class="AdminPage_tip"> 设置 </div>
         </div>
 

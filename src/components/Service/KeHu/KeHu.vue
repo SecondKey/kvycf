@@ -1,34 +1,36 @@
 <template>
-    <div class="kehu-page">
-     <KeHuItem class="kehu-box"></KeHuItem>
+  <div class="kehu-page">
+    <el-container class="kehu-box">
+      <KeHuItem2></KeHuItem2>
+      <KeHuItem1></KeHuItem1>
+    </el-container>
   </div>
 </template>
 
 <script>
-import KeHuItem from './KeHuItem'
+import KeHuItem1 from './KeHuItem1'
+import KeHuItem2 from './KeHuItem2'
 export default {
-  components:{
-    'KeHuItem':KeHuItem
+  components: {
+    KeHuItem1: KeHuItem1,
+    KeHuItem2: KeHuItem2
   }
-      
 }
 </script>
 
 <style>
-.kefu-page{
+.kefu-page {
   width: 1500px;
   height: 1180px;
   background-color: blue;
 }
-.kehu-box{
+.kehu-box {
   width: 1400px;
   height: 1100px;
-  background-color:#fff;
-  
+  background-color: #fff;
+
   top: 70px;
   left: 70px;
-  border: 1px solid
+  border: 1px solid;
 }
-
-
 </style>

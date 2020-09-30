@@ -2,7 +2,7 @@
     
 <el-container class="">
     
-  <el-aside class="ServicePage_aside" style="overflow:unset;width: 400px;">
+  <el-aside class="SheZhi_aside" style="overflow:unset;width: 400px;">
       <div class="part">
 
       </div>
@@ -15,7 +15,7 @@
 
   </el-aside>
 
-  <el-main  class="ServicePage_main">
+  <el-main  class="SheZhi_main">
       
   </el-main>
 
@@ -32,7 +32,7 @@ export default {
 
 <style>
 
-.ServicePage_aside{
+.SheZhi_aside{
     height: 1120px;
     background-color: rgb(130, 164, 236);
 
@@ -50,7 +50,7 @@ export default {
 
 }
 
-.ServicePage_main{
+.SheZhi_main{
     width: 700px;
     height: 1120px;
     left: 0;

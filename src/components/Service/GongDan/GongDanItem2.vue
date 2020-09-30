@@ -1,64 +1,6 @@
 <template>
   <div>
     <div class="header">
-      <el-dropdown>
-        <span class="el-dropdown-link">
-          全部状态<i class="el-icon-arrow-down el-icon--right"></i>
-        </span>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item v-for="cs in allCustomerServices" :key="cs.id">{{
-            cs.name
-          }}</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
-
-      <el-dropdown>
-        <span class="el-dropdown-link">
-          全部优先级<i class="el-icon-arrow-down el-icon--right"></i>
-        </span>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item v-for="co in allCustomerOrigin" :key="co.id">{{
-            co.name
-          }}</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
-<el-dropdown>
-        <span class="el-dropdown-link">
-          全部分类<i class="el-icon-arrow-down el-icon--right"></i>
-        </span>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item v-for="cs in allCustomerSort" :key="cs.id">{{
-            cs.name
-          }}</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown><el-dropdown>
-        <span class="el-dropdown-link">
-          全部渠道<i class="el-icon-arrow-down el-icon--right"></i>
-        </span>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item v-for="cs in allCustomerRoad" :key="cs.id">{{
-            cs.name
-          }}</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown><el-dropdown>
-        <span class="el-dropdown-link">
-          全部客服组<i class="el-icon-arrow-down el-icon--right"></i>
-        </span>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item v-for="cs in allCustomerTeam" :key="cs.id">{{
-            cs.name
-          }}</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown><el-dropdown>
-        <span class="el-dropdown-link">
-          全部客服<i class="el-icon-arrow-down el-icon--right"></i>
-        </span>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item v-for="cs in allCustomerService" :key="cs.id">{{
-            cs.name
-          }}</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
       <div class="block">
         <el-date-picker
           v-model="value1"
@@ -80,7 +22,7 @@
       <el-button
         type="primary"
         @click="dialogFormVisible = true"
-        style="position: relative; top: -105px; left: 550px"
+        style="position: relative; top: -65px; left: 15px"
         >添加工单</el-button>
         <el-dialog title="新建工单" :visible.sync="dialogFormVisible">
   <el-form :model="form">
@@ -228,106 +170,6 @@ export default {
           desc: ''
         },
         formLabelWidth: '100px',
-      allCustomerServices: [
-        {
-          id: 1,
-          name: "未分配",
-        },
-        {
-          id: 2,
-          name: "待处理",
-        },
-        {
-          id: 3,
-          name: "处理中",
-        },
-        {
-          id: 4,
-          name: "已解决",
-        },
-        {
-          id: 5,
-          name: "已关闭",
-        },
-      ],
-      allCustomerOrigin: [
-        {
-          id: 1,
-          name: "低",
-        },
-        {
-          id: 2,
-          name: "中",
-        },
-        {
-          id: 3,
-          name: "高",
-        },
-        {
-          id: 4,
-          name: "紧急",
-        },
-      ],
-      allCustomerSort: [
-        {
-          id: 1,
-          name: "分类一",
-        },
-        {
-          id: 2,
-          name: "分类二",
-        },
-        {
-          id: 3,
-          name: "分类三",
-        }
-      ],
-      allCustomerRoad: [
-        {
-          id: 1,
-          name: "手动录入",
-        },
-        {
-          id: 2,
-          name: "即时聊天",
-        },
-        {
-          id: 3,
-          name: "客户管理",
-        },
-      ],
-      allCustomerTeam: [
-        {
-          id: 1,
-          name: "客服组一",
-        },
-        {
-          id: 2,
-          name: "客服组二",
-        },
-        {
-          id: 3,
-          name: "客服组三",
-        },
-      ],
-      allCustomerService: [
-        {
-          id: 1,
-          name: "张大仙",
-        },
-        {
-          id: 2,
-          name: "梦泪",
-        },
-        {
-          id: 3,
-          name: "一诺",
-        },
-        {
-          id: 4,
-          name: "上好佳",
-        },
-      ],
       customers: [
         {
           name: "河北省秦皇岛市客户",
@@ -456,7 +298,7 @@ export default {
 }
 .add {
   position: absolute;
-  left: 660px;
+  left: 120px;
   top: 15px;
   width: 100px;
   background-color: #dcdfe6;
@@ -467,7 +309,7 @@ export default {
 }
 .add1{
   position: absolute;
-  left: 770px;
+  left: 227px;
   top: 15px;
   width: 100px;
   background-color: #dcdfe6;
