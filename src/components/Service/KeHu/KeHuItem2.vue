@@ -4,7 +4,7 @@
     <!--  -->
       <el-menu :default-openeds="['1', '3']">
         <el-submenu index="1">
-          <template slot="title" style="background-color: black"> <P class="Index_1st">普通用户</p></template>
+          <template slot="title"> <P class="Index_1st">普通用户</p></template>
           <el-menu-item-group>
             <el-menu-item index="1-1">用户1</el-menu-item>
             <el-menu-item index="1-2">用户2</el-menu-item>
