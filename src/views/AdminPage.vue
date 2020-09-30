@@ -51,21 +51,20 @@
 </template>
 
 <script>
-export default {
-    name:'Header',
-    components:{CompanyPage,CompanyPageR1},
-    data(){
-        return{
-            activeIndex: '1',
-            currentView:''
-        }
+  export default {
+    data() {
+      return {
+        activeIndex: '1',
+        activeIndex2: '1'
+      };
     },
-    methods:{
-        tabChange(tabItem) {
-            this.currentView = tabItem;
-        }
+    methods: {
+      handleSelect(key, keyPath) {
+        console.log(key, keyPath);
+      }
     }
-}
+  }
+    
 
 </script>
 
