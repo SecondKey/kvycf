@@ -7,16 +7,25 @@
         <div class="ShouYe-perc">较昨日上涨{{ item.perc }}</div>
       </div>
     </div>
-    <div class="ShouYe-zhong">
-      <div class="ShouYe-zujian">
-        <ShouYeTuBiao ></ShouYeTuBiao>
-      </div>
 
-      <div class="ShouYe-tongzhi"></div>
+    <div class="ShouYe-zhong">
+      <ShouYeTuBiao class="ShouYe-zujian">
+      </ShouYeTuBiao>
+
+      <div class="ShouYe-tongzhi">
+          <h4 class="ShouYe-h4">通知</h4>
+          <p>时间日期 </p>
+          <p></p>
+          <p></p>
+
+
+      </div>
     </div>
 
     <div class="ShouYe-monitor">
-      <div></div>
+      <div>
+
+      </div>
     </div>
   </div>
 </template>
@@ -28,7 +37,6 @@ export default {
   components: {
     ShouYeTuBiao: ShouYeTuBiao,
   },
-
   data: function () {
     return {
       navItems: [
@@ -62,13 +70,14 @@ export default {
 .ShouYe-frame {
   width: 1200px;
   height: 2000px;
-  background-color: aquamarine;
+  background-color: rgb(109, 177, 154);
 }
+
 
 .ShouYe-count-box {
   height: 203px;
   width: 1200px;
-  background: rgb(229, 237, 245);
+  background: rgb(238, 241, 245);
   border-radius: 4px;
   margin-top: 30px;
 
@@ -82,44 +91,55 @@ export default {
   height: 120px;
   width: 500px;
   border: 1px;
-  background-color: rgba(85, 143, 214, 0.05);
+  background-color: rgb(253, 193, 120);
   font-size: 13px;
   margin: 10px;
+  line-height: 40px;
+  text-align: center;
   padding-top: 40px;
+  
 }
 
 .ShouYe-title {
   margin: 1px;
-  font: 1em sans-serif;
+  font-size: 1.5em;
   color: #000;
 }
 .ShouYe-count {
   font-size: 2em;
   font-weight: 800;
+  color: rgb(36, 147, 164);
 }
 .ShouYe-perc {
   font-size: 0.8;
   opacity: 0.6;
 }
 
+
 .ShouYe-zhong {
   width: 1200px;
-  height: 400;
+  height: 400px;
 }
 .ShouYe-zujian {
   width: 800px;
   height: 400px;
-  margin: 5px;
   float: left;
   background-color: #fff; 
 }
 .ShouYe-tongzhi {
-  width: 380px;
+  width: 395px;
   height: 400px;
-  margin: 2px;
+  margin-left: 5px;
   float: right;
   background-color: #fff;
 }
+  .ShouYe-h4{
+      font-size: 20px;
+      text-align: center;
+
+  }
+
+
 
 .ShouYe-monitor {
   width: 1200px;
