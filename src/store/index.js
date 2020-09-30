@@ -133,7 +133,8 @@ export default new Vuex.Store({
             email: '2278228786@qq.com'
           }
         ], //客服人员
-        nService: [] //正在注册的客服人员
+        nService: [], //正在注册的客服人员
+        order: []
       }
     ]
     //#endregion

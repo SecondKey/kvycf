@@ -368,10 +368,11 @@ export default {
   padding: 0;
 }
 .loginDIV {
-  position: absolute;
+  position: relative;
   left: 50%;
-  top: 50px;
+  top: 50%;
   margin-left: -150px;
+  margin-top: -260px;
   text-align: center;
   width: 300px;
 }
