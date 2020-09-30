@@ -35,9 +35,15 @@ import Service_ShouYe from '../components/Service/ShouYe/ShouYe'
 
 //#region 管理员页面
 import AdminPage from '../views/AdminPage'
+
+import Admin_ShouYe from '../components/Administor/Shouye/Shouye'
+import Admin_KeFu from ''
+import Admin_KeHu from '../components/Administor/KeHu/KeHu'
+import Admin_GongDan from '../components/Administor/GongDan/GongDan'
+import Admin_LiaoTianJiLu from '../components/Administor/LiaoTianJiLu/LiaoTianJiLu'
+import Admin_Shezhi from '../components/Administor/Shezhi/Shezhi'
+
 //#endregion
-
-
 
 Vue.use(VueRouter)
 
@@ -138,6 +144,7 @@ const routes = [
     ]
   },
   //#endregion
+
   //#region Service路由
   {
     path: '/ServicePage',
@@ -182,11 +189,44 @@ const routes = [
     ]
   },
   //#endregion
+
   //#region Admin路由
   {
     path: '/AdminPage',
     name: 'AdminPage',
-    component: AdminPage
+    component: AdminPage,
+    children: [
+      {
+        path: '/AdminPage/ShouYe',
+        name: 'Admin_ShouYe',
+        component: Admin_ShouYe
+      },
+      {
+        path: '/AdminPage/KeFu',
+        name: 'Admin_KeFu',
+        component: Admin_KeFu
+      },
+      {
+        path: '/AdminPage/KeHu',
+        name: 'Admin_KeHu',
+        component: Admin_KeHu
+      },
+      {
+        path: '/AdminPage/GongDan',
+        name: 'Admin_GongDan',
+        component: Admin_GongDan
+      },
+      {
+        path: '/AdminPage/LiaoTianJiLu',
+        name: 'Admin_LiaoTianJiLu',
+        component: Admin_LiaoTianJiLu
+      },
+      {
+        path: '/AdminPage/Shezhi',
+        name: 'Admin_Shezhi',
+        component: Admin_Shezhi
+      }
+    ]
   }
   //#endregion
 ]
