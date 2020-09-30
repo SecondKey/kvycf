@@ -111,7 +111,7 @@ export default {
   height: 400px;
   margin: 5px;
   float: left;
-  background-color: #fff;
+  background-color: #fff; 
 }
 .ShouYe-tongzhi {
   width: 380px;
