@@ -1,25 +1,25 @@
 <template>
-    <div class="kehu-page">
+  <div class="kehu-page">
     <KeHuItem class="kehu-box"></KeHuItem>
-    </div>
+  </div>
 </template>
 
 <script>
 import KeHuItem from './KeHuItem'
 export default {
-  components:{
-    'KeHuItem':KeHuItem
-  },
+  components: {
+    KeHuItem: KeHuItem
+  }
 }
 </script>
 
 <style>
-.kefu-page{
+.kefu-page {
   width: 1410px;
   height: 1160px;
   background-color: blue;
 }
-.kehu-box{
+.kehu-box {
   width: 1380px;
   height: 1120px;
   background-color: blueviolet;
