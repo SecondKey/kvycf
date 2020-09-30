@@ -134,7 +134,92 @@ export default new Vuex.Store({
           }
         ], //客服人员
         nService: [], //正在注册的客服人员
-        order: []
+        client: [
+          {
+            id: 0, //k客户编号
+            name: '客户', //客户名称
+            tel: '13912345678', //手机
+            email: '12345678@qq.com', //邮箱
+            position: '北京市', //地址
+            rate: 10, //信誉评级
+            visitTime: '2020.9.28', //访问时间
+            order: [0, 1, 2, 3] //订单
+          },
+          {
+            id: 1,
+            name: '客户01',
+            tel: '13912345678',
+            email: '12345678@qq.com',
+            position: '北京市',
+            rate: 10,
+            visitTime: '2020.9.28',
+            order: [4, 5, 6]
+          },
+          {
+            id: 2,
+            name: '客户02',
+            tel: '13912345678',
+            email: '12345678@qq.com',
+            position: '北京市',
+            rate: 10,
+            visitTime: '2020.9.28',
+            order: [7, 8, 9]
+          },
+          {
+            id: 3,
+            name: '客户03',
+            tel: '13912345678',
+            email: '12345678@qq.com',
+            position: '北京市',
+            rate: 10,
+            visitTime: '2020.9.28',
+            order: [7, 8, 9]
+          },
+          {
+            id: 4,
+            name: '客户04',
+            tel: '13912345678',
+            email: '12345678@qq.com',
+            position: '北京市',
+            rate: 10,
+            visitTime: '2020.9.28',
+            order: [7, 8, 9]
+          },
+          {
+            id: 5,
+            name: '客户05',
+            tel: '13912345678',
+            email: '12345678@qq.com',
+            position: '北京市',
+            rate: 10,
+            visitTime: '2020.9.28',
+            order: [7, 8, 9]
+          }
+        ],
+        order: [
+          {
+            id: 0, //工单id
+            title: '手机维修', //工单标题
+            state: false, //工单状态，工单是否已经完成
+            client: 0, //发起工单的客户的id
+            category: 0, //分类
+            priority: 3, //优先级
+            createTime: '2019.12.05', //创建时间
+            convers: [
+              {
+                id: 0, //会话的id
+                service: 0, //接待客服id
+                msg: [
+                  {
+                    talker: 0, //说话的人，0客户，1客服
+                    time: '2019.12.05 13:23',
+                    contant: '我手机坏了'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
     //#endregion
