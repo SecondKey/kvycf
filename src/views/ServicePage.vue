@@ -169,7 +169,7 @@
 }
 
 .ServicePage_menu-head{
-    width: 150px;
+    width: 224px;
     height: 60px;
     border-width: 0px;
     position: absolute;
@@ -180,7 +180,7 @@
     border: none;
 }
   .ServicePage_el-menu-demo{
-    width: 150px;
+    width: 224px;
     height: 60px;
 
     position: absolute;
