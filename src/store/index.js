@@ -218,6 +218,116 @@ export default new Vuex.Store({
                 ]
               }
             ]
+          },
+          {
+            id: 1, //工单id
+            title: '手机维修', //工单标题
+            state: false, //工单状态，工单是否已经完成
+            client: 0, //发起工单的客户的id
+            category: 0, //分类
+            priority: 3, //优先级
+            createTime: '2019.12.05', //创建时间
+            convers: [
+              {
+                id: 0, //会话的id
+                service: 0, //接待客服id
+                msg: [
+                  {
+                    talker: 0, //说话的人，0客户，1客服
+                    time: '2019.12.05 13:23',
+                    contant: '我手机坏了'
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            id: 2, //工单id
+            title: '手机维修', //工单标题
+            state: false, //工单状态，工单是否已经完成
+            client: 0, //发起工单的客户的id
+            category: 0, //分类
+            priority: 3, //优先级
+            createTime: '2019.12.05', //创建时间
+            convers: [
+              {
+                id: 0, //会话的id
+                service: 0, //接待客服id
+                msg: [
+                  {
+                    talker: 0, //说话的人，0客户，1客服
+                    time: '2019.12.05 13:23',
+                    contant: '我手机坏了'
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            id: 3, //工单id
+            title: '手机维修', //工单标题
+            state: false, //工单状态，工单是否已经完成
+            client: 0, //发起工单的客户的id
+            category: 0, //分类
+            priority: 3, //优先级
+            createTime: '2019.12.05', //创建时间
+            convers: [
+              {
+                id: 0, //会话的id
+                service: 0, //接待客服id
+                msg: [
+                  {
+                    talker: 0, //说话的人，0客户，1客服
+                    time: '2019.12.05 13:23',
+                    contant: '我手机坏了'
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            id: 4, //工单id
+            title: '手机维修', //工单标题
+            state: false, //工单状态，工单是否已经完成
+            client: 0, //发起工单的客户的id
+            category: 0, //分类
+            priority: 3, //优先级
+            createTime: '2019.12.05', //创建时间
+            convers: [
+              {
+                id: 0, //会话的id
+                service: 0, //接待客服id
+                msg: [
+                  {
+                    talker: 0, //说话的人，0客户，1客服
+                    time: '2019.12.05 13:23',
+                    contant: '我手机坏了'
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            id: 5, //工单id
+            title: '手机维修', //工单标题
+            state: false, //工单状态，工单是否已经完成
+            client: 0, //发起工单的客户的id
+            category: 0, //分类
+            priority: 3, //优先级
+            createTime: '2019.12.05', //创建时间
+            convers: [
+              {
+                id: 0, //会话的id
+                service: 0, //接待客服id
+                msg: [
+                  {
+                    talker: 0, //说话的人，0客户，1客服
+                    time: '2019.12.05 13:23',
+                    contant: '我手机坏了'
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
