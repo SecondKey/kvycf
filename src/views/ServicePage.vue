@@ -2,27 +2,27 @@
 <el-container class="ServicePage_el-container">
   <el-aside class="ServicePage_el-aside"  style="overflow:unset;width: 64px;">
         <div class="ServicePage_nav-item">
-            <i id="icon" class="el-icon-s-home"></i>
+           <router-link to="/ShouYe"><i id="icon" class="el-icon-s-home"></i></router-link>
             <div class="ServicePage_tip">首页</div>
         </div>
         <div class="ServicePage_nav-item">
-            <i id="icon" class="el-icon-s-comment"></i>
+            <router-link to="/HuiHua"><i id="icon" class="el-icon-s-comment"></i></router-link>
             <div class="ServicePage_tip">会话</div>
         </div>
         <div class="ServicePage_nav-item">
-            <i id="icon" class="el-icon-s-custom"></i>
+            <router-link to="/KeHu"><i id="icon" class="el-icon-s-custom"></i></router-link>
             <div class="ServicePage_tip">客户</div>
         </div>
         <div class="ServicePage_nav-item">
-            <i id="icon" class="el-icon-s-unfold"></i>
+            <router-link to="/LiShi"><i id="icon" class="el-icon-s-unfold"></i></router-link>
             <div class="ServicePage_tip">历史</div>
         </div>
         <div class="ServicePage_nav-item">
-            <i id="icon" class="el-icon-s-order"></i>
+            <router-link to="/GongDan"><i id="icon" class="el-icon-s-order"></i></router-link>
             <div class="ServicePage_tip">工单</div>
         </div>
         <div class="ServicePage_nav-item">
-            <i id="icon" class="el-icon-s-tools"></i>
+            <router-link to="/components/Service/SheZhi/SheZhi"><i id="icon" class="el-icon-s-tools"></i></router-link>
             <div class="ServicePage_tip"> 设置 </div>
         </div>
 
@@ -50,12 +50,14 @@
 <el-main class="ServicePage_el-main" style="overflow:unset">
     <router-view></router-view>
     </el-main>
+
 </el-container>
 </template>
 
 <script>
 import CompanyPage from '@/components/Enter/Company/CompanyPage.vue'
 import CompanyPageR1 from '@/components/Enter/Company/CompanyPageR1.vue'
+
 export default {
     name:'Header',
     components:{CompanyPage,CompanyPageR1},
