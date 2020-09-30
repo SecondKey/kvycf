@@ -34,35 +34,20 @@ import KeHumsg from './KeHumsg.js'
 export default {
    data() {
       return {
-            
-            id:this.$store.state.SData_Company[0].client[1].id, //k客户编号
             name:this.$store.state.SData_Company[0].client[1].name,//客户名称
-            tel:this.$store.state.SData_Company[0].client[1].tel, //手机
-            email:this.$store.state.SData_Company[0].client[1].email, //邮箱
-            position:this.$store.state.SData_Company[0].client[1].position, //地址
-            rate: this.$store.state.SData_Company[0].client[1].rate, //信誉评级
-            visitTime: this.$store.state.SData_Company[0].client[1].visitTime, //访问时间
-            order: [0, 1, 2, 3] //订单
-            
             }
         },
-        mounted:function() {
-          var _this=this
-          KeHumsg.on('val',function(m) {
-            _this.name=m;
-          })
-          
-        },
+       
 
-    methods: {
-      menu1:function(){
-        KeHumsg.$emit("val","this.$store.state.SData_Company[0].client[1]");
-      },
-      menu2:function(){
-        KeHumsg.$emit("val","this.$store.state.SData_Company[0].client[2]");
-      }
+  //   methods: {
+  //     menu1:function(){
+  //       KeHumsg.$emit("val","1");
+  //     },
+  //     menu2:function(){
+  //       KeHumsg.$emit("val","2");
+  //     }
    
-  },
+  // },
  
 }
 </script>
