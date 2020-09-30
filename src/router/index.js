@@ -37,7 +37,7 @@ import Service_ShouYe from '../components/Service/ShouYe/ShouYe'
 import AdminPage from '../views/AdminPage'
 
 import Admin_ShouYe from '../components/Administor/Shouye/Shouye'
-import Admin_KeFu from ''
+import Admin_KeFu from '../components/Administor/KeFu/KeFu'
 import Admin_KeHu from '../components/Administor/KeHu/KeHu'
 import Admin_GongDan from '../components/Administor/GongDan/GongDan'
 import Admin_LiaoTianJiLu from '../components/Administor/LiaoTianJiLu/LiaoTianJiLu'
