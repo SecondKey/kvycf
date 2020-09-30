@@ -1,14 +1,21 @@
 <template>
     <div class="kehu-page">
-     <KeHuItem class="kehu-box"></KeHuItem>
+      <el-container class="kehu-box">
+      <KeHuItem2></KeHuItem2>
+     <KeHuItem1></KeHuItem1>
+     
+   </el-container>
   </div>
+  
 </template>
 
 <script>
-import KeHuItem from './KeHuItem'
+import KeHuItem1 from './KeHuItem1'
+import KeHuItem2 from './KeHuItem2'
 export default {
   components:{
-    'KeHuItem':KeHuItem
+    'KeHuItem1':KeHuItem1,
+    'KeHuItem2':KeHuItem2
   }
       
 }
@@ -29,6 +36,4 @@ export default {
   left: 70px;
   border: 1px solid
 }
-
-
 </style>
