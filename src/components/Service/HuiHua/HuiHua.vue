@@ -38,7 +38,7 @@ export default {
 }
 .huihua-box2{
     width: 850px;
-    height: 1100px;
+    height: 850px;
     background-color: green;
     position: absolute;
     top: 50px;
