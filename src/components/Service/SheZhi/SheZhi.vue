@@ -1,8 +1,20 @@
 <template>
-  <div style="width:100% ;margin-top:-20px">
-    <div style=" height:100%;width:300px;background:white;position: fixed;">
+  <div style="width:100%;o">
+    <div
+      style="
+      margin-left:1px;
+      height:100%;
+      width:300px;
+      background:white;
+      position: fixed;
+      border-left: solid black 1px;
+      border-right: solid black 1px;"
+    >
       <div
-        style="padding-top:20px;padding-bottom:20px;padding-left:16px;border-bottom: solid black 0.2px;"
+        style="padding-top:20px;
+        padding-bottom:20px;
+        padding-left:16px;
+        border-bottom: solid black 0.2px;"
       >
         客服设置
       </div>
@@ -48,9 +60,9 @@
         <el-step></el-step>
       </el-steps>
     </div>
-    <div style="background:white;height:2000px;border-left:solid black">
+    <div style="" class="test">
       <div>
-        <h1></h1>
+        <div class="settingHead">账户设置</div>
       </div>
     </div>
   </div>
@@ -80,7 +92,21 @@ export default {
 
 <style>
 .test {
-  position: fixed;
-  border-left: solid black 0.5px;
+  background: white;
+  height: 2000px;
+  border-left: solid black 1px;
+  width: calc(100% - 301px);
+  margin-left: 300px;
+  text-align: left;
+}
+
+.settingArea {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.settingHead {
+  font-size: 50px;
+  color: black;
 }
 </style>

@@ -215,9 +215,25 @@ export default new Vuex.Store({
                 service: 0, //接待客服id
                 msg: [
                   {
-                    talker: 0, //说话的人，0客户，1客服
+                    id: 0,
+                    owner: 0, //说话的人，0客户，1客服
+                    ownerID: 1,
                     time: '2019.12.05 13:23',
-                    contant: '我手机坏了'
+                    contant: '你好,我的手机坏了，那你能帮帮我吗？'
+                  },
+                  {
+                    id: 1,
+                    owner: 1, //说话的人，0客户，1客服
+                    ownerID: 0,
+                    time: '2019.12.05 13:24',
+                    contant: '你什么配置？'
+                  },
+                  {
+                    id: 2,
+                    owner: 0, //说话的人，0客户，1客服
+                    ownerID: 1,
+                    time: '2019.12.05 13:25',
+                    contant: '我8G内存'
                   }
                 ]
               }
