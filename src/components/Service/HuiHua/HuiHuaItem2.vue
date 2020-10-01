@@ -4,12 +4,15 @@
       <h2>王二</h2>
     </el-header>
     <el-main class="HuiHuaItem2_main">
-      <ul id="chat_ul" v-for="item in tabelData" :key="item.id">
+      <el-button id="send_btn" @click="kehusend" style="float:right">测试</el-button>
+      <ul id="chat_ul" 
+      v-for="item in this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].order[0].convers[0].msg"
+       :key="item.id">
         <li>
-          {{item.owner}},{{item.date}}:
+          {{item.owner}},{{item.time}}:
         </li>
         <li style="list-style-type:none" class="speech">
-          {{item.content}}
+          {{item.contant}}
         </li>
       </ul>
     </el-main>
@@ -26,6 +29,7 @@
       <!-- <el-button id="choose_btn" @click="choose">选择</el-button> -->
       <input type="text" id="send_txt" v-model="send_txt" class="HuiHuaItem_input">
       <el-button id="send_btn" @click="send" type="primary" style="float:right">发送</el-button>
+      
     </el-footer>
   </el-container>
 </template> 
@@ -69,6 +73,7 @@ export default {
   },
   methods:{
     send(){
+      console.log()
     let myDate=new Date()
       // console.log(this.send_txt)
     var chat_ul = document.getElementById('chat_ul');
@@ -76,7 +81,33 @@ export default {
       if (send_txt.value == '') {
           alert("请不要惜字如金");
       } else {
-        this.tabelData.push({id:this.tabelData.length,owner:"客服小何",date:myDate.toLocaleString(),content:this.send_txt})
+        this.$store.commit('SData_AddConvers',
+          {
+          id:this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].order[0].convers[0].msg.length,
+          owner:"客服房镇",
+          time:myDate.toLocaleString(),
+          contant:this.send_txt
+          })
+          this.send_txt = '';          
+        }
+        this.tabelData.sort()
+    },
+    kehusend(){
+      console.log()
+    let myDate=new Date()
+      // console.log(this.send_txt)
+    var chat_ul = document.getElementById('chat_ul');
+    var chat_span = chat_ul.getElementsByTagName('span');
+      if (send_txt.value == '') {
+          alert("请不要惜字如金");
+      } else {
+        this.$store.commit('SData_AddConvers',
+          {
+          id:this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].order[0].convers[0].msg.length,
+          owner:"客户01",
+          time:myDate.toLocaleString(),
+          contant:this.send_txt
+          })
           this.send_txt = '';          
         }
         this.tabelData.sort()
@@ -88,6 +119,7 @@ export default {
 <style>
 .HuiHuaItem2_container {
   background-color: gainsboro !important;
+  text-align: left;
 }
 .HuiHuaItem2_header {
   background-color: white;

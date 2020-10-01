@@ -205,33 +205,30 @@ export default new Vuex.Store({
             id: 0, //工单id
             title: '手机维修', //工单标题
             state: false, //工单状态，工单是否已经完成
-            client: 0, //发起工单的客户的id
+            client: 1, //发起工单的客户的id
             category: 0, //分类
             priority: 3, //优先级
             createTime: '2019.12.05', //创建时间
             convers: [
               {
                 id: 0, //会话的id
-                service: 0, //接待客服id
+                service: 1, //接待客服id
                 msg: [
                   {
                     id: 0,
-                    owner: 0, //说话的人，0客户，1客服
-                    ownerID: 1,
+                    owner: '客服房镇',
                     time: '2019.12.05 13:23',
                     contant: '你好,我的手机坏了，那你能帮帮我吗？'
                   },
                   {
                     id: 1,
-                    owner: 1, //说话的人，0客户，1客服
-                    ownerID: 0,
+                    owner: '客户01',
                     time: '2019.12.05 13:24',
                     contant: '你什么配置？'
                   },
                   {
                     id: 2,
-                    owner: 0, //说话的人，0客户，1客服
-                    ownerID: 1,
+                    owner: '客服房镇',
                     time: '2019.12.05 13:25',
                     contant: '我8G内存'
                   }
@@ -424,8 +421,15 @@ export default new Vuex.Store({
 
     OData_Client_SelectClient(state, num) {
       state.OData_Client_nowChoiseClient = num
-    }
+    },
 
+    //#endregion
+    
+    //#region 全部数据
+    SData_AddConvers(state,newConvers)
+    {
+        state.SData_Company[state.Data_Login_Conpany].order[0].convers[0].msg.push(newConvers)
+    }
     //#endregion
   },
   actions: {},

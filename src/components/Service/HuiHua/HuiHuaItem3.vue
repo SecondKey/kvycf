@@ -32,20 +32,22 @@ export default {
   data(){
     return{
       kehu:{
-        adress:'198.128.255.0',
-        name:'王二',
-        tel:'13855112270',
-        email:'1725433499@qq.com',
-        rate:1,
-        time:'2020-9-30 20:50:58'
+        id: 0, //k客户编号
+        name: '客户', //客户名称
+        tel: '13912345670', //手机
+        email: '12345678@qq.com', //邮箱
+        position: '北京市', //地址
+        rate: 10, //信誉评级
+        visitTime: '2020.9.28', //访问时间
       },
       gongdan:{
-        id:0,
-        title:'手机维修',
-        kehuid:0,
-        sort:0,
-        level:3,
-        time:'2020-9-30 20:50:58'
+        id: 0, //工单id
+        title: '手机维修', //工单标题
+        state: false, //工单状态，工单是否已经完成
+        client: 1, //发起工单的客户的id
+        category: 0, //分类
+        priority: 3, //优先级
+        createTime: '2019.12.05', //创建时间
       }
     }
   }
