@@ -1,17 +1,10 @@
 <template>
   <div class="containedDiv">
     <ShouYeItem1 class="shouye-box1"></ShouYeItem1>
-    <<<<<<< HEAD
-    <ShouYeItem2 class="shouye-box2"></ShouYeItem2>
-    <ShouYeItem3 class="shouye-box3"></ShouYeItem3>
-    <ShouYeItem4 class="shouye-box4"></ShouYeItem4>
-    <ShouYeItem5 class="shouye-box5"></ShouYeItem5>
-    =======
-    <ShouYeItem2 class="shouye-box2"></ShouYeItem2>
 
+    <ShouYeItem2 class="shouye-box2"></ShouYeItem2>
+    
     <ShouYeItem4 class="shouye-box4"></ShouYeItem4>
-
-    >>>>>>> 4819c4862c83db0b158e80e95d45b3f5b4c6b12b
   </div>
 </template>
 
