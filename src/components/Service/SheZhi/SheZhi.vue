@@ -1,6 +1,6 @@
 <template>
-  <div style="width:100%">
-    <div style="height:100%;width:300px;background:white;position: fixed;">
+  <div style="width:100% ;margin-top:-20px">
+    <div style=" height:100%;width:300px;background:white;position: fixed;">
       <div
         style="padding-top:20px;padding-bottom:20px;padding-left:16px;border-bottom: solid black 0.2px;"
       >
