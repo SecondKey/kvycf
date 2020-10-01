@@ -1,5 +1,5 @@
 <template>
-  <div class="kehu-page">
+  <div class="containedDiv">
     <el-container class="kehu-box">
       <KeHuItem2></KeHuItem2>
       <KeHuItem1></KeHuItem1>

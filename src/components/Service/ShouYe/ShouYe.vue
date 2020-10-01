@@ -1,10 +1,10 @@
 <template>
-  <div class="shouye-page">
+  <div class="containedDiv">
     <ShouYeItem1 class="shouye-box1"></ShouYeItem1>
-      <ShouYeItem2 class="shouye-box2"></ShouYeItem2>
-      <ShouYeItem3 class="shouye-box3"></ShouYeItem3>
-      <ShouYeItem4 class="shouye-box4"></ShouYeItem4>
-      <ShouYeItem5 class="shouye-box5"></ShouYeItem5>
+    <ShouYeItem2 class="shouye-box2"></ShouYeItem2>
+    <ShouYeItem3 class="shouye-box3"></ShouYeItem3>
+    <ShouYeItem4 class="shouye-box4"></ShouYeItem4>
+    <ShouYeItem5 class="shouye-box5"></ShouYeItem5>
   </div>
 </template>
 
@@ -15,18 +15,20 @@ import ShouYeItem3 from './ShouYeItem3'
 import ShouYeItem4 from './ShouYeItem4'
 import ShouYeItem5 from './ShouYeItem5'
 export default {
-  components:{
-    'ShouYeItem1':ShouYeItem1,
-    'ShouYeItem2':ShouYeItem2,
-    'ShouYeItem3':ShouYeItem3,
-    'ShouYeItem4':ShouYeItem4,
-    'ShouYeItem5':ShouYeItem5
-  },
+  components: {
+    ShouYeItem1: ShouYeItem1,
+    ShouYeItem2: ShouYeItem2,
+    ShouYeItem3: ShouYeItem3,
+    ShouYeItem4: ShouYeItem4,
+    ShouYeItem5: ShouYeItem5
+  }
 }
 </script>
 
 <style>
 .shouye-page {
+  position: relative;
+  margin: 0 auto;
   width: 1410px;
   height: 1160px;
   background-color: rgb(226, 23, 23);
@@ -38,7 +40,6 @@ export default {
   top: 100px;
   left: 500px;
   background-color: blue;
-  
 }
 .shouye-box2 {
   width: 200px;
