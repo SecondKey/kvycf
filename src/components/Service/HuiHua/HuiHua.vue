@@ -28,7 +28,7 @@ export default {
 .huihua-box1{
     width: 240px;
     height: 850px;
-    background-color: hotpink;
+    background-color: whitesmoke;
     position: absolute;
     top: 50px;
     left: 40px;

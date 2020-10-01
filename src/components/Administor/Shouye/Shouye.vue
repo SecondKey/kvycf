@@ -1,5 +1,6 @@
 <template>
   <div class="ShouYe-frame">
+
     <div class="ShouYe-count-box">
       <div class="ShouYe-count-item" v-for="item in navItems" :key="item.title">
         <div class="ShouYe-title">{{ item.title }}</div>
@@ -14,10 +15,41 @@
 
       <div class="ShouYe-tongzhi">
           <h4 class="ShouYe-h4">通知</h4>
-          <p>时间日期 </p>
-          <p></p>
-          <p></p>
-
+          <table>
+        <thead>
+            <tr>
+                <th class="ShouYe-th">公告</th>
+                <th class="ShouYe-th">时间</th>
+            </tr><br>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="ShouYe-td"><u>WCT-24新品上线 </u></td>
+                <td class="ShouYe-td1">2019/09/12 10:99</td>
+            </tr><br>
+            <tr>
+                <td class="ShouYe-td"><u>WCT-24新品上线 </u></td>
+                <td class="ShouYe-td1">2019/09/12 10:99</td>
+            </tr><br>
+            <tr>
+                <td class="ShouYe-td"><u>WCT-24新品上线 </u></td>
+                <td class="ShouYe-td1">2019/09/12 10:99</td>
+            </tr><br>
+            <tr>
+                <td class="ShouYe-td"><u>WCT-24新品上线 </u></td>
+                <td class="ShouYe-td1">2019/09/12 10:99</td>
+            </tr><br>
+            <tr>
+                <td class="ShouYe-td"><u>WCT-24新品上线 </u></td>
+                <td class="ShouYe-td1">2019/09/12 10:99</td>
+            </tr><br>
+            <tr>
+                <td class="ShouYe-td"><u>WCT-24新品上线 </u></td>
+                <td class="ShouYe-td1">2019/09/12 10:99</td>
+            </tr><br>
+            
+            </tbody>
+         </table>
 
       </div>
     </div>
@@ -69,7 +101,7 @@ export default {
 <style>
 .ShouYe-frame {
   width: 1200px;
-  height: 2000px;
+  height: 1620px;
   background-color: rgb(109, 177, 154);
 }
 
@@ -79,11 +111,10 @@ export default {
   width: 1200px;
   background: rgb(238, 241, 245);
   border-radius: 4px;
-  margin-top: 30px;
+  margin-top: 8px;
 
   box-sizing: border-box;
   padding: 14px 20px;
-
   display: flex;
   justify-content: space-between;
 }
@@ -91,17 +122,19 @@ export default {
   height: 120px;
   width: 500px;
   border: 1px;
-  background-color: rgb(253, 193, 120);
-  font-size: 13px;
+  background-color: rgb(163, 196, 248);
+
+  font-size: 14px;
   margin: 10px;
   line-height: 40px;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 14px;
+  padding-bottom: 20px;
   
 }
 
 .ShouYe-title {
-  margin: 1px;
+    
   font-size: 1.5em;
   color: #000;
 }
@@ -131,20 +164,38 @@ export default {
   height: 400px;
   margin-left: 5px;
   float: right;
-  background-color: #fff;
+  background-color: rgb(171, 236, 223);
 }
   .ShouYe-h4{
       font-size: 20px;
       text-align: center;
 
   }
+ .ShouYe-th{
+     width: 200px;
+     font-size: 20px;
+     text-align: center;
 
+ }
+  .ShouYe-td{
+     width: 200px;
+     font-size: 17px;
+     text-align: center;
+     color: rgb(13, 13, 174);
 
+ }
+ .ShouYe-td1{
+     width: 200px;
+     text-align: center;
+     font-size: 17px;
+     color: rgb(61, 64, 64);
+
+ }
 
 .ShouYe-monitor {
   width: 1200px;
   height: 1000px;
   margin-top: 10px;
-  background-color: rgb(204, 187, 164);
+  background-color: rgb(243, 228, 208);
 }
 </style>
