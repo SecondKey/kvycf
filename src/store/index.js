@@ -141,7 +141,7 @@ export default new Vuex.Store({
         client: [
           {
             id: 0, //k客户编号
-            name: '客户', //客户名称
+            name: '客户00', //客户名称
             tel: '13912345670', //手机
             email: '12345678@qq.com', //邮箱
             position: '北京市', //地址
