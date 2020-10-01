@@ -25,8 +25,12 @@ export default new Vuex.Store({
     Data_Login_ID: 0,
     //#endregion
 
-    //#endregion
     //#region 模拟数据 加S
+
+    //#region 其他数据
+    OData_Client_nowChoiseClient: 0,
+    //#endregion
+
     //#region EnterPage所有数据
     SData_Enter_ServiceInfo: [
       {
@@ -397,7 +401,16 @@ export default new Vuex.Store({
       Data_Login_Conpany = data.cid
       Data_Login_Type = 'Service'
       Data_Login_ID = data.id
+    },
+    //#endregion
+
+    //#region 其他数据
+
+    OData_Client_SelectClient(state, num) {
+      state.OData_Client_nowChoiseClient = num
     }
+
+    //#endregion
   },
   actions: {},
   modules: {}
