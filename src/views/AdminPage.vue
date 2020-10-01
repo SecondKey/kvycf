@@ -71,16 +71,15 @@
 
 <script>
 export default {
-  name: 'Header',
   data() {
     return {
       activeIndex: '1',
-      currentView: ''
+      activeIndex2: '1'
     }
   },
   methods: {
-    tabChange(tabItem) {
-      this.currentView = tabItem
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath)
     }
   }
 }

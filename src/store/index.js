@@ -138,7 +138,7 @@ export default new Vuex.Store({
           {
             id: 0, //k客户编号
             name: '客户', //客户名称
-            tel: '13912345678', //手机
+            tel: '13912345670', //手机
             email: '12345678@qq.com', //邮箱
             position: '北京市', //地址
             rate: 10, //信誉评级
@@ -148,7 +148,7 @@ export default new Vuex.Store({
           {
             id: 1,
             name: '客户01',
-            tel: '13912345678',
+            tel: '13912345671',
             email: '12345678@qq.com',
             position: '北京市',
             rate: 10,
@@ -158,7 +158,7 @@ export default new Vuex.Store({
           {
             id: 2,
             name: '客户02',
-            tel: '13912345678',
+            tel: '13912345672',
             email: '12345678@qq.com',
             position: '北京市',
             rate: 10,
@@ -168,7 +168,7 @@ export default new Vuex.Store({
           {
             id: 3,
             name: '客户03',
-            tel: '13912345678',
+            tel: '13912345673',
             email: '12345678@qq.com',
             position: '北京市',
             rate: 10,
@@ -178,7 +178,7 @@ export default new Vuex.Store({
           {
             id: 4,
             name: '客户04',
-            tel: '13912345678',
+            tel: '1391234567',
             email: '12345678@qq.com',
             position: '北京市',
             rate: 10,

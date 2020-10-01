@@ -36,12 +36,12 @@ import Service_ShouYe from '../components/Service/ShouYe/ShouYe'
 //#region 管理员页面
 import AdminPage from '../views/AdminPage'
 
-import Admin_ShouYe from '../components/Administor/Shouye/Shouye'
+import Admin_ShouYe from '../components/Administor/ShouYe/Shouye'
 import Admin_KeFu from '../components/Administor/KeFu/KeFu'
 import Admin_KeHu from '../components/Administor/KeHu/KeHu'
 import Admin_GongDan from '../components/Administor/GongDan/GongDan'
 import Admin_LiaoTianJiLu from '../components/Administor/LiaoTianJiLu/LiaoTianJiLu'
-import Admin_Shezhi from '../components/Administor/Shezhi/Shezhi'
+import Admin_Shezhi from '../components/Administor/SheZhi/Shezhi'
 
 //#endregion
 

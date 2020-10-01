@@ -1,26 +1,33 @@
 <template>
   <div class="containedDiv">
     <ShouYeItem1 class="shouye-box1"></ShouYeItem1>
+    <<<<<<< HEAD
     <ShouYeItem2 class="shouye-box2"></ShouYeItem2>
     <ShouYeItem3 class="shouye-box3"></ShouYeItem3>
     <ShouYeItem4 class="shouye-box4"></ShouYeItem4>
     <ShouYeItem5 class="shouye-box5"></ShouYeItem5>
+    =======
+    <ShouYeItem2 class="shouye-box2"></ShouYeItem2>
+
+    <ShouYeItem4 class="shouye-box4"></ShouYeItem4>
+
+    >>>>>>> 4819c4862c83db0b158e80e95d45b3f5b4c6b12b
   </div>
 </template>
 
 <script>
 import ShouYeItem1 from './ShouYeItem1'
 import ShouYeItem2 from './ShouYeItem2'
-import ShouYeItem3 from './ShouYeItem3'
+// import ShouYeItem3 from './ShouYeItem3'
 import ShouYeItem4 from './ShouYeItem4'
-import ShouYeItem5 from './ShouYeItem5'
+// import ShouYeItem5 from './ShouYeItem5'
 export default {
   components: {
     ShouYeItem1: ShouYeItem1,
     ShouYeItem2: ShouYeItem2,
-    ShouYeItem3: ShouYeItem3,
-    ShouYeItem4: ShouYeItem4,
-    ShouYeItem5: ShouYeItem5
+    // 'ShouYeItem3':ShouYeItem3,
+    ShouYeItem4: ShouYeItem4
+    // 'ShouYeItem5':ShouYeItem5
   }
 }
 </script>
@@ -34,43 +41,28 @@ export default {
   background-color: rgb(226, 23, 23);
 }
 .shouye-box1 {
-  width: 500px;
-  height: 300px;
+  width: 700px;
+  height: 433px;
   position: absolute;
-  top: 100px;
+  top: 75px;
   left: 500px;
   background-color: blue;
 }
 .shouye-box2 {
-  width: 200px;
-  height: 200px;
+  width: 270px;
+  height: 423px;
   position: absolute;
-  top: 500px;
-  left: 200px;
+  top: 85px;
+  left: 100px;
   background-color: blue;
 }
-.shouye-box3 {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: 500px;
-  left: 500px;
-  background-color: green;
-}
+
 .shouye-box4 {
-  width: 200px;
-  height: 200px;
+  width: 1100px;
+  height: 340px;
   position: absolute;
-  top: 500px;
-  left: 800px;
+  top: 566px;
+  left: 100px;
   background-color: darkseagreen;
-}
-.shouye-box5 {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: 500px;
-  left: 1100px;
-  background-color: midnightblue;
 }
 </style>

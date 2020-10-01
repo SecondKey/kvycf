@@ -23,7 +23,7 @@
     </el-option>
   </el-select>
       <!-- <el-input id="send_txt" type="text" ></el-input> -->
-      <el-button id="choose_btn" @click="choose">选择</el-button>
+      <!-- <el-button id="choose_btn" @click="choose">选择</el-button> -->
       <input type="text" id="send_txt" v-model="send_txt" class="HuiHuaItem_input">
       <el-button id="send_btn" @click="send" type="primary" style="float:right">发送</el-button>
     </el-footer>
