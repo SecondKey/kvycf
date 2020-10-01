@@ -104,8 +104,11 @@ export default {
 {
   height: 80%;
   width: 90%;
-  border: none;
-  margin-top: 5px;
+  border-color: skyblue;
+  border-style:solid;
+  border-radius: 5px;
+  /* margin-top: 2.5px;
+  margin-bottom: 2.5px; */
 }
 .speech
 {
