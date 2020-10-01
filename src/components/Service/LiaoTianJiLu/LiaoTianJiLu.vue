@@ -1,7 +1,7 @@
 <template>
   <div class="containedDiv">
-    <h3 style="position:absolute;top:55px;left:70px">聊天目录</h3>
-    <LiaoTianJiLuItem1 class="liaotianjilu-box1"></LiaoTianJiLuItem1>
+    <!-- <h3 style="position:absolute;top:55px;left:70px">聊天目录</h3> -->
+    <!-- <LiaoTianJiLuItem1 class="liaotianjilu-box1"></LiaoTianJiLuItem1> -->
     <LiaoTianJiLuItem2 class="liaotianjilu-box2"> </LiaoTianJiLuItem2>
   </div>
 </template>
@@ -34,12 +34,12 @@ export default {
   /* display: inline-block; */
 }
 .liaotianjilu-box2 {
-  width: 1320px;
-  height: 1060px;
+  width: 1200px!important;
+  height: 600px!important;
   position: absolute;
-  top: 105px;
+  top: 40px!important;
   left: 70px;
-  background-color: hotpink;
+  background-color: white!important;
 }
 .liaotianjilu-h2 {
   display: inline;
