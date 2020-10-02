@@ -14,14 +14,14 @@
         </el-input>
       </div>
         <div class="add">
-       <el-button type="text" @click="testclick">批量修改状态</el-button></div>
+       <el-button type="text" >批量修改状态</el-button></div>
         <div class="add1">
         <el-button type="text" >导出工单</el-button></div>
 <div class="add2">
       <el-button
         type="primary"
         @click="dialogFormVisible = true"
-        style="position: relative; top: -65px; left: 15px"
+        style="position: relative; top: -65px; left: -460px"
         >添加工单</el-button>
         <el-dialog title="新建工单" :visible.sync="dialogFormVisible">
   <el-form :model="form">
@@ -247,7 +247,7 @@ export default {
 }
 .add {
   position: absolute;
-  left: 120px;
+  left: 110px;
   top: 15px;
   width: 100px;
   background-color: #dcdfe6;
@@ -258,7 +258,7 @@ export default {
 }
 .add1{
   position: absolute;
-  left: 227px;
+  left: 217px;
   top: 15px;
   width: 100px;
   background-color: #dcdfe6;
@@ -270,12 +270,12 @@ export default {
 .block {
   position: relative;
   top: 65px;
-  left: 15px;
+  left: -400px;
 }
 .search {
   position: relative;
   top: 25px;
-  left: 250px;
+  left: 230px;
   width: 230px;
 }
 p{
@@ -291,4 +291,5 @@ text-indent: 2.5em;
   text-align: left;
   width: 200px;
 }
+/* .el-form */
 </style>
