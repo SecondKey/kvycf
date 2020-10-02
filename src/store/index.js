@@ -448,8 +448,14 @@ export default new Vuex.Store({
       state.SData_Company[
         state.Data_Login_Conpany
       ].order[0].convers[0].msg.push(newConvers)
-    }
+    },
 
+    SData_AddChangYongYu(state, newText) {
+      state.SData_Company[state.Data_Login_Conpany].KeFuChangYongYu.push({
+        value: state.SData_Company[state.Data_Login_Conpany].KeFuChangYongYu,
+        label: newText
+      })
+    }
     //#endregion
   },
   actions: {},

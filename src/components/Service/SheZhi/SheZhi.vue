@@ -126,50 +126,18 @@
         >
           <el-table-column prop="label" width="500"> </el-table-column>
         </el-table>
-        <el-button type="success" style="width:500px;height:50px;">
+        <el-input
+          style="width:400px"
+          v-model="nowChangYongYu"
+          placeholder="添加常用语"
+        ></el-input>
+        <el-button
+          @click="AddChangYongYu"
+          type="success"
+          style="width:100px; margin-left:20px"
+        >
           添加
         </el-button>
-      </div>
-
-      <div class="settingArea">
-        <el-divider></el-divider>
-        <div class="settingHead">常用语设置</div>
-        <el-divider></el-divider>
-        <el-form
-          ref="form"
-          label-width="80px"
-          style="width:500px;text-align:left;text-align: left;"
-        >
-          <el-form-item label="工号" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="昵称" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="姓名" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="账号" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="密码" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="电话" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="邮箱" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item style="margin-top:40px">
-            <el-button
-              type="success"
-              style="width:500px;height:50px;float:right;"
-            >
-              保存
-            </el-button>
-          </el-form-item>
-        </el-form>
       </div>
 
       <div class="settingArea">
@@ -307,12 +275,19 @@ export default {
       nowPos: '1',
       nowStep: 0,
 
-      ChangYongYuData: ['您好，请问有什么可以帮您？']
+      nowChangYongYu: '',
+
+      sortList: [1, 2, 3, 4]
     }
   },
   methods: {
     ChangeSelect(index) {
       this.nowStep = Number(index) - 1
+    },
+    AddChangYongYu() {
+      this.$store.commit('SData_AddChangYongYu', this.nowChangYongYu)
+      this.nowChangYongYu = ''
+      this.sortList.sort()
     }
   }
   // components: {
