@@ -35,9 +35,9 @@ export default {
 }
 .shouye-box1 {
   width: 700px;
-  height: 433px;
+  height: 443px;
   position: absolute;
-  top: 75px;
+  top: 85px;
   left: 500px;
   background-color: rgb(115, 115, 126);
 }
@@ -49,15 +49,6 @@ export default {
   left: 100px;
   background-color:aqua;
 }
-
-.shouye-box3 {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: 500px;
-  left: 500px;
-  background-color:thistle
-}
 .shouye-box4 {
   width: 1100px;
   height: 340px;
@@ -65,13 +56,5 @@ export default {
   top: 566px;
   left: 100px;
   background-color:skyblue;
-}
-.shouye-box5 {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: 500px;
-  left: 1100px;
-  background-color:snow;
 }
 </style>

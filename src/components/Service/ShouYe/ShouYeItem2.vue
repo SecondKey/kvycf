@@ -3,12 +3,26 @@
   <el-table
     :data="tableData"
     height="445"
-    border style="width: 100%">
+    style="width: 100%">
     <el-table-column
       prop="date"
       label="通知"
       width="269"
       header-align="center">
+      <el-table-column
+          prop="title"
+          label="标题"
+          width="130"
+          align="center"
+          >
+        </el-table-column>
+        <el-table-column
+          prop="time"
+          label="时间"
+          width="139"
+          align="center"
+          >
+        </el-table-column>
     </el-table-column>
   </el-table>
 </template></div>
@@ -17,28 +31,33 @@
 export default {
      data() {
       return {
-        // tableData: [{
-        //   date: '2016-05-03',
-        // }, {
-        //   date: '2016-05-02',
-        // }, {
-        //   date: '2016-05-04',
-        // }, {
-        //   date: '2016-05-01',
-        // }, {
-        //   date: '2016-05-08',
-        // }, {
-        //   date: '2016-05-06',
-        // }, {
-        //   date: '2016-05-07',
-        // }]
+        tableData: [{
+          title: '凯文云高校特惠，助力学生创业梦！',
+          time:'2020-10-02',
+        }, {
+          title: '0元体验，快速入门云计算！',
+          time:'2020-10-01'
+        }, {
+          title: 'WCT-24新品上线！',
+          time:'2020-09-30',
+        }, {
+          title: '云客服最新规章制度已发布！',
+          time:'2020-09-29'
+        }, {
+          title: '注册云客服,即可获得姜子牙门票一张！',
+          time:'2020-09-28'
+        }, {
+          title:'云客服2.0版本已上架，欢迎大家更新下载！',
+          time:'2020-09-27'
+        }, {
+          title:'双节即将到来，举国同庆！',
+          time:'2020-09-26'
+        }],
       }
     }
 }
 </script>
 
 <style>
-/* .el-table td{
-  text-indent: 2em;
-  }  */
+
 </style>
