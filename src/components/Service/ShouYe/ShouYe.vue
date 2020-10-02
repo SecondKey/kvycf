@@ -1,9 +1,9 @@
 <template>
-  <div class="containedDiv">
+  <div class="containedDiv" style="height:960px">
     <ShouYeItem1 class="shouye-box1"></ShouYeItem1>
 
     <ShouYeItem2 class="shouye-box2"></ShouYeItem2>
-    
+
     <ShouYeItem4 class="shouye-box4"></ShouYeItem4>
   </div>
 </template>
@@ -39,7 +39,7 @@ export default {
   position: absolute;
   top: 75px;
   left: 500px;
-  background-color: blue;
+  background-color: rgb(115, 115, 126);
 }
 .shouye-box2 {
   width: 270px;
@@ -47,15 +47,31 @@ export default {
   position: absolute;
   top: 85px;
   left: 100px;
-  background-color: blue;
+  background-color:aqua;
 }
 
+.shouye-box3 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 500px;
+  left: 500px;
+  background-color:thistle
+}
 .shouye-box4 {
   width: 1100px;
   height: 340px;
   position: absolute;
   top: 566px;
   left: 100px;
-  background-color: darkseagreen;
+  background-color:skyblue;
+}
+.shouye-box5 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 500px;
+  left: 1100px;
+  background-color:snow;
 }
 </style>

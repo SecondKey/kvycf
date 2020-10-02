@@ -85,11 +85,29 @@ export default new Vuex.Store({
         tel: '1234567', //电话
         email: '12345678@qq.com', //邮箱
         scheme: 3, //选择的服务
+        KeFuChangYongYu: [
+          {
+            value: 1,
+            label: '你好，请问有什么可以帮你？'
+          },
+          {
+            value: 2,
+            label: '正在为您查询相关信息，请稍等'
+          },
+          {
+            value: 3,
+            label: '请问您对这次服务满意吗？'
+          },
+          {
+            value: 4,
+            label: '再见，祝您生活愉快'
+          }
+        ],
         admin: [
           {
             id: 0,
             name: 'admin',
-            account: '凯文云' + 'admin',
+            account: '凯文云admin',
             pwd: '123456',
             email: ''
           },
@@ -216,19 +234,19 @@ export default new Vuex.Store({
                 msg: [
                   {
                     id: 0,
-                    owner: '客服房镇',
+                    owner: '客户01',
                     time: '2019.12.05 13:23',
                     contant: '你好,我的手机坏了，那你能帮帮我吗？'
                   },
                   {
                     id: 1,
-                    owner: '客户01',
+                    owner: '客服房镇',
                     time: '2019.12.05 13:24',
                     contant: '你什么配置？'
                   },
                   {
                     id: 2,
-                    owner: '客服房镇',
+                    owner: '客户01',
                     time: '2019.12.05 13:25',
                     contant: '我8G内存'
                   }
@@ -424,12 +442,14 @@ export default new Vuex.Store({
     },
 
     //#endregion
-    
+
     //#region 全部数据
-    SData_AddConvers(state,newConvers)
-    {
-        state.SData_Company[state.Data_Login_Conpany].order[0].convers[0].msg.push(newConvers)
+    SData_AddConvers(state, newConvers) {
+      state.SData_Company[
+        state.Data_Login_Conpany
+      ].order[0].convers[0].msg.push(newConvers)
     }
+
     //#endregion
   },
   actions: {},

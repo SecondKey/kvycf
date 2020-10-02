@@ -4,28 +4,17 @@
     <!--  -->
       <el-menu :default-openeds="['1']">
         <el-submenu index="1">
-          <template slot="title" style="background-color: black"> <P class="Index_1st">普通用户</p></template>
+          <template slot="title" style="background-color: black"> <P class="Index_1st">工单</p></template>
           <el-menu-item-group>
-            <el-menu-item index="1-1">用户1</el-menu-item>
-            <el-menu-item index="1-2">用户2</el-menu-item>
-            <el-menu-item index="1-3">用户3</el-menu-item>
+            <el-menu-item index="1-1">全部工单</el-menu-item>
+            <el-menu-item index="1-2">待处理的</el-menu-item>
+            <el-menu-item index="1-3">最近工单</el-menu-item>
+            <el-menu-item index="1-4">抄送工单</el-menu-item>
+            <el-menu-item index="1-5">处理中工单</el-menu-item>
+            <el-menu-item index="1-5">已解决工单</el-menu-item>
           </el-menu-item-group>
           </el-submenu>
-        <el-submenu index="2">
-          <template slot="title"><P class="Index_1st">高级用户</P></template>
-          <el-menu-item-group>
-            <el-menu-item index="2-1">用户4</el-menu-item>
-            <el-menu-item index="2-2">用户5</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-        <el-submenu index="3">
-          <template slot="title"><P class="Index_1st">至尊用户</P></template>
-          <el-menu-item-group>
-            <el-menu-item index="3-1">用户6</el-menu-item>
-            <el-menu-item index="3-2">用户7</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-      </el-menu>
+          </el-menu>
     </el-aside>
 </template>
 
