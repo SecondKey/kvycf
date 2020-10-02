@@ -21,9 +21,9 @@
       <el-button
         type="primary"
         @click="dialogFormVisible = true"
-        style="position: relative; top: -65px; left: -460px"
+        style="position: relative; top: -65px; left: -380px"
         >添加工单</el-button>
-        <el-dialog title="新建工单" :visible.sync="dialogFormVisible">
+        <el-dialog title="新建工单" :visible.sync="dialogFormVisible" style="text-align:left!important;">
   <el-form :model="form">
     <el-form-item label="工单分类" :label-width="formLabelWidth">
         <el-select v-model="form.grade" placeholder="请选择">
@@ -41,16 +41,16 @@
     <el-form-item label="工单描述" :label-width="formLabelWidth">
       <el-input type="textarea" :rows="4" placeholder="请输入工单描述" v-model="textarea"></el-input>
     </el-form-item>
-   <p>添加附件（最多上传5个附件，当个文件最大20M）</p>
-    <el-form-item label="抄送人" :label-width="formLabelWidth">
+   <p style="text-indent:2.3em!important;">添加附件（最多上传5个附件，当个文件最大20M）</p>
+    <el-form-item label="抄送人员" :label-width="formLabelWidth">
       <el-select v-model="form.region" placeholder="请选择">
         <el-option label="张大仙" value="1"></el-option>
         <el-option label="梦泪" value="2"></el-option>
         <el-option label="一诺" value="3"></el-option>
       </el-select>
     </el-form-item>
-     <div class="item2">
-            <label for="level">优先级</label>
+     <div class="item2" style="text-indent:2.3em!important;">
+            <label for="level" >优先级</label>
             <label><input type="radio" id="temp1" name="demo">低</label>
             <label><input type="radio" id="temp2" name="demo">中</label>            
             <label><input type="radio" id="temp3" name="demo">高</label>
@@ -63,13 +63,6 @@
         <el-option label="处理中" value="3"></el-option>
         <el-option label="已解决" value="4"></el-option>
         <el-option label="已关闭" value="5"></el-option>       
-      </el-select>
-    </el-form-item>
-    <el-form-item label="法定客服组" :label-width="formLabelWidth">
-      <el-select v-model="form.region" placeholder="请选择">
-        <el-option label="客服组一" value="1"></el-option>
-        <el-option label="客服组二" value="2"></el-option>
-        <el-option label="客服组三" value="3"></el-option>
       </el-select>
     </el-form-item>
     <el-form-item label="法定客服" :label-width="formLabelWidth">
@@ -96,12 +89,12 @@
         </div>
     </div>
     <el-table :data="this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany]
-        .order"  border style="width: 100%">
-      <el-table-column fixed prop="id" label="工单ID" width="140" align="center"> </el-table-column>
+        .order"  border style="width: 100%" height="300">
+      <el-table-column fixed prop="id" label="工单ID" width="100" align="center"> </el-table-column>
       <el-table-column prop="title" label="工单标题" width="140" align="center"> </el-table-column>
-      <el-table-column prop="client" label="客户ID" width="140" align="center"> </el-table-column>
-      <el-table-column prop="category" label="分类" width="140" align="center"> </el-table-column>
-      <el-table-column prop="priority" label="优先级" width="140" align="center"> </el-table-column>
+      <el-table-column prop="client" label="客户ID" width="100" align="center"> </el-table-column>
+      <el-table-column prop="category" label="分类" width="100" align="center"> </el-table-column>
+      <el-table-column prop="priority" label="优先级" width="100" align="center"> </el-table-column>
        <el-table-column prop="createTime" label="创建时间" width="140" align="center"></el-table-column>
       <el-table-column fixed="right" label="操作" width="140" >
         <el-button type="text"  style="float:left">查看详情</el-button>
@@ -218,7 +211,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .el-select .el-input {
     width: 130px;
   }
@@ -270,7 +263,7 @@ export default {
 .block {
   position: relative;
   top: 65px;
-  left: -400px;
+  left: -320px;
 }
 .search {
   position: relative;
@@ -278,12 +271,7 @@ export default {
   left: 230px;
   width: 230px;
 }
-p{
-text-indent: 2.5em;
-}
-.item2{
-text-indent: 2.5em;
-}
+
 .el-pagination{
   text-align:center ;
 }
@@ -291,5 +279,4 @@ text-indent: 2.5em;
   text-align: left;
   width: 200px;
 }
-/* .el-form */
 </style>
