@@ -1,6 +1,6 @@
 <template>
 <div class="panel customer-monitor">
-      <div class="title1">客服监控</div>
+      <div class="title1">未处理工单</div>
       <el-table :data="tableData" border style="width:100%" >
         <el-table-column prop="name" label="客服昵称" width="160">
         </el-table-column>
@@ -82,8 +82,9 @@ export default {
 
 <style scoped>
  .title1{
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 47px;
+  font-weight: 600;
 
 }
 .el-table{
