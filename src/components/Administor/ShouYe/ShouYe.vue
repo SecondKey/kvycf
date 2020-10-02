@@ -13,8 +13,9 @@
 
       <div class="ShouYe-tongzhi">
         <h4 class="ShouYe-h4">通知</h4>
+        <hr>
         <table>
-          <thead>
+          <thead style="display:none;">
             <tr>
               <th class="ShouYe-th">公告</th>
               <th class="ShouYe-th">时间</th>
@@ -103,13 +104,13 @@ export default {
 .ShouYe-frame {
   width: 1200px;
   height: 1620px;
-  background-color: rgb(109, 177, 154);
+  background-color:rgb(163, 196, 248);
 }
 
 .ShouYe-count-box {
   height: 203px;
   width: 1200px;
-  background: rgb(238, 241, 245);
+  background: rgb(163, 196, 248);
   border-radius: 4px;
   margin-top: 8px;
 
@@ -122,7 +123,7 @@ export default {
   height: 120px;
   width: 500px;
   border: 1px;
-  background-color: rgb(163, 196, 248);
+  background-color:rgb(238, 241, 245);
 
   font-size: 14px;
   margin: 10px;
@@ -161,7 +162,7 @@ export default {
   height: 400px;
   margin-left: 5px;
   float: right;
-  background-color: rgb(171, 236, 223);
+  background-color:white;
 }
 .ShouYe-h4 {
   font-size: 20px;
