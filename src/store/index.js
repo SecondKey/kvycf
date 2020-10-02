@@ -222,7 +222,7 @@ export default new Vuex.Store({
                   },
                   {
                     id: 1,
-                    owner: '服房镇',
+                    owner: '客服房镇',
                     time: '2019.12.05 13:24',
                     contant: '你什么配置？'
                   },
