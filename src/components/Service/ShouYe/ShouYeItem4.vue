@@ -1,37 +1,101 @@
 <template>
-<div class="item">
-  <font style="vertical-align: inherit;"  class="item1" >在线客服数</font>
-  <nav></nav>
-  <font style="vertical-align: inherit;" class="item5">30</font>
-  <nav></nav>
-  <font style="vertical-align: inherit;" class="item3">较昨日上涨10％</font>
-</div>
+<div class="panel customer-monitor">
+      <div class="title1">客服监控</div>
+      <el-table :data="tableData" border style="width:100%" >
+        <el-table-column prop="name" label="客服昵称" width="160">
+        </el-table-column>
+        <el-table-column prop="status" label="状态" width="160"> 
+          <template slot-scope="scope">
+        <div :class="{online:scope.row.status=='在线'}">{{scope.row.status}}</div>
+        </template>
+        </el-table-column>
+        <el-table-column prop="duration" label="在线时长" width="160">
+        </el-table-column>
+        <el-table-column prop="sessionCount" label="会话数" width="160">
+        </el-table-column>
+        <el-table-column prop="msgCount" label="消息数" width="158">
+        </el-table-column>
+        <el-table-column prop="msgCount" label="平均响应时长" width="150">
+        </el-table-column>
+        <el-table-column prop="msgCount" label="平均会话时长" width="150">
+        </el-table-column>
+      </el-table>
+    </div>
 </template>
 
 <script>
 export default {
-
+  data: function () {
+    return {
+      tableData: [
+        {
+          name: '客服小美',
+          status: '在线',
+          duration: '6h',
+          sessionCount: '30',
+          msgCount:'389',
+          respondtime:'24s',
+          conversation:'5min',
+        } ,
+         {
+          name: '客服小美',
+          status: '在线',
+          duration: '6h',
+          sessionCount: '30',
+          msgCount:'389',
+          respondtime:'24s',
+          conversation:'5min',
+        } ,
+         {
+          name: '客服小美',
+          status: '在线',
+          duration: '6h',
+          sessionCount: '30',
+          msgCount:'389',
+          respondtime:'24s',
+          conversation:'5min',
+        } ,
+         {
+          name: '客服小美',
+          status: '在线',
+          duration: '6h',
+          sessionCount: '30',
+          msgCount:'389',
+          respondtime:'24s',
+          conversation:'5min',
+        } ,
+         {
+          name: '客服小美',
+          status: '在线',
+          duration: '6h',
+          sessionCount: '30',
+          msgCount:'389',
+          respondtime:'24s',
+          conversation:'5min',
+        } ,
+        
+      ],
+    }
+  }
 }
 </script>
 
-<style>
-.item,.item1,.item2{
-  text-align: center;
-  line-height: 54px;
+<style scoped>
+ .title1{
+  font-size: 18px;
+  margin-bottom: 47px;
+
 }
-.item1{
-font-size: 13px;
-font-weight: 400;
-color: rgba(51, 51, 51, 0.898);
-}
-.item5{
-  color:rgb(46, 212, 119);
-  font-size: 48px;
-  font-weight: 650;
-}
-.item3{
-  font-size: 12px;
-  color: rgb(153,153,153);
-  font-weight: 400;
-}
+.el-table{
+  top:-40px;
+  height: 300px;
+} 
+::v-deep.el-table th > .cell {
+      text-align: center;
+
+    }
+::v-deep.el-table .cell {
+      text-align: center;
+
+    }
 </style>

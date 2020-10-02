@@ -1,44 +1,25 @@
 <template>
-  <div><template>
-  <el-table
-    :data="tableData"
-    height="310"
-    border style="width: 100%">
-    <el-table-column
-      prop="date"
-      label="通知"
-      width="499"
-      header-align="center">
-    </el-table-column>
-  </el-table>
-</template></div>
+  <el-carousel indicator-position="outside">
+    <el-carousel-item v-for="item in 4" :key="item">
+      <h3>{{ item }}</h3>
+    </el-carousel-item>
+  </el-carousel>
 </template>
-<script>
-export default {
-     data() {
-      return {
-        // tableData: [{
-        //   date: '2016-05-03',
-        // }, {
-        //   date: '2016-05-02',
-        // }, {
-        //   date: '2016-05-04',
-        // }, {
-        //   date: '2016-05-01',
-        // }, {
-        //   date: '2016-05-08',
-        // }, {
-        //   date: '2016-05-06',
-        // }, {
-        //   date: '2016-05-07',
-        // }]
-      }
-    }
-}
-</script>
 
 <style>
-/* .el-table td{
-  text-indent: 2em;
-  }  */
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 18px;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
+  }
+  
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+  
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  }
 </style>

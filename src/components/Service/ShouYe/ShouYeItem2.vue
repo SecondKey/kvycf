@@ -1,37 +1,44 @@
 <template>
-<div class="item">
-  <font style="vertical-align: inherit;"  class="item1" >总会话量</font>
-  <nav></nav>
-  <font style="vertical-align: inherit;" class="item2">230</font>
-  <nav></nav>
-  <font style="vertical-align: inherit;" class="item3">较昨日上涨10％</font>
-</div>
+  <div><template>
+  <el-table
+    :data="tableData"
+    height="445"
+    border style="width: 100%">
+    <el-table-column
+      prop="date"
+      label="通知"
+      width="269"
+      header-align="center">
+    </el-table-column>
+  </el-table>
+</template></div>
 </template>
-
 <script>
 export default {
-
+     data() {
+      return {
+        // tableData: [{
+        //   date: '2016-05-03',
+        // }, {
+        //   date: '2016-05-02',
+        // }, {
+        //   date: '2016-05-04',
+        // }, {
+        //   date: '2016-05-01',
+        // }, {
+        //   date: '2016-05-08',
+        // }, {
+        //   date: '2016-05-06',
+        // }, {
+        //   date: '2016-05-07',
+        // }]
+      }
+    }
 }
 </script>
 
 <style>
-.item,.item1,.item2{
-  text-align: center;
-  line-height: 54px;
-}
-.item1{
-font-size: 13px;
-font-weight: 400;
-color: rgba(51, 51, 51, 0.898);
-}
-.item2{
-  color: rgba(0, 110,255, 0.898);
-  font-size: 48px;
-  font-weight: 650;
-}
-.item3{
-  font-size: 12px;
-  color: rgb(153,153,153);
-  font-weight: 400;
-}
+/* .el-table td{
+  text-indent: 2em;
+  }  */
 </style>
