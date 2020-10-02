@@ -11,6 +11,11 @@
         :default-active="nowChoisePage1"
       >
         <img class="logo" src="../img/LOGO.png" />
+        <div class="title" style="margin-left:20px">
+          {{ $store.state.SData_Company[$store.state.Data_Login_Conpany].name }}
+        </div>
+        <div class="title">-云客服平台</div>
+
         <el-submenu
           index="1"
           style="color:#ffffff;float:right;margin-right:20px;font-size:25px;width:200px"
@@ -46,28 +51,27 @@
           style="margin-top:30px"
           class="CeBianLanItem"
           index="1"
-          route="/ServicePage"
+          route="/AdminPage"
         >
-          <i class="el-icon-s-home" style="font-size:40px;margin-top:-20px"></i>
+          <i
+            class="el-icon-s-home"
+            style="font-size:40px;margin-top:-20px;margin-left:-10px"
+          ></i>
           <div class="ServicePage_tip">首页</div>
         </el-menu-item>
 
-        <el-menu-item
-          class="CeBianLanItem"
-          index="2"
-          route="/ServicePage/HuiHua"
-        >
+        <el-menu-item class="CeBianLanItem" index="2" route="/AdminPage/KeFu">
           <i
             class="el-icon-s-comment"
-            style="font-size:40px;margin-top:-20px"
+            style="font-size:40px;margin-top:-20px;margin-left:-10px"
           ></i>
-          <div class="ServicePage_tip">会话</div>
+          <div class="ServicePage_tip">客服</div>
         </el-menu-item>
 
-        <el-menu-item class="CeBianLanItem" index="3" route="/ServicePage/KeHu">
+        <el-menu-item class="CeBianLanItem" index="3" route="/AdminPage/KeHu">
           <i
             class="el-icon-s-custom"
-            style="font-size:40px;margin-top:-20px"
+            style="font-size:40px;margin-top:-20px;margin-left:-10px"
           ></i>
           <div class="ServicePage_tip">客户</div>
         </el-menu-item>
@@ -75,11 +79,11 @@
         <el-menu-item
           class="CeBianLanItem"
           index="4"
-          route="/ServicePage/LiaoTianJiLu"
+          route="/AdminPage/LiaoTianJiLu"
         >
           <i
             class="el-icon-s-unfold"
-            style="font-size:40px;margin-top:-20px"
+            style="font-size:40px;margin-top:-20px;margin-left:-10px"
           ></i>
           <div class="ServicePage_tip">历史</div>
         </el-menu-item>
@@ -87,11 +91,11 @@
         <el-menu-item
           class="CeBianLanItem"
           index="5"
-          route="/ServicePage/GongDan"
+          route="/AdminPage/GongDan"
         >
           <i
             class="el-icon-s-order"
-            style="font-size:40px;margin-top:-20px"
+            style="font-size:40px;margin-top:-20px;margin-left:-10px"
           ></i>
           <div class="ServicePage_tip">工单</div>
         </el-menu-item>

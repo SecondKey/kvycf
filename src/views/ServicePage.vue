@@ -13,6 +13,11 @@
         :default-active="nowChoisePage1"
       >
         <img class="logo" src="../img/LOGO.png" />
+
+        <div class="title" style="margin-left:20px">
+          {{ $store.state.SData_Company[$store.state.Data_Login_Conpany].name }}
+        </div>
+        <div class="title">-云客服平台</div>
         <el-submenu
           index="1"
           style="color:#ffffff;float:right;margin-right:20px;font-size:25px;width:200px"
@@ -34,8 +39,12 @@
       </el-menu>
     </el-header>
     <el-aside
-      style="z-index:1000 ;width:60px;height:calc(100% - 60px);position:fixed;margin-top:60px; min-height: 500px;
-      overflow:visible"
+      style="z-index:1000 ;
+      width:60px;height:calc(100% - 60px);
+      position:fixed;margin-top:60px;
+       min-height: 500px;
+      overflow:visible;
+      text-align:center"
     >
       <el-menu
         style="width:60px;height:100%;max-width: 70px;"
@@ -49,7 +58,10 @@
           index="1"
           route="/ServicePage"
         >
-          <i class="el-icon-s-home" style="font-size:40px;margin-top:-20px"></i>
+          <i
+            class="el-icon-s-home"
+            style="font-size:40px;margin-top:-20px;margin-left:-10px"
+          ></i>
           <div class="ServicePage_tip">首页</div>
         </el-menu-item>
 
@@ -60,7 +72,7 @@
         >
           <i
             class="el-icon-s-comment"
-            style="font-size:40px;margin-top:-20px"
+            style="font-size:40px;margin-top:-20px;margin-left:-10px"
           ></i>
           <div class="ServicePage_tip">会话</div>
         </el-menu-item>
@@ -68,7 +80,7 @@
         <el-menu-item class="CeBianLanItem" index="3" route="/ServicePage/KeHu">
           <i
             class="el-icon-s-custom"
-            style="font-size:40px;margin-top:-20px"
+            style="font-size:40px;margin-top:-20px;margin-left:-10px"
           ></i>
           <div class="ServicePage_tip">客户</div>
         </el-menu-item>
@@ -80,7 +92,7 @@
         >
           <i
             class="el-icon-s-unfold"
-            style="font-size:40px;margin-top:-20px"
+            style="font-size:40px;margin-top:-20px;margin-left:-10px"
           ></i>
           <div class="ServicePage_tip">历史</div>
         </el-menu-item>
@@ -92,7 +104,7 @@
         >
           <i
             class="el-icon-s-order"
-            style="font-size:40px;margin-top:-20px"
+            style="font-size:40px;margin-top:-20px;margin-left:-10px"
           ></i>
           <div class="ServicePage_tip">工单</div>
         </el-menu-item>
