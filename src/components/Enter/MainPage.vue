@@ -158,7 +158,6 @@
         >
           <div class="enterButtonText">登录</div>
         </el-button>
-        
       </div>
     </el-drawer>
   </div>
@@ -233,6 +232,15 @@ export default {
       if (this.AdminVerify == this.$store.state.Data_VerificationCode) {
         for (let comp in this.$store.state.SData_Company) {
           for (let admin in this.$store.state.SData_Company[comp].admin) {
+            console.log(
+              this.$store.state.SData_Company[comp].admin[admin].account +
+                ' ' +
+                this.AdminAcc +
+                ' ' +
+                this.$store.state.SData_Company[comp].admin[admin].pwd +
+                ' ' +
+                this.AdminPwd
+            )
             if (
               this.$store.state.SData_Company[comp].admin[admin].account ==
                 this.AdminAcc &&

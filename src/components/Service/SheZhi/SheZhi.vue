@@ -83,22 +83,22 @@
             <el-input disabled></el-input>
           </el-form-item>
           <el-form-item label="昵称" style="margin-top:40px">
-            <el-input disabled></el-input>
+            <el-input></el-input>
           </el-form-item>
           <el-form-item label="姓名" style="margin-top:40px">
-            <el-input disabled></el-input>
+            <el-input></el-input>
           </el-form-item>
           <el-form-item label="账号" style="margin-top:40px">
-            <el-input disabled></el-input>
+            <el-input></el-input>
           </el-form-item>
           <el-form-item label="密码" style="margin-top:40px">
-            <el-input disabled></el-input>
+            <el-input></el-input>
           </el-form-item>
           <el-form-item label="电话" style="margin-top:40px">
-            <el-input disabled></el-input>
+            <el-input></el-input>
           </el-form-item>
           <el-form-item label="邮箱" style="margin-top:40px">
-            <el-input disabled></el-input>
+            <el-input></el-input>
           </el-form-item>
           <el-form-item style="margin-top:40px">
             <el-button
@@ -115,41 +115,20 @@
         <el-divider></el-divider>
         <div class="settingHead">常用语设置</div>
         <el-divider></el-divider>
-        <el-form
-          ref="form"
-          label-width="80px"
-          style="width:500px;text-align:left;text-align: left;"
+        <el-table
+          :data="
+            this.$store.state.SData_Company[
+              this.$store.state.Data_Login_Conpany
+            ].KeFuChangYongYu
+          "
+          style="width: 100%"
+          :show-header="false"
         >
-          <el-form-item label="工号" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="昵称" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="姓名" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="账号" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="密码" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="电话" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="邮箱" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item style="margin-top:40px">
-            <el-button
-              type="success"
-              style="width:500px;height:50px;float:right;"
-            >
-              保存
-            </el-button>
-          </el-form-item>
-        </el-form>
+          <el-table-column prop="label" width="500"> </el-table-column>
+        </el-table>
+        <el-button type="success" style="width:500px;height:50px;">
+          添加
+        </el-button>
       </div>
 
       <div class="settingArea">
@@ -326,7 +305,9 @@ export default {
   data() {
     return {
       nowPos: '1',
-      nowStep: 0
+      nowStep: 0,
+
+      ChangYongYuData: ['您好，请问有什么可以帮您？']
     }
   },
   methods: {
