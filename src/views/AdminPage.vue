@@ -128,7 +128,7 @@ export default {
   color: rgb(16, 109, 163);
   position: relative;
 }
-i {
+i{
   width: 25px;
   height: 22px;
   left: 25px;

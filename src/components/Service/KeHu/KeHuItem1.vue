@@ -7,29 +7,20 @@
       <el-container >
        
           <el-aside >
-                <i class=" el-icon-s-custom" style="font-size: 300px; color: black;margin: 30px"></i>
+              <i class=" el-icon-s-custom" style="font-size: 160px; color: black;margin: 30px"></i>
                
               <div>
-                <p class="KeHu_tr">名字：{{name}}</p>
+                <p class="KeHu_tr">名字：{{name}}  </p>
                 <p class="KeHu_tr">地址：{{position}}</p>
                 <p class="KeHu_tr">评级：{{rate}}</p>
               </div>
 
-                <!-- <el-table style="color: #000;margin: 20px;" :data="this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client">
-                <el-table-column prop="name" label="客户姓名" width="180">
-              </el-table-column>
-               <el-table-column prop="visitTime" label="历史访问时间" width="180">
-              </el-table-column>
-               <el-table-column prop="visitTime" label="历史访问时间" width="180">
-              </el-table-column>
-                  
-                </el-table> -->
+              
           </el-aside>
       <!-- 客户动态数据 -->
       <el-container>
           <el-main>
-            <el-table :data="this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany]
-        .client"  border style="width: 100%">
+            <el-table border style="width: 100%" :data="this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client">
               <el-table-column prop="visitTime" label="历史访问时间" width="180">
               </el-table-column>
               <el-table-column prop="email" label="邮箱" width="180">
@@ -44,36 +35,49 @@
 
      
     </el-container>
-  </el-container>
+
 </template>
 
 <script>
 
 
 
-import KeHumsg from "./KeHumsg.js"
+
 export default {
+
 
    data() {
       return {
+
             // id: ,
-            name:this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[kk].name, //客户名称
-            // tel: , //手机
-            // email: , //邮箱
-            position: this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[kk].position, //地址
-            rate:this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[kk].rate, //信誉评级
-            // visitTime: , //访问时间
+            name:this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[this.$store.state.OData_Client_nowChoiseClient].name, //客户名称
+            //tel: this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client.tel , //手机
+            //email:  this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client.email, //邮箱
+            position: this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[this.$store.state.OData_Client_nowChoiseClient].position, //地址
+            rate:this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[this.$store.state.OData_Client_nowChoiseClient].rate, //信誉评级
+            //visitTime:  this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client.visitTime, //访问时间
             // order: [0, 1, 2, 3] //订单
 
             }
         },
-         mounted:function() {
-          // var _this=this
-          // KeHumsg.on('val',function(m) {
-          //   _this.kk=m;
-          // })
-          console.log(this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[0])
-        }
+        methods:{
+
+        //#region 测试用例
+        // test(){
+        //   console.log(this.$store.state.OData_Client_nowChoiseClient)
+        //   console.log(this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[this.$store.state.OData_Client_nowChoiseClient].name)
+        // }
+        //#endregion
+
+        },
+
+        //#region 刷新页面
+        // computed:{
+        //   Updata_name(){
+        //     return this.$store.state.OData_Client_nowChoiseClient
+        //   }
+        // }
+        //#endregion
 
      }
 </script>
