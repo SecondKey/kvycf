@@ -208,11 +208,11 @@ export default {
                   ' 登录成功',
                 center: true
               })
-              this.$router.push('/ServicePage')
               this.$store.commit('Login_ServiceLogin', {
                 cid: comp,
                 di: serv
               })
+              this.$router.push('/ServicePage')
               return
             }
           }
@@ -254,11 +254,11 @@ export default {
                   ' 登录成功',
                 center: true
               })
-              this.$router.push('/AdminPage')
               this.$store.commit('Login_AdminLogin', {
                 cid: comp,
                 di: serv
               })
+              this.$router.push('/AdminPage')
               return
             }
           }

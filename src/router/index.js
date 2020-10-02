@@ -197,7 +197,7 @@ const routes = [
     component: AdminPage,
     children: [
       {
-        path: '/AdminPage/ShouYe',
+        path: '/AdminPage',
         name: 'Admin_ShouYe',
         component: Admin_ShouYe
       },
