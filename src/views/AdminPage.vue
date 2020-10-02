@@ -27,7 +27,11 @@
               src="../img/head.png"
               style="width:40px;height:40px;margin-right:10px"
             />
-            凯文管理员
+            {{
+              $store.state.SData_Company[$store.state.Data_Login_Conpany].admin[
+                $store.state.Data_Login_ID
+              ].name
+            }}管理员
           </template>
           <el-menu-item index="1" route="/ServicePage/SheZhi"
             >设置</el-menu-item
