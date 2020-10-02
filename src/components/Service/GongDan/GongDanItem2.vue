@@ -281,7 +281,8 @@ export default {
 .block {
   position: relative;
   top: 65px;
-  left: -320px;
+  left: 160px;
+  
 }
 .search {
   position: relative;
