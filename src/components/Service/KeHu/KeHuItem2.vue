@@ -29,6 +29,9 @@ export default {
     console.log(this.$store.state.currentCustomer);
   }
   },
+  created(){
+    this.$store.state.currentCustomer=this.$store.state.SData_Company[0].client[0]
+  }
   
 }
 </script>

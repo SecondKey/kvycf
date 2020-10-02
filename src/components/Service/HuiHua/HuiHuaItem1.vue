@@ -1,42 +1,37 @@
 <template>
-  <div>
-    <el-aside width="240px" style="background-color: #ffffff">
-
+  <el-aside width="200px" style="background-color: #ffffff">
     <!--  -->
-      <el-menu :default-openeds="['1']">
-        <el-submenu index="1">
-          <template slot="title" style="background-color: black"> <P class="Index_1st">普通用户</p></template>
-          <el-menu-item-group>
-            <el-menu-item index="1-1">用户1</el-menu-item>
-            <el-menu-item index="1-2">用户2</el-menu-item>
-            <el-menu-item index="1-3">用户3</el-menu-item>
-          </el-menu-item-group>
-          </el-submenu>
-        <el-submenu index="2">
-          <template slot="title"><P class="Index_1st">高级用户</P></template>
-          <el-menu-item-group>
-            <el-menu-item index="2-1">用户4</el-menu-item>
-            <el-menu-item index="2-2">用户5</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-        <el-submenu index="3">
-          <template slot="title"><P class="Index_1st">至尊用户</P></template>
-          <el-menu-item-group>
-            <el-menu-item index="3-1">用户6</el-menu-item>
-            <el-menu-item index="3-2">用户7</el-menu-item>
-          </el-menu-item-group>
-        </el-submenu>
-      </el-menu>
-    </el-aside>
-</div>
+    <el-menu :default-openeds="['1', '3']">
+      <el-menu-item :index="c.id" v-for="c in customers" @click="handleClick(c.id)" :key="c.id">{{ c.name }}</el-menu-item>
+    </el-menu>
+  </el-aside>
 </template>
 
 <script>
+import {mapState} from 'vuex';
 export default {
-
+  data() {
+    return {
+      customers:this.$store.state.SData_Company[0].client,
+      order_msgs:this.$store.state.SData_Company[0].order
+    }
+  },
+  methods:{
+    handleClick:function(id){
+      // 从数组中找出和当前选择的用户的id相同的元素
+    let order_msg = null;
+    for(let i in this.order_msgs){
+      if(this.order_msgs[i].id === id){
+        order_msg = this.order_msgs[i];
+        break;
+      }
+    }
+    this.$store.commit('currentOrder',order_msg)//将找出来的客户提交到state中
+    console.log(this.$store.state.currentOrder);
+  }
+  },
+  
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
