@@ -1,5 +1,5 @@
 <template>
-  <div class="containedDiv">
+  <div class="containedDiv" style="height:600px">
     <el-container class="kehu-box">
       <KeHuItem2></KeHuItem2>
       <KeHuItem1></KeHuItem1>
@@ -21,13 +21,13 @@ export default {
 <style>
 .kefu-page {
   width: 1500px;
-  height: 1180px;
+  height: 600px;
   background-color: blue;
 }
 .kehu-box {
   width: 1400px;
-  height: 1100px;
-  background-color: #fff;
+  height: 600px;
+  background-color: #00000000;
 
   top: 70px;
   left: 70px;

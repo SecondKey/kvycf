@@ -1,8 +1,8 @@
 <template>
   <div>
-    <el-container>
+    <el-container style="box-shadow:2px 2px 6px #000;">
       <el-header height="100px" style="line-height:50px;background-color:#7badfe;">
-        <h2>聊天记录目录</h2>
+        <h2>聊天记录</h2>
       </el-header>
       
       
@@ -31,8 +31,8 @@
       </el-main>
         </el-container>
         <!-- </el-main>  -->
-      <el-footer height="160px" style="background-color:blue">
-
+      <el-footer height="160px" class="jilufooter">
+        <div></div>
       </el-footer>
     </el-container>
   </div>
@@ -48,5 +48,9 @@ export default {
 .lili{
   text-align: left;
   list-style: none;
+}
+.jilufooter{
+  
+  background-image:url(../../../img/footer.jpg);
 }
 </style>

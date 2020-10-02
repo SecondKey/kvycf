@@ -31,8 +31,8 @@ export default {
   left: 50px;
 }
 .gongdan-box2 {
-  width: 1030px;
-  height: 1070px;
+  width: 870px!important;
+  height: 460px!important;
   position: absolute;
   background-color: cornflowerblue;
   top: 70px;

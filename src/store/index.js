@@ -5,6 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    currentCustomer: null, //当前用户
+    currentOrder: null,
     //#region 页面布局
     LayOut_EnterPage_NowChoisePage: '1',
     //#endregion
@@ -28,6 +30,7 @@ export default new Vuex.Store({
     //#region 模拟数据 加S
 
     //#region 其他数据
+
     //#endregion
 
     //#region EnterPage所有数据
@@ -115,7 +118,7 @@ export default new Vuex.Store({
           {
             id: 0,
             name: 'admin',
-            account: '凯文云admin',
+            account: '凯文云' + 'admin',
             pwd: '123456',
             email: ''
           },
@@ -466,8 +469,16 @@ export default new Vuex.Store({
         value: state.SData_Company[state.Data_Login_Conpany].KeFuChangYongYu,
         label: newText
       })
-    }
+    },
     //#endregion
+
+    currentCustomer(state, payload) {
+      state.currentCustomer = payload
+    },
+
+    currentOrder(state, payload) {
+      state.currentOrder = payload
+    }
   },
   actions: {},
   modules: {}
