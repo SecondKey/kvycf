@@ -5,23 +5,23 @@
       <el-submenu index="1">
         <template slot="title"> <P class="Index_1st">普通用户</P></template>
         <el-menu-item-group>
-          <el-menu-item index="1-1" >{{ name1 }}</el-menu-item>
-          <el-menu-item index="1-2">{{ name2 }}</el-menu-item>
-          <el-menu-item index="1-3" @click="Change_KeHu_03">{{ name3 }}</el-menu-item>
+          <el-menu-item index="1-1" @click="Change_KeHu(0)">{{ name1 }}</el-menu-item>
+          <el-menu-item index="1-2" @click="Change_KeHu(1)">{{ name2 }}</el-menu-item>
+          <el-menu-item index="1-3" @click="Change_KeHu(2)">{{ name3 }}</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="2">
         <template slot="title"><P class="Index_1st">高级用户</P></template>
         <el-menu-item-group>
-          <el-menu-item index="2-1">{{ name4 }}</el-menu-item>
-          <el-menu-item index="2-2">{{ name5 }}</el-menu-item>
+          <el-menu-item index="2-1" @click="Change_KeHu(3)">{{ name4 }}</el-menu-item>
+          <el-menu-item index="2-2" @click="Change_KeHu(4)">{{ name5 }}</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="3">
         <template slot="title"><P class="Index_1st">至尊用户</P></template>
         <el-menu-item-group>
-          <el-menu-item index="3-1">{{ name6 }}</el-menu-item>
-          <el-menu-item index="3-2">{{ name6 }}</el-menu-item>
+          <el-menu-item index="3-1" @click="Change_KeHu(5)">{{ name6 }}</el-menu-item>
+          <el-menu-item index="3-2" @click="Change_KeHu(5)">{{ name6 }}</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>
@@ -34,7 +34,7 @@ export default {
     return {
 
       //#region name数据
-
+      name:this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[this.$store.state.OData_Client_nowChoiseClient].name,
       name1: this.$store.state.SData_Company[
         this.$store.state.Data_Login_Conpany
       ].client[0].name, //客户名称
@@ -62,38 +62,14 @@ export default {
 
      //#region 动态触发
 
-      Change_KeHu_00(){
-     
-      this.$store.commit('OData_Client_SelectClient',0)
-      
-      
-    },
-     Change_KeHu_01(){
-     
-      this.$store.commit('OData_Client_SelectClient',1)
-      
-    },
-     Change_KeHu_02(){
-     
-      this.$store.commit('OData_Client_SelectClient',2)
-      
-    },
-    Change_KeHu_03(){
-     
-      this.$store.commit('OData_Client_SelectClient',3)
-      // console.log(this.$store.state.OData_Client_nowChoiseClient)
+      Change_KeHu(index){
+
+      this.$store.commit('OData_Client_SelectClient',index)
+      location.reload()
+      console.log(this.$store.state.OData_Client_nowChoiseClient)
 
     },
-     Change_KeHu_04(){
-     
-      this.$store.commit('OData_Client_SelectClient',4)
-      
-    },
-     Change_KeHu_05(){
-     
-      this.$store.commit('OData_Client_SelectClient',5)
-      
-    },
+
 
    //#endregion
 

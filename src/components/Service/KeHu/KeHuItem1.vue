@@ -9,7 +9,7 @@
           <el-aside >
               <i class=" el-icon-s-custom" style="font-size: 160px; color: black;margin: 30px"></i>
                
-              <div>
+              <div >
                 <p class="KeHu_tr">名字：{{name}}  </p>
                 <p class="KeHu_tr">地址：{{position}}</p>
                 <p class="KeHu_tr">评级：{{rate}}</p>
@@ -72,11 +72,11 @@ export default {
         },
 
         //#region 刷新页面
-        // computed:{
-        //   Updata_name(){
-        //     return this.$store.state.OData_Client_nowChoiseClient
-        //   }
-        // }
+        computed:{
+          Updata_name(){
+            return this.$store.state.OData_Client_nowChoiseClient
+          }
+        }
         //#endregion
 
      }
