@@ -4,9 +4,10 @@
     <el-header class="HuiHua_header">
       <h2>客户信息</h2>
     </el-header>
-    <el-main class="HuiHua_main">
+    <el-main class="HuiHua_main" v-if="this.$store.state.currentCustomer">
       <ul class="HuiHua_ul">
-        <li class="HuiHua_li" v-for="(value,key) in kehu" :key="key">{{key}}：{{value}}</li>
+        <li class="HuiHua_li" v-for="(value,key) in this.$store.state.currentCustomer"
+       :key="key">{{key}}：{{value}}</li>
       </ul>
     </el-main>
 
@@ -15,9 +16,9 @@
     <el-header class="HuiHua_header">
       <h2>工单信息</h2>
     </el-header>
-    <el-main class="HuiHua_main">
+    <el-main class="HuiHua_main" v-if="this.$store.state.currentOrder">
       <ul class="HuiHua_ul">
-        <li class="HuiHua_li" v-for="(value,key) in kehu" :key="key">{{key}}：{{value}}</li>
+        <li class="HuiHua_li" v-for="(value,key) in this.$store.state.currentOrder" :key="key">{{key}}：{{value}}</li>
       </ul>
     </el-main>
     <el-footer class="HuiHua_footer">

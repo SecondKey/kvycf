@@ -1,10 +1,13 @@
 <template>
-  <el-aside width="200px" style="background-color: #ffffff">
+<el-container >
+  <el-header height="20px"></el-header>
+  <el-aside width="200px" style="background-color: #ffffff;">
     <!--  -->
     <el-menu :default-openeds="['1', '3']">
       <el-menu-item :index="c.id" v-for="c in customers" @click="handleClick(c.id)" :key="c.id">{{ c.name }}</el-menu-item>
     </el-menu>
   </el-aside>
+</el-container>
 </template>
 
 <script>

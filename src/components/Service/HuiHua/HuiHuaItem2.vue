@@ -115,6 +115,9 @@ export default {
   },
   created(){
     this.$store.state.currentOrder=this.$store.state.SData_Company[0].order[0]
+  },
+  created(){
+    this.$store.state.currentCustomer=this.$store.state.SData_Company[0].client[0]
   }
 }
 </script>

@@ -24,8 +24,18 @@ export default {
       if(this.order_msgs[i].id === id){
         order_msg = this.order_msgs[i];
         break;
-      }
+      }  
     }
+
+    let customer = null;
+    for(let i in this.customers){
+      if(this.customers[i].id === id){
+        customer = this.customers[i];
+        break;
+      }  
+    }
+    this.$store.commit('currentCustomer',customer)//将找出来的客户提交到state中
+    console.log(this.$store.state.currentCustomer);
     this.$store.commit('currentOrder',order_msg)//将找出来的客户提交到state中
     console.log(this.$store.state.currentOrder);
   }
