@@ -27,7 +27,7 @@
       >
         <el-menu-item index="1" style="font-size:25px">
           <i class="el-icon-menu"></i>
-          <span slot="title">账户</span>
+          <span slot="title" href="#to0">账户</span>
         </el-menu-item>
 
         <el-menu-item index="2" style="font-size:25px">
@@ -40,7 +40,7 @@
         </el-menu-item>
         <el-menu-item index="4" style="font-size:25px">
           <i class="el-icon-menu"></i>
-          <span slot="title">客户设置</span>
+          <span slot="title">客户信息</span>
         </el-menu-item>
         <el-menu-item index="5" style="font-size:25px">
           <i class="el-icon-document"></i>
@@ -61,243 +61,43 @@
         <el-step></el-step>
       </el-steps>
     </div>
-    <div
-      style="background: white;
-      height: 5000px;
-      border-left: solid black 1px;
-      width: calc(100% - 401px);
-      margin-left: 400px;
-      text-align: left;
-      padding-top:30px"
-    >
-      <div class="settingArea">
-        <el-divider></el-divider>
-        <div class="settingHead">账户设置</div>
-        <el-divider></el-divider>
-        <el-form
-          ref="form"
-          label-width="80px"
-          style="width:500px;text-align:left;text-align: left;"
-        >
-          <el-form-item label="工号" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="昵称" style="margin-top:40px">
-            <el-input></el-input>
-          </el-form-item>
-          <el-form-item label="姓名" style="margin-top:40px">
-            <el-input></el-input>
-          </el-form-item>
-          <el-form-item label="账号" style="margin-top:40px">
-            <el-input></el-input>
-          </el-form-item>
-          <el-form-item label="密码" style="margin-top:40px">
-            <el-input></el-input>
-          </el-form-item>
-          <el-form-item label="电话" style="margin-top:40px">
-            <el-input></el-input>
-          </el-form-item>
-          <el-form-item label="邮箱" style="margin-top:40px">
-            <el-input></el-input>
-          </el-form-item>
-          <el-form-item style="margin-top:40px">
-            <el-button
-              type="success"
-              style="width:500px;height:50px;float:right;"
-            >
-              保存
-            </el-button>
-          </el-form-item>
-        </el-form>
-      </div>
-
-      <div class="settingArea">
-        <el-divider></el-divider>
-        <div class="settingHead">常用语设置</div>
-        <el-divider></el-divider>
-        <el-table
-          :data="
-            this.$store.state.SData_Company[
-              this.$store.state.Data_Login_Conpany
-            ].KeFuChangYongYu
-          "
-          style="width: 100%"
-          :show-header="false"
-        >
-          <el-table-column prop="label" width="500"> </el-table-column>
-        </el-table>
-        <el-input
-          style="width:400px"
-          v-model="nowChangYongYu"
-          placeholder="添加常用语"
-        ></el-input>
-        <el-button
-          @click="AddChangYongYu"
-          type="success"
-          style="width:100px; margin-left:20px"
-        >
-          添加
-        </el-button>
-      </div>
-
-      <div class="settingArea">
-        <el-divider></el-divider>
-        <div class="settingHead">自动回复设置</div>
-        <el-divider></el-divider>
-        <el-form
-          ref="form"
-          label-width="80px"
-          style="width:500px;text-align:left;text-align: left;"
-        >
-          <el-form-item label="工号" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="昵称" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="姓名" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="账号" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="密码" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="电话" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="邮箱" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item style="margin-top:40px">
-            <el-button
-              type="success"
-              style="width:500px;height:50px;float:right;"
-            >
-              保存
-            </el-button>
-          </el-form-item>
-        </el-form>
-      </div>
-
-      <div class="settingArea">
-        <el-divider></el-divider>
-        <div class="settingHead">客户设置</div>
-        <el-divider></el-divider>
-        <el-form
-          ref="form"
-          label-width="80px"
-          style="width:500px;text-align:left;text-align: left;"
-        >
-          <el-form-item label="工号" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="昵称" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="姓名" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="账号" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="密码" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="电话" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="邮箱" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item style="margin-top:40px">
-            <el-button
-              type="success"
-              style="width:500px;height:50px;float:right;"
-            >
-              保存
-            </el-button>
-          </el-form-item>
-        </el-form>
-      </div>
-
-      <div class="settingArea">
-        <el-divider></el-divider>
-        <div class="settingHead">黑名单</div>
-        <el-divider></el-divider>
-        <el-form
-          ref="form"
-          label-width="80px"
-          style="width:500px;text-align:left;text-align: left;"
-        >
-          <el-form-item label="工号" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="昵称" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="姓名" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="账号" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="密码" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="电话" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item label="邮箱" style="margin-top:40px">
-            <el-input disabled></el-input>
-          </el-form-item>
-          <el-form-item style="margin-top:40px">
-            <el-button
-              type="success"
-              style="width:500px;height:50px;float:right;"
-            >
-              保存
-            </el-button>
-          </el-form-item>
-        </el-form>
-      </div>
-    </div>
+    <SheZhi1></SheZhi1>
   </div>
 </template>
 
 <script>
-// import SheZhiItem1 from './SheZhiItem1'
-// import SheZhiItem2 from './SheZhiItem2'
+import SheZhi1 from './SheZhi1'
+
 export default {
   data() {
     return {
       nowPos: '1',
-      nowStep: 0,
-
-      nowChangYongYu: '',
-
-      sortList: [1, 2, 3, 4]
+      nowStep: 0
     }
   },
   methods: {
     ChangeSelect(index) {
       this.nowStep = Number(index) - 1
+      document.getElementById('setting' + index).scrollIntoView()
     },
     AddChangYongYu() {
       this.$store.commit('SData_AddChangYongYu', this.nowChangYongYu)
       this.nowChangYongYu = ''
       this.sortList.sort()
+    },
+    onScroll(index) {
+      this.nowStep = index
+      nowPos = index + 1
     }
+  },
+
+  components: {
+    SheZhi1: SheZhi1
   }
-  // components: {
-  //   SheZhiItem1: SheZhiItem2,
-  //   SheZhiItem2: SheZhiItem2
-  // }
 }
 </script>
 
-<style scoped>
+<style>
 .settingArea {
   margin-left: 30px;
   padding-top: 30px;
@@ -315,5 +115,9 @@ export default {
 .el-form-item__label {
   text-align: left !important;
   font-size: 30px !important;
+}
+.autoMargin {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 </style>

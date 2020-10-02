@@ -22,13 +22,12 @@ export default new Vuex.Store({
     //#region 登录
     Data_Login_Conpany: 0,
     Data_Login_Type: 'Admin',
-    Data_Login_ID: 0,
+    Data_Login_ID: 1,
     //#endregion
 
     //#region 模拟数据 加S
 
     //#region 其他数据
-    OData_Client_nowChoiseClient: 0,
     //#endregion
 
     //#region EnterPage所有数据
@@ -85,6 +84,15 @@ export default new Vuex.Store({
         tel: '1234567', //电话
         email: '12345678@qq.com', //邮箱
         scheme: 3, //选择的服务
+        AutoReply: {
+          start: true,
+          startMsg: '您好，请问有什么需要帮助的吗？',
+          atuo: false,
+          autoTime: 20000,
+          autoMsg: '正在为您处理，请稍后',
+          end: true,
+          endText: '这次聊天对你有什么帮助吗？请为本次服务打分'
+        },
         KeFuChangYongYu: [
           {
             value: 1,
@@ -165,7 +173,8 @@ export default new Vuex.Store({
             position: '北京市', //地址
             rate: 10, //信誉评级
             visitTime: '2020.9.28', //访问时间
-            order: [0, 1, 2, 3] //订单
+            order: [0, 1, 2, 3], //订单
+            isBlack: false
           },
           {
             id: 1,
@@ -175,7 +184,8 @@ export default new Vuex.Store({
             position: '北京市',
             rate: 10,
             visitTime: '2020.9.28',
-            order: [4, 5, 6]
+            order: [4, 5, 6],
+            isBlack: false
           },
           {
             id: 2,
@@ -185,7 +195,8 @@ export default new Vuex.Store({
             position: '北京市',
             rate: 10,
             visitTime: '2020.9.28',
-            order: [7, 8, 9]
+            order: [7, 8, 9],
+            isBlack: false
           },
           {
             id: 3,
@@ -195,7 +206,8 @@ export default new Vuex.Store({
             position: '北京市',
             rate: 10,
             visitTime: '2020.9.28',
-            order: [7, 8, 9]
+            order: [7, 8, 9],
+            isBlack: false
           },
           {
             id: 4,
@@ -205,7 +217,8 @@ export default new Vuex.Store({
             position: '北京市',
             rate: 10,
             visitTime: '2020.9.28',
-            order: [7, 8, 9]
+            order: [7, 8, 9],
+            isBlack: false
           },
           {
             id: 5,
@@ -215,14 +228,15 @@ export default new Vuex.Store({
             position: '北京市',
             rate: 10,
             visitTime: '2020.9.28',
-            order: [7, 8, 9]
+            order: [7, 8, 9],
+            isBlack: false
           }
         ],
         order: [
           {
             id: 0, //工单id
             title: '手机维修', //工单标题
-            state: false, //工单状态，工单是否已经完成
+            state: 0, //工单状态，工单是否已经完成
             client: 1, //发起工单的客户的id
             category: 0, //分类
             priority: 3, //优先级
@@ -257,7 +271,7 @@ export default new Vuex.Store({
           {
             id: 1, //工单id
             title: '手机维修', //工单标题
-            state: false, //工单状态，工单是否已经完成
+            state: 0, //工单状态，工单是否已经完成
             client: 0, //发起工单的客户的id
             category: 0, //分类
             priority: 3, //优先级
@@ -279,7 +293,7 @@ export default new Vuex.Store({
           {
             id: 2, //工单id
             title: '手机维修', //工单标题
-            state: false, //工单状态，工单是否已经完成
+            state: 1, //工单状态，工单是否已经完成
             client: 0, //发起工单的客户的id
             category: 0, //分类
             priority: 3, //优先级
@@ -301,7 +315,7 @@ export default new Vuex.Store({
           {
             id: 3, //工单id
             title: '手机维修', //工单标题
-            state: false, //工单状态，工单是否已经完成
+            state: 1, //工单状态，工单是否已经完成
             client: 0, //发起工单的客户的id
             category: 0, //分类
             priority: 3, //优先级
@@ -323,7 +337,7 @@ export default new Vuex.Store({
           {
             id: 4, //工单id
             title: '手机维修', //工单标题
-            state: false, //工单状态，工单是否已经完成
+            state: 2, //工单状态，工单是否已经完成
             client: 0, //发起工单的客户的id
             category: 0, //分类
             priority: 3, //优先级
@@ -345,7 +359,7 @@ export default new Vuex.Store({
           {
             id: 5, //工单id
             title: '手机维修', //工单标题
-            state: false, //工单状态，工单是否已经完成
+            state: 2, //工单状态，工单是否已经完成
             client: 0, //发起工单的客户的id
             category: 0, //分类
             priority: 3, //优先级
@@ -364,7 +378,8 @@ export default new Vuex.Store({
               }
             ]
           }
-        ]
+        ],
+        blackList: []
       }
     ]
     //#endregion
@@ -436,10 +451,6 @@ export default new Vuex.Store({
     //#endregion
 
     //#region 其他数据
-
-    OData_Client_SelectClient(state, num) {
-      state.OData_Client_nowChoiseClient = num
-    },
 
     //#endregion
 

@@ -23,7 +23,9 @@
     <el-footer class="HuiHuaItem2_footer" height="30%">
       <el-select v-model="send_txt" placeholder="请选择">
         <el-option
-          v-for="item in options"
+          v-for="item in this.$store.state.SData_Company[
+            this.$store.state.Data_Login_Conpany
+          ].KeFuChangYongYu"
           :key="item.value"
           :label="item.label"
           :value="item.label"
@@ -66,23 +68,23 @@ export default {
       ],
       options: [
         {
-          value: '选项1',
+          value: 1,
           label: '你好，请问有什么可以帮你？'
         },
         {
-          value: '选项2',
+          value: 2,
           label: '正在为您查询相关信息，请稍等'
         },
         {
-          value: '选项3',
+          value: 3,
           label: '请问您对这次服务满意吗？'
         },
         {
-          value: '选项4',
+          value: 4,
           label: '再见，祝您生活愉快'
         },
         {
-          value: '选项5',
+          value: 5,
           label: '自定义'
         }
       ]
