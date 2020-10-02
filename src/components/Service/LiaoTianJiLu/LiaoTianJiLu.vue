@@ -28,7 +28,7 @@ export default {
   height: 30px;
   position: absolute;
   top: 70px;
-  right: 110px;
+  right: 130px;
   border-radius: 2px;
   background-color: chartreuse;
   /* display: inline-block; */
