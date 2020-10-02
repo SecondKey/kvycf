@@ -1,9 +1,9 @@
 <template>
-  <div class="containedDiv">
+  <div class="containedDiv" style="height:960px">
     <ShouYeItem1 class="shouye-box1"></ShouYeItem1>
 
     <ShouYeItem2 class="shouye-box2"></ShouYeItem2>
-    
+
     <ShouYeItem4 class="shouye-box4"></ShouYeItem4>
   </div>
 </template>

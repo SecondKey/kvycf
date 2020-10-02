@@ -216,19 +216,19 @@ export default new Vuex.Store({
                 msg: [
                   {
                     id: 0,
-                    owner: '客服房镇',
+                    owner: '客户01',
                     time: '2019.12.05 13:23',
                     contant: '你好,我的手机坏了，那你能帮帮我吗？'
                   },
                   {
                     id: 1,
-                    owner: '客户01',
+                    owner: '服房镇',
                     time: '2019.12.05 13:24',
                     contant: '你什么配置？'
                   },
                   {
                     id: 2,
-                    owner: '客服房镇',
+                    owner: '客户01',
                     time: '2019.12.05 13:25',
                     contant: '我8G内存'
                   }
@@ -424,11 +424,12 @@ export default new Vuex.Store({
     },
 
     //#endregion
-    
+
     //#region 全部数据
-    SData_AddConvers(state,newConvers)
-    {
-        state.SData_Company[state.Data_Login_Conpany].order[0].convers[0].msg.push(newConvers)
+    SData_AddConvers(state, newConvers) {
+      state.SData_Company[
+        state.Data_Login_Conpany
+      ].order[0].convers[0].msg.push(newConvers)
     }
     //#endregion
   },

@@ -1,5 +1,5 @@
 <template>
-  <div class="containedDiv">
+  <div class="containedDiv" style="height:950px">
     <HuiHuaItem1 class="huihua-box1">会话人表格</HuiHuaItem1>
     <HuiHuaItem2 class="huihua-box2">会话内容</HuiHuaItem2>
     <HuiHuaItem3 class="huihua-box3">会话人信息</HuiHuaItem3>
