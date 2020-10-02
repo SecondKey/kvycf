@@ -2,78 +2,32 @@
   <el-aside width="200px" style="background-color: #ffffff">
     <!--  -->
     <el-menu :default-openeds="['1', '3']">
-      <el-submenu index="1">
-        <template slot="title"> <P class="Index_1st">普通用户</P></template>
-        <el-menu-item-group>
-          <el-menu-item index="1-1" @click="Change_KeHu(0)">{{ name1 }}</el-menu-item>
-          <el-menu-item index="1-2" @click="Change_KeHu(1)">{{ name2 }}</el-menu-item>
-          <el-menu-item index="1-3" @click="Change_KeHu(2)">{{ name3 }}</el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
-      <el-submenu index="2">
-        <template slot="title"><P class="Index_1st">高级用户</P></template>
-        <el-menu-item-group>
-          <el-menu-item index="2-1" @click="Change_KeHu(3)">{{ name4 }}</el-menu-item>
-          <el-menu-item index="2-2" @click="Change_KeHu(4)">{{ name5 }}</el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
-      <el-submenu index="3">
-        <template slot="title"><P class="Index_1st">至尊用户</P></template>
-        <el-menu-item-group>
-          <el-menu-item index="3-1" @click="Change_KeHu(5)">{{ name6 }}</el-menu-item>
-          <el-menu-item index="3-2" @click="Change_KeHu(5)">{{ name6 }}</el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
+      <el-menu-item :index="c.id" v-for="c in customers" @click="handleClick(c.id)" :key="c.id">{{ c.name }}</el-menu-item>
     </el-menu>
   </el-aside>
 </template>
 
 <script>
+import {mapState} from 'vuex';
 export default {
   data() {
     return {
-
-      //#region name数据
-      name:this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[this.$store.state.OData_Client_nowChoiseClient].name,
-      name1: this.$store.state.SData_Company[
-        this.$store.state.Data_Login_Conpany
-      ].client[0].name, //客户名称
-      name2: this.$store.state.SData_Company[
-        this.$store.state.Data_Login_Conpany
-      ].client[1].name, //客户名称
-      name3: this.$store.state.SData_Company[
-        this.$store.state.Data_Login_Conpany
-      ].client[2].name, //客户名称
-      name4: this.$store.state.SData_Company[
-        this.$store.state.Data_Login_Conpany
-      ].client[3].name, //客户名称
-      name5: this.$store.state.SData_Company[
-        this.$store.state.Data_Login_Conpany
-      ].client[4].name, //客户名称
-      name6: this.$store.state.SData_Company[
-        this.$store.state.Data_Login_Conpany
-      ].client[5].name //客户名称
-
-      //#endregion
-
+      customers:this.$store.state.SData_Company[0].client
     }
   },
   methods:{
-
-     //#region 动态触发
-
-      Change_KeHu(index){
-
-      this.$store.commit('OData_Client_SelectClient',index)
-      location.reload()
-      console.log(this.$store.state.OData_Client_nowChoiseClient)
-
-    },
-
-
-   //#endregion
-
-   
+    handleClick:function(id){
+      // 从数组中找出和当前选择的用户的id相同的元素
+    let customer = null;
+    for(let i in this.customers){
+      if(this.customers[i].id === id){
+        customer = this.customers[i];
+        break;
+      }
+    }
+    this.$store.commit('currentCustomer',customer)//将找出来的客户提交到state中
+    console.log(this.$store.state.currentCustomer);
+  }
   },
   
 }

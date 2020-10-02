@@ -6,16 +6,14 @@
       <!-- 客户静态数据 -->
       <el-container >
        
-          <el-aside >
+          <el-aside v-if="this.$store.state.currentCustomer">
               <i class=" el-icon-s-custom" style="font-size: 160px; color: black;margin: 30px"></i>
                
-              <div >
-                <p class="KeHu_tr">名字：{{name}}  </p>
-                <p class="KeHu_tr">地址：{{position}}</p>
-                <p class="KeHu_tr">评级：{{rate}}</p>
+              <div>
+                <p class="KeHu_tr">名字：{{this.$store.state.currentCustomer.name}}  </p>
+                <p class="KeHu_tr">地址：{{this.$store.state.currentCustomer.position}}</p>
+                <p class="KeHu_tr">评级：{{this.$store.state.currentCustomer.rate}}</p>
               </div>
-
-              
           </el-aside>
       <!-- 客户动态数据 -->
       <el-container>
@@ -48,36 +46,17 @@ export default {
 
    data() {
       return {
-
-            // id: ,
-            name:this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[this.$store.state.OData_Client_nowChoiseClient].name, //客户名称
-            //tel: this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client.tel , //手机
-            //email:  this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client.email, //邮箱
-            position: this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[this.$store.state.OData_Client_nowChoiseClient].position, //地址
-            rate:this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[this.$store.state.OData_Client_nowChoiseClient].rate, //信誉评级
-            //visitTime:  this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client.visitTime, //访问时间
-            // order: [0, 1, 2, 3] //订单
+            customers:this.$store.state.SData_Company[0].client,
+            
 
             }
         },
         methods:{
 
-        //#region 测试用例
-        // test(){
-        //   console.log(this.$store.state.OData_Client_nowChoiseClient)
-        //   console.log(this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].client[this.$store.state.OData_Client_nowChoiseClient].name)
-        // }
-        //#endregion
 
         },
 
-        //#region 刷新页面
-        computed:{
-          Updata_name(){
-            return this.$store.state.OData_Client_nowChoiseClient
-          }
-        }
-        //#endregion
+        
 
      }
 </script>
