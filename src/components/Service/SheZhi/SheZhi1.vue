@@ -1,13 +1,15 @@
 <template>
   <div
-    id="sDiv"
     style="background: white;
       border-left: solid black 1px;
       width: calc(100% - 401px);
       margin-left: 400px;
       text-align: left;
       padding-top:30px;
-      height:100%"
+      height:723px;
+      overflow:auto"
+    id="123"
+    @scroll="onScroll"
   >
     <div class="settingArea" id="setting1">
       <el-divider></el-divider>
@@ -243,20 +245,23 @@ export default {
       this.nowChangYongYu = ''
       this.sortList.sort()
     },
-    onScroll(e) {
-      console.log(e.srcElement.scrollTop)
-      console.log('123')
+    onScroll(event) {
+      let i = 0
+      if (document.getElementById('123').scrollTop < 850) {
+        i = 0
+      } else if (document.getElementById('123').scrollTop < 1255) {
+        i = 1
+      } else if (document.getElementById('123').scrollTop < 2020) {
+        i = 2
+      } else if (document.getElementById('123').scrollTop < 2400) {
+        i = 3
+      } else {
+        i = 4
+      }
+      this.$parent.PageScroll(i)
     }
   },
-  mounted() {
-    window.addEventListener(
-      'scroll',
-      () => {
-        console.log(document.documentElement.scrollTop)
-      },
-      true
-    )
-  }
+  mounted() {}
 }
 </script>
 

@@ -27,7 +27,7 @@
       >
         <el-menu-item index="1" style="font-size:25px">
           <i class="el-icon-menu"></i>
-          <span slot="title" href="#to0">账户</span>
+          <span slot="title">账户</span>
         </el-menu-item>
 
         <el-menu-item index="2" style="font-size:25px">
@@ -85,9 +85,9 @@ export default {
       this.nowChangYongYu = ''
       this.sortList.sort()
     },
-    onScroll(index) {
-      this.nowStep = index
-      nowPos = index + 1
+    PageScroll(i) {
+      this.nowStep = i
+      this.nowPos = i + 1 + ''
     }
   },
 
