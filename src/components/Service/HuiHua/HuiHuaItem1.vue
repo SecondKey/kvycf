@@ -2,7 +2,7 @@
   <el-aside width="200px" style="background-color: #ffffff">
     <!--  -->
     <el-menu :default-openeds="['1', '3']">
-      <el-menu-item v-for="c in customers" @click="handleClick(c.id)" :key="c.id">{{ c.name }}</el-menu-item>
+      <el-menu-item :index="c.id" v-for="c in customers" @click="handleClick(c.id)" :key="c.id">{{ c.name }}</el-menu-item>
     </el-menu>
   </el-aside>
 </template>
@@ -28,9 +28,9 @@ export default {
     }
 
     let customer = null;
-    for(let i in this.customers){
-      if(this.customers[i].id === id){
-        customer = this.customers[i];
+    for(let j in this.customers){
+      if(this.customers[j].id === id){
+        customer = this.customers[j];
         break;
       }  
     }
