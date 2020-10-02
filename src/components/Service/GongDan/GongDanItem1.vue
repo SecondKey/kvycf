@@ -4,7 +4,7 @@
     <!--  -->
       <el-menu :default-openeds="['1']">
         <el-submenu index="1">
-          <template slot="title" style="background-color: black"> <P class="Index_1st">工单</p></template>
+          <template slot="title" style="background-color: black" > <P class="Index_1st" style="text-align:left">工单</p></template>
           <el-menu-item-group>
             <el-menu-item index="1-1">全部工单</el-menu-item>
             <el-menu-item index="1-2">待处理的</el-menu-item>
@@ -25,5 +25,4 @@ export default {
 </script>
 
 <style>
-
 </style>
