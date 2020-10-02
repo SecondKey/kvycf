@@ -3,10 +3,10 @@
     <el-header class="HuiHuaItem2_header">
       <h2>王二</h2>
     </el-header>
-    <el-main class="HuiHuaItem2_main">
+    <el-main class="HuiHuaItem2_main" v-if="this.$store.state.currentOrder">
       <el-button id="send_btn" @click="kehusend" style="float:right">测试</el-button>
       <ul id="chat_ul" 
-      v-for="item in this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].order[0].convers[0].msg"
+      v-for="item in this.$store.state.currentOrder.convers[0].msg"
        :key="item.id">
         <li>
           {{item.owner}},{{item.time}}:
@@ -112,6 +112,9 @@ export default {
         }
         this.tabelData.sort()
     }
+  },
+  created(){
+    this.$store.state.currentOrder=this.$store.state.SData_Company[0].order[0]
   }
 }
 </script>

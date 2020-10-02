@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    currentCustomer:null,//d当前用户
+    currentCustomer:null,//当前用户
+    currentOrder:null,
     //#region 页面布局
     LayOut_EnterPage_NowChoisePage: '1',
     //#endregion
@@ -29,7 +30,7 @@ export default new Vuex.Store({
     //#region 模拟数据 加S
 
     //#region 其他数据
-    OData_Client_nowChoiseClient: 0,
+  
     //#endregion
 
     //#region EnterPage所有数据
@@ -433,8 +434,13 @@ export default new Vuex.Store({
       ].order[0].convers[0].msg.push(newConvers)
     },
     //#endregion
+   
     currentCustomer(state,payload){
       state.currentCustomer=payload
+    },
+
+    currentOrder(state,payload){
+      state.currentOrder=payload
     }
   },
   actions: {},
