@@ -1,7 +1,7 @@
 <template>
   <el-container class="HuiHuaItem2_container">
     <el-header class="HuiHuaItem2_header">
-      <h2>王二</h2>
+      <h2>{{this.$store.state.currentCustomer.name}}</h2>
     </el-header>
     <el-main class="HuiHuaItem2_main" v-if="this.$store.state.currentOrder">
       <el-button id="send_btn" @click="kehusend" style="float:right"
