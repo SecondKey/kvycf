@@ -46,7 +46,7 @@
         </el-menu-item>
       </el-menu>
     </el-header>
-    <el-main class=".el-main" style="padding:0px;position:relative;">
+    <el-main style="padding:0px;position:relative;">
       <router-view></router-view>
     </el-main>
   </el-container>
