@@ -1,82 +1,25 @@
 <template>
 <div class="panel customer-monitor">
       <div class="title1">未处理工单</div>
-      <el-table :data="tableData" border style="width:100%" >
-        <el-table-column prop="name" label="客服昵称" width="160">
-        </el-table-column>
-        <el-table-column prop="status" label="状态" width="160"> 
-          <template slot-scope="scope">
-        <div :class="{online:scope.row.status=='在线'}">{{scope.row.status}}</div>
-        </template>
-        </el-table-column>
-        <el-table-column prop="duration" label="在线时长" width="160">
-        </el-table-column>
-        <el-table-column prop="sessionCount" label="会话数" width="160">
-        </el-table-column>
-        <el-table-column prop="msgCount" label="消息数" width="158">
-        </el-table-column>
-        <el-table-column prop="msgCount" label="平均响应时长" width="150">
-        </el-table-column>
-        <el-table-column prop="msgCount" label="平均会话时长" width="150">
-        </el-table-column>
+      <el-table :data="this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany]
+        .order" border style="width:100%" >
+        <el-table-column fixed prop="id" label="工单ID" width="150" align="center"> </el-table-column>
+      <el-table-column prop="title" label="工单标题" width="150" align="center"> </el-table-column>
+      <el-table-column prop="client" label="客户ID" width="150" align="center"> </el-table-column>
+      <el-table-column prop="category" label="分类" width="150" align="center"> </el-table-column>
+      <el-table-column prop="priority" label="优先级" width="150" align="center"> </el-table-column>
+       <el-table-column prop="createTime" label="创建时间" width="150" align="center"></el-table-column>
+      <el-table-column fixed="right" label="操作" width="150" >
+        <el-button type="text"  style="float:left">查看详情</el-button>
+        <el-button type="text" @click="open1" style="float:left">接单</el-button>
+      </el-table-column>
       </el-table>
     </div>
 </template>
 
 <script>
 export default {
-  data: function () {
-    return {
-      tableData: [
-        {
-          name: '客服小美',
-          status: '在线',
-          duration: '6h',
-          sessionCount: '30',
-          msgCount:'389',
-          respondtime:'24s',
-          conversation:'5min',
-        } ,
-         {
-          name: '客服小美',
-          status: '在线',
-          duration: '6h',
-          sessionCount: '30',
-          msgCount:'389',
-          respondtime:'24s',
-          conversation:'5min',
-        } ,
-         {
-          name: '客服小美',
-          status: '在线',
-          duration: '6h',
-          sessionCount: '30',
-          msgCount:'389',
-          respondtime:'24s',
-          conversation:'5min',
-        } ,
-         {
-          name: '客服小美',
-          status: '在线',
-          duration: '6h',
-          sessionCount: '30',
-          msgCount:'389',
-          respondtime:'24s',
-          conversation:'5min',
-        } ,
-         {
-          name: '客服小美',
-          status: '在线',
-          duration: '6h',
-          sessionCount: '30',
-          msgCount:'389',
-          respondtime:'24s',
-          conversation:'5min',
-        } ,
-        
-      ],
-    }
-  }
+
 }
 </script>
 
