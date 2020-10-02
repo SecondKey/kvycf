@@ -31,10 +31,10 @@ export default {
   background-color: whitesmoke;
   position: absolute;
   top: 50px;
-  left: 40px;
+  left: 80px;
 }
 .huihua-box2 {
-  width: 850px;
+  width: 810px;
   height: 850px;
   background-color: green;
   position: absolute;
@@ -47,6 +47,6 @@ export default {
   background-color: cadetblue;
   position: absolute;
   top: 50px;
-  left: 1150px;
+  left: 1110px;
 }
 </style>

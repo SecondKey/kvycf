@@ -17,6 +17,7 @@
   
   .el-carousel__item:nth-child(2n) {
     background-color: #99a9bf;
+    height: 443px;
   }
   
   .el-carousel__item:nth-child(2n+1) {

@@ -41,7 +41,21 @@
     <el-form-item label="工单描述" :label-width="formLabelWidth">
       <el-input type="textarea" :rows="4" placeholder="请输入工单描述" v-model="textarea"></el-input>
     </el-form-item>
-   <p style="text-indent:2.3em!important;">添加附件（最多上传5个附件，当个文件最大20M）</p>
+   <p style="text-indent:2.3em!important;">添加附件（最多上传5个附件）</p>
+   <el-upload
+  class="upload-demo"
+  action="https://jsonplaceholder.typicode.com/posts/"
+  :on-preview="handlePreview"
+  :on-remove="handleRemove"
+  :before-remove="beforeRemove"
+  multiple
+  :limit="5"
+  :on-exceed="handleExceed"
+  :file-list="fileList" style="text-indent:1.3em!important">
+  <div class="tt">
+  <el-button size="small" type="primary" style="text-align:right!important">点击上传</el-button></div>
+  <div slot="tip" class="el-upload__tip" style="text-indent:2.7em!important">只能上传jpg/png文件，且不超过500kb</div>
+  </el-upload>
     <el-form-item label="抄送人员" :label-width="formLabelWidth">
       <el-select v-model="form.region" placeholder="请选择">
         <el-option label="张大仙" value="1"></el-option>
@@ -102,12 +116,11 @@
       </el-table-column>
     </el-table>
     <div class="block1">
-    
-    <el-pagination
-  background
-  layout="prev, pager, next"
-  :total="1000">
-</el-pagination>
+      <el-pagination 
+      background 
+      layout="prev, pager, next"
+      :total="1000">
+      </el-pagination>
   </div>
   </div>
 </template>
@@ -116,6 +129,18 @@
 export default {
   
   methods: {
+     handleRemove(file, fileList) {
+        console.log(file, fileList);
+      },
+      handlePreview(file) {
+        console.log(file);
+      },
+      handleExceed(files, fileList) {
+        this.$message.warning(`当前限制选择 5 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
+      },
+      beforeRemove(file, fileList) {
+        return this.$confirm(`确定移除 ${ file.name }？`);
+      },
     handleClick(row) {
       console.log(row);
     },
@@ -137,6 +162,7 @@ export default {
 
   data() {
     return {
+       fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}],
       customers:[],
        options: [{
           value: '选项1',
@@ -198,15 +224,8 @@ export default {
         input2: '',
         textarea: ''
     }
+    
   }
-  
-
-    // created:function(){
-    //     this.$axios.get("http://192.168.9.251:3000/")
-    //                 .then(resp=>{
-    //                     this.visitors = resp.data.visitors;
-    //                 });
-    // }
   
 }
 </script>
@@ -278,5 +297,8 @@ export default {
 .allCustomerServices .allCustomerOrigin .allCustomerSort .allCustomerRoad .allCustomerService{
   text-align: left;
   width: 200px;
+}
+.tt{
+  text-indent:1.2em!important
 }
 </style>
