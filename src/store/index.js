@@ -442,14 +442,15 @@ export default new Vuex.Store({
     //#endregion
     //#region 登录
     Login_AdminLogin(state, data) {
-      Data_Login_Conpany = data.cid
-      Data_Login_Type = 'Admin'
-      Data_Login_ID = data.id
+      state.Data_Login_Conpany = data.cid
+      state.Data_Login_Type = 'Admin'
+      state.Data_Login_ID = data.id
     },
     Login_ServiceLogin(state, data) {
-      Data_Login_Conpany = data.cid
-      Data_Login_Type = 'Service'
-      Data_Login_ID = data.id
+      console.log(data.cid + ' ' + data.id)
+      state.Data_Login_Conpany = data.cid
+      state.Data_Login_Type = 'Service'
+      state.Data_Login_ID = data.id
     },
     //#endregion
 
