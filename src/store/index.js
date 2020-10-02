@@ -85,11 +85,29 @@ export default new Vuex.Store({
         tel: '1234567', //电话
         email: '12345678@qq.com', //邮箱
         scheme: 3, //选择的服务
+        KeFuChangYongYu: [
+          {
+            value: 1,
+            label: '你好，请问有什么可以帮你？'
+          },
+          {
+            value: 2,
+            label: '正在为您查询相关信息，请稍等'
+          },
+          {
+            value: 3,
+            label: '请问您对这次服务满意吗？'
+          },
+          {
+            value: 4,
+            label: '再见，祝您生活愉快'
+          }
+        ],
         admin: [
           {
             id: 0,
             name: 'admin',
-            account: '凯文云' + 'admin',
+            account: '凯文云admin',
             pwd: '123456',
             email: ''
           },
@@ -431,6 +449,7 @@ export default new Vuex.Store({
         state.Data_Login_Conpany
       ].order[0].convers[0].msg.push(newConvers)
     }
+
     //#endregion
   },
   actions: {},

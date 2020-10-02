@@ -115,7 +115,17 @@
         <el-divider></el-divider>
         <div class="settingHead">常用语设置</div>
         <el-divider></el-divider>
-
+        <el-table
+          :data="
+            this.$store.state.SData_Company[
+              this.$store.state.Data_Login_Conpany
+            ].KeFuChangYongYu
+          "
+          style="width: 100%"
+          :show-header="false"
+        >
+          <el-table-column prop="label" width="500"> </el-table-column>
+        </el-table>
         <el-button type="success" style="width:500px;height:50px;">
           添加
         </el-button>
@@ -295,7 +305,9 @@ export default {
   data() {
     return {
       nowPos: '1',
-      nowStep: 0
+      nowStep: 0,
+
+      ChangYongYuData: ['您好，请问有什么可以帮您？']
     }
   },
   methods: {
