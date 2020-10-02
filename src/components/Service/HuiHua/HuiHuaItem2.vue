@@ -134,11 +134,13 @@ export default {
 }
 .HuiHuaItem_input
 {
-  height: 80%;
+  height: 10%;
   width: 90%;
   border-color: skyblue;
   border-style:solid;
   border-radius: 5px;
+  padding-top: 0%;
+  padding-bottom: 20%;
   /* margin-top: 2.5px;
   margin-bottom: 2.5px; */
 }
