@@ -10,8 +10,8 @@
         <el-container>
           <el-aside width="400px">
         <el-menu mode="vertical"
-      v-for="item in this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].order"
-      :key="item.id">
+      v-for="item in this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany].order" @click="handleClick(item.id)"
+      :key="item.id" >
         <el-menu-item class="menu"><a>
           id:{{item.id}} 标题：{{item.title}} 创建时间：{{item.createTime}} 优先级：{{item.priority}} 
           </a></el-menu-item>

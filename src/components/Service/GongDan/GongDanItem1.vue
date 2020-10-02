@@ -3,21 +3,41 @@
 
     <!--  -->
       <el-menu :default-openeds="['1']">
-        <el-submenu index="1">
-          <template slot="title" style="background-color: black" > <P class="Index_1st" style="text-align:left">工单</p></template>
-          <el-menu-item-group>
-            <el-menu-item index="1-1">全部工单</el-menu-item>
-            <el-menu-item index="1-2">待处理的</el-menu-item>
-            <el-menu-item index="1-3">处理中工单</el-menu-item>
-            <el-menu-item index="1-4">已解决工单</el-menu-item>
-          </el-menu-item-group>
-          </el-submenu>
+            <el-menu-item index="1-1" @click="handleClick(0)">全部工单</el-menu-item>
+            <el-menu-item index="1-2" @click="handleClick(0)">待处理的</el-menu-item>
+            <el-menu-item index="1-3" @click="handleClick(1)">处理中工单</el-menu-item>
+            <el-menu-item index="1-4" @click="handleClick(2)">已解决工单</el-menu-item>
           </el-menu>
     </el-aside>
 </template>
 
 <script>
 export default {
+   data() {
+    return {
+      Order_Lists:this.$store.state.SData_Company[0].order
+    }
+  },
+
+methods:{
+    handleClick:function(state){
+      // 从数组中找出和当前选择的用户的Order_List相同的元素
+    let Order_List = null;
+    for(let i in this.Order_Lists){
+      if(this.Order_Lists[i].state >= state){
+        Order_List = this.Order_Lists[i];
+        this.$store.commit('currentOrder_List',Order_List)//将找出来的客户提交到state中
+    console.log(this.$store.state.currentOrder_List);
+        }
+        if(i>7)
+        break;
+    }
+    
+  }
+  },
+  // created(){
+  //   this.$store.state.currentCustomer=this.$store.state.SData_Company[0].client[0]
+  // }
 
 }
 </script>
