@@ -80,10 +80,10 @@ export default {
       this.$store.commit('CompanyInfo_SignUp_AddAdmin', {
         id: this.$store.state.Data_SignUp_Company_ID,
         newAdmin: {
-          name: this.adminName,
-          account: this.adminAcc,
-          pwd: this.adminPwd,
-          email: this.adminEmail
+          name: this.formData.adminName,
+          account: this.formData.adminAcc,
+          pwd: this.formData.adminPwd,
+          email: this.formData.adminEmail
         }
       })
       this.$router.push('/EnterSignUpPage/EnterCompanyPage/EnterCompanyPageR5')
