@@ -2,7 +2,7 @@
   <el-container style="height:100%">
     <el-header style="padding:0px">
       <el-menu
-        :default-active="$store.state.LayOut_EnterPage_NowChoisePage"
+        :default-active="$route.path"
         class="el-menu-demo"
         mode="horizontal"
         background-color="black"
