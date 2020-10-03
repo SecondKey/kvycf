@@ -116,10 +116,10 @@
                 </el-table>
         </el-main>
         <el-footer>
-          <div class="shouye_echarts1">
-
+          <div class="shouye_echarts1" ref="line">
+            
           </div>
-          <div class="shouye_echarts2">
+          <div class="shouye_echarts2" ref="line1">
 
           </div>
         </el-footer>
@@ -131,13 +131,76 @@
 
 <script>
 import ShouYeTuBiao from './ShouYeTuBiao'
-
+let echarts = require('echarts')
 export default {
+  mounted: function () {
+    let myChart = echarts.init(this.$refs.line)
+    myChart.setOption(this.option)
+    let myChart1 = echarts.init(this.$refs.line1)
+    myChart1.setOption(this.option1)
+  },
   components: {
     ShouYeTuBiao: ShouYeTuBiao
   },
   data: function() {
     return {
+    option: {
+      title: {
+          text: '本周用户量',
+        },
+    xAxis: {
+        type: 'category',
+        data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [1205, 2104, 1050, 1308, 1794, 1106, 1305],
+        type: 'bar'
+    }]
+},
+option1 :{
+    tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b}: {c} ({d}%)'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 10,
+        data: ['访问量', '预订量','订单量', '成交量', '完成量']
+    },
+    series: [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius: ['50%', '70%'],
+            avoidLabelOverlap: false,
+            label: {
+                show: false,
+                position: 'center'
+            },
+            emphasis: {
+                label: {
+                    show: true,
+                    fontSize: '30',
+                    fontWeight: 'bold'
+                }
+            },
+            labelLine: {
+                show: false
+            },
+            data: [
+                {value: 335, name: '访问量'},
+                {value: 310, name: '预订量'},
+                {value: 234, name: '订单量'},
+                {value: 135, name: '成交量'},
+                {value: 1548, name: '完成量'}
+            ]
+        }
+    ]
+},
+
       navItems: [
         {
           title: '总会话量',
@@ -255,17 +318,17 @@ export default {
   width: 1200px;
   height: 500px;
   margin-top: 10px;
-  background-color:black;
+  background-color:rgb(36, 147, 164);
 }
 .shouye_echarts1{
   width: 900px;
-  height: 250px;
+  height: 300px;
   background-color: white;
   float: left;
 }
 .shouye_echarts2{
   width: 250px;
-  height: 250px;
+  height: 300px;
   background-color: white;
   float: right;
 }

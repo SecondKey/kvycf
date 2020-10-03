@@ -1,5 +1,5 @@
 <template>
-  <div class="containedDiv" style="height:950px">
+  <div class="containedDiv" style="height:880px">
     <HuiHuaItem1 class="huihua-box1">会话人表格</HuiHuaItem1>
     <HuiHuaItem2 class="huihua-box2">会话内容</HuiHuaItem2>
     <HuiHuaItem3 class="huihua-box3">会话人信息</HuiHuaItem3>
@@ -26,27 +26,27 @@ export default {
   background-color: greenyellow;
 }
 .huihua-box1 {
-  width: 240px;
+  width: 235px;
   height: 850px;
   background-color: whitesmoke;
   position: absolute;
-  top: 50px;
-  left: 80px;
+  top: 15px;
+  left: 15px;
 }
 .huihua-box2 {
-  width: 810px;
+  width: 820px;
   height: 850px;
   background-color: green;
   position: absolute;
-  top: 50px;
-  left: 290px;
+  top: 15px;
+  left: 265px;
 }
 .huihua-box3 {
-  width: 240px;
+  width: 320px;
   height: 850px;
   background-color: cadetblue;
   position: absolute;
-  top: 50px;
-  left: 1110px;
+  top: 15px;
+  left: 1075px;
 }
 </style>

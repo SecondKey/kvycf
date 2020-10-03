@@ -194,7 +194,7 @@ export default {
 .cardInfoDiv {
   margin-top: 50px;
   widows: 800px;
-  height: 450px;
+  height: 440px;
   border: solid #00000077;
   text-align: center;
 }
