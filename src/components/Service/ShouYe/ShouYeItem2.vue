@@ -7,19 +7,19 @@
     <el-table-column
       prop="date"
       label="通知"
-      width="269"
+      width="350"
       header-align="center">
       <el-table-column
           prop="title"
           label="标题"
-          width="130"
+          width="190"
           align="center"
           >
         </el-table-column>
         <el-table-column
           prop="time"
           label="时间"
-          width="139"
+          width="189"
           align="center"
           >
         </el-table-column>
