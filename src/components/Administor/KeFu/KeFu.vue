@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="containedDiv">
     <el-container>
       <el-header> </el-header>
       <el-main>
@@ -59,7 +59,7 @@
           <el-table
             :data="this.$store.state.SData_Company[0].nService"
             style="width:1010px"
-            max-height="500px"
+            
           >
             <el-table-column
               prop="name"
@@ -105,7 +105,7 @@
             </el-table-column>
             <el-table-column label="操作" width="160" align="center">
               <template slot-scope="scope">
-                <el-button type="success" size="mini">接受</el-button>
+                <el-button type="success" size="mini" @click="accept()">接受</el-button>
                 <el-button type="warning" size="mini">拒绝</el-button>
               </template>
             </el-table-column>
@@ -124,10 +124,23 @@ export default {
     }
   },
   methods: {
-    accept() {},
+    accept() {
+      this.$store.state.SData_Company[0].service.push(this.$store.state.SData_Company[0].nService)
+      this.$store.state.SData_Company[0].nService.pop()
+      this.nService.sort()     
+    },
     refuse() {}
   }
 }
 </script>
 
-<style></style>
+<style>
+.containedDiv{
+   background-color: #d3dce6;
+    background-image: url(../../../img/fz1.jpg);
+        width: 100%;
+        height: 443px;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+</style>

@@ -1,6 +1,8 @@
 <template>
-  <el-aside width="300px" style="background-color: #ffffff">
-
+  <el-aside width="300px" style="background-color: cornflowerblue;">
+    <el-container>
+      <el-header style="background-color: cornflowerblue;"></el-header>
+      <el-main style="background-color: #ffffff">
     <!--  -->
       <el-menu :default-openeds="['1']">
             <el-menu-item index="1-1" @click="handleClick_all(0)">全部工单</el-menu-item>
@@ -8,6 +10,9 @@
             <el-menu-item index="1-3" @click="handleClick(1)">处理中工单</el-menu-item>
             <el-menu-item index="1-4" @click="handleClick(2)">已解决工单</el-menu-item>
           </el-menu>
+      </el-main>
+      <el-footer style="background-color: #ffffff"></el-footer>
+    </el-container>
     </el-aside>
 </template>
 
@@ -67,13 +72,14 @@ methods:{
     
   // },
   },
+  
 }
 </script>
 
 <style scoped>
 .el-menu-item{
-   margin-top:60px;
-   font-size:30px!important;
+   margin-top:20px;
+   font-size:18px!important;
    font-weight: normal;
 }
 </style>
