@@ -366,6 +366,7 @@
       </div>
       <el-divider></el-divider>
       <el-form
+        style="width:500px;text-align:left;text-align: left;"
         label-width="120px"
         :rules="rules"
         :model="formData"
@@ -483,9 +484,12 @@ export default {
         if (valid) {
           this.formData.adminName = ''
           this.formData.adminAcc = ''
-          this.FormData.adminPwd = ''
-          this.formDatadata.adminEmail = ''
-          this.$message('这是一条消息提示')
+          this.formData.adminPwd = ''
+          this.formData.adminEmail = ''
+          this.$message({
+            message: '添加管理员成功',
+            type: 'success'
+          })
         } else {
           console.log('error submit!!')
           return false

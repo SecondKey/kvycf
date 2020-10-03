@@ -18,7 +18,6 @@
 .mask {
   margin: auto;
   width: 900px;
-  min-height: 900px;
   background-color: #ffffffcc;
   text-align: center;
 }
