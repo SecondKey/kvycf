@@ -25,7 +25,7 @@
         >添加工单</el-button>
         <el-dialog title="新建工单" :visible.sync="dialogFormVisible" style="text-align:left!important;">
   <el-form :model="form">
-    <el-form-item label="工单分类" :label-width="formLabelWidth">
+    <el-form-item label="工单分类" :label-width="formLabelWidth" >
         <el-select v-model="form.grade" placeholder="请选择">
     <el-option
       v-for="item in options"
@@ -239,7 +239,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+.el-form-item__label {
+  text-align: right !important;
+  font-size: 14px !important;
+}
 .el-select .el-input {
     width: 130px;
   }
@@ -309,6 +313,7 @@ export default {
   width: 200px;
 }
 .tt{
-  text-indent:1.2em!important
+  text-indent:1.2em!important;
 }
+
 </style>
