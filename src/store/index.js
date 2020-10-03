@@ -7,43 +7,7 @@ export default new Vuex.Store({
   state: {
     currentCustomer: null, //当前用户
     currentOrder: null,
-    currentOrder_List: [
-      //   {
-      //   id:'', //工单id
-      //   title: '', //工单标题
-      //   state:'', //工单状态，0/1/2 0:完成 1：处理中 2：待处理
-      //   client: '', //发起工单的客户的id
-      //   category: '', //分类
-      //   priority: '', //优先级
-      //   createTime: '', //创建时间
-      //   convers: [
-      //     {
-      //       id: 0, //会话的id
-      //       service: 1, //接待客服id
-      //       msg: [
-      //         {
-      //           id: 0,
-      //           owner: '客户01',
-      //           time: '2019.12.05 13:23',
-      //           contant: '你好,我的手机坏了，那你能帮帮我吗？'
-      //         },
-      //         {
-      //           id: 1,
-      //           owner: '客服房镇',
-      //           time: '2019.12.05 13:24',
-      //           contant: '你什么配置？'
-      //         },
-      //         {
-      //           id: 2,
-      //           owner: '客户01',
-      //           time: '2019.12.05 13:25',
-      //           contant: '我8G内存'
-      //         }
-      //       ]
-      //     }
-      //   ]
-      // },
-    ],
+    currentOrder_List: [],
     //#region 页面布局
     LayOut_EnterPage_NowChoisePage: '1',
     //#endregion
