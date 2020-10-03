@@ -96,7 +96,7 @@
   </el-form>
   <div slot="footer" class="dialog-footer">
     <el-button @click="dialogFormVisible = false">取 消</el-button>
-    <el-button type="primary" @click="open5" :plain="true" >确 定</el-button>
+    <el-button type="primary" @click="open5" :plain="true"  >确 定</el-button>
   </div>
 </el-dialog>
 
@@ -136,7 +136,7 @@ export default {
   methods: {
     open5(){
        this.$message({
-          message: '恭喜你，新建成功！',
+          message: '恭喜你，一个工单新建成功！',
           type: 'success'
         });
     },
@@ -247,7 +247,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style>
 .el-form-item__label {
   text-align: right !important;
   font-size: 14px !important;
