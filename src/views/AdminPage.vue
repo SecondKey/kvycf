@@ -26,8 +26,9 @@
         >
           <template slot="title">
             <img
-              src="../img/head.png"
-              style="width:40px;height:40px;margin-right:10px"
+              src="../img/221.jpg"
+              style="width:40px;height:40px;margin-right:10px;border-radius:50% "
+              
             />
             {{
               $store.state.SData_Company[$store.state.Data_Login_Conpany].admin[
