@@ -252,7 +252,6 @@ option1 :{
   width: 500px;
   border: 1px;
   background-color: rgb(238, 241, 245);
-
   font-size: 14px;
   margin: 10px;
   line-height: 40px;
