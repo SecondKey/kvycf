@@ -275,7 +275,10 @@
       <el-radio-group
         v-model="radio"
         style="
-        background-color: aliceblue;"
+        background-color: aliceblue;
+        padding-top:30px;
+        padding-bottom:30px;
+        padding-left: 10px;"
       >
         <el-radio :label="0">
           <div style="float:right">
@@ -286,22 +289,25 @@
             </div>
           </div>
         </el-radio>
+
+        <el-divider></el-divider>
         <div></div>
         <el-radio :label="1">
           <div style="float:right">
-            <div>按排序轮流分配</div>
+            <div>按排序优先分配</div>
             <div>
-              设定一个客服排序, 新的对话按此排序, 在可分配的客服间轮流分配,
-              从排序最靠前的开始
+              设定一个客服排序, 优先给排序靠前的客服分配到对话数量上限,
+              才会分配给排序下一位的客服
             </div>
           </div></el-radio
         >
+
+        <el-divider></el-divider>
         <el-radio :label="2">
           <div style="float:right">
             <div>按平均分配</div>
             <div>
-              设定一个客服排序, 优先给排序靠前的客服分配到对话数量上限,
-              才会分配给排序下一位的客服
+              根据每位客服的对话量维持一个平均的工作量分配。
             </div>
           </div></el-radio
         >
@@ -327,6 +333,30 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="settingArea" id="setting8">
+      <el-divider></el-divider>
+      <div class="settingHead">
+        工单设置
+      </div>
+      <el-divider></el-divider>
+      <div class="autoMargin" style="margin-top:30px;margin-bottom:30px">
+        通知工单创建人
+        <el-switch v-model="value6"> </el-switch>
+        <div style="margin-top:30px">
+          <div style="display:inline">
+            工单被更新时，同步通知工单创建人
+          </div>
+        </div>
+      </div>
+      <el-divider></el-divider>
+      <div>
+        工单回复可见范围
+        <el-radio v-model="radio" label="1">仅客服可见</el-radio>
+        <el-radio v-model="radio" label="2">所有人可见</el-radio>
+      </div>
+      <el-divider></el-divider>
     </div>
   </div>
 </template>
@@ -371,7 +401,11 @@ export default {
 
       radio: 0,
       value4: true,
-      value5: true
+      value5: true,
+
+      value6: true,
+      radio1: 0,
+      posList: []
     }
   },
   methods: {
@@ -386,22 +420,43 @@ export default {
       this.noticeText = ''
     },
     onScroll(event) {
-      let i = 0
-      if (document.getElementById('123').scrollTop < 850) {
-        i = 0
-      } else if (document.getElementById('123').scrollTop < 1255) {
-        i = 1
-      } else if (document.getElementById('123').scrollTop < 2020) {
-        i = 2
-      } else if (document.getElementById('123').scrollTop < 2400) {
-        i = 3
-      } else {
-        i = 4
+      let pos = 0
+      for (let i in this.posList) {
+        if (document.getElementById('123').scrollTop < this.posList[i] - 70) {
+          pos = i
+          break
+        }
       }
-      this.$parent.PageScroll(i)
+
+      this.$parent.PageScroll(Number(pos))
     }
   },
-  mounted() {}
+  updated: function() {
+    let t = document.getElementById('setting1').getBoundingClientRect().top - 90
+    this.posList = []
+    this.posList.push(
+      document.getElementById('setting2').getBoundingClientRect().top - t
+    )
+    this.posList.push(
+      document.getElementById('setting3').getBoundingClientRect().top - t
+    )
+    this.posList.push(
+      document.getElementById('setting4').getBoundingClientRect().top - t
+    )
+    this.posList.push(
+      document.getElementById('setting5').getBoundingClientRect().top - t
+    )
+    this.posList.push(
+      document.getElementById('setting6').getBoundingClientRect().top - t
+    )
+    this.posList.push(
+      document.getElementById('setting7').getBoundingClientRect().top - t
+    )
+    this.posList.push(
+      document.getElementById('setting8').getBoundingClientRect().top - t
+    )
+    console.log(this.posList)
+  }
 }
 </script>
 
