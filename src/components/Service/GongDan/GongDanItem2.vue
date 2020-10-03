@@ -184,7 +184,7 @@
           width="140"
           align="center"
         ></el-table-column>
-        <el-table-column fixed="right" label="操作" width="140">
+        <el-table-column fixed="right" label="操作" width="130">
           <el-button type="text" style="float:left">查看详情</el-button>
           <el-button type="text" @click="open1" style="float:left"
             >接单</el-button
