@@ -13,16 +13,17 @@
         :key="item.id"
       >
         <li>{{ item.owner }},{{ item.time }}:</li>
-        <li
-          style="list-style-type:none"
-          class="speech"
-        >
+        <li style="list-style-type:none" class="speech">
           {{ item.contant }}
         </li>
       </ul>
     </el-main>
     <el-footer class="HuiHuaItem2_footer" height="30%">
-      <el-select v-model="send_txt" placeholder="请选择">
+      <el-select
+        v-model="send_txt"
+        placeholder="请选择"
+        style="margin-top:10px;margin-bottom:10px"
+      >
         <el-option
           v-for="item in this.$store.state.SData_Company[
             this.$store.state.Data_Login_Conpany
@@ -33,17 +34,22 @@
         >
         </el-option>
       </el-select>
+      <el-button
+        id="send_btn"
+        @click="send"
+        type="primary"
+        style="float:right;margin-top:10px;margin-bottom:10px"
+        >发送</el-button
+      >
       <!-- <el-input id="send_txt" type="text" ></el-input> -->
       <!-- <el-button id="choose_btn" @click="choose">选择</el-button> -->
-      <input
-        type="text"
+      <el-input
+        type="textarea"
+        rows="8.1"
         id="send_txt"
         v-model="send_txt"
         class="HuiHuaItem_input"
       />
-      <el-button id="send_btn" @click="send" type="primary" style="float:right"
-        >发送</el-button
-      >
     </el-footer>
   </el-container>
 </template>
@@ -54,7 +60,10 @@ export default {
     return {
       left: true,
       right: false,
-      send_txt: ''
+      send_txt: '',
+
+      kehuList: [],
+      kefuList: []
     }
   },
   methods: {
