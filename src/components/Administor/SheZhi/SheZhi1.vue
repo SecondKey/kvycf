@@ -460,7 +460,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
 .settingArea {
   margin-left: 30px;
   padding-top: 30px;

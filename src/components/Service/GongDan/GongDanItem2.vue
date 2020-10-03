@@ -247,7 +247,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
 .el-form-item__label {
   text-align: right !important;
   font-size: 14px !important;
