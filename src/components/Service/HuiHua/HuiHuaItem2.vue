@@ -1,21 +1,24 @@
 <template>
   <el-container class="HuiHuaItem2_container">
     <el-header class="HuiHuaItem2_header">
-      <h2>{{this.$store.state.currentCustomer.name}}</h2>
+      <h2>{{ this.$store.state.currentCustomer.name }}</h2>
     </el-header>
     <el-main class="HuiHuaItem2_main" v-if="this.$store.state.currentOrder">
       <el-button id="send_btn" @click="kehusend" style="float:right"
-        >测试</el-button>
+        >测试</el-button
+      >
       <ul
         id="chat_ul"
         v-for="item in this.$store.state.currentOrder.convers[0].msg"
         :key="item.id"
       >
-        <li :class="{'right':right}">{{ item.owner }},{{ item.time }}:</li>
-        <li style="list-style-type:none" :class="{'speech':left,'speechright':right}">
+        <li :class="{ right: right }">{{ item.owner }},{{ item.time }}:</li>
+        <li
+          style="list-style-type:none"
+          :class="{ speech: left, speechright: right }"
+        >
           {{ item.contant }}
         </li>
-
       </ul>
     </el-main>
     <el-footer class="HuiHuaItem2_footer" height="30%">
@@ -49,52 +52,16 @@
 export default {
   data() {
     return {
-      left:true,
-      right:false,
-      send_txt: '',
-      tabelData: [
-        {
-          id: 0,
-          date: '2016-05-02-19:34',
-          content: '你好,我的手机坏了，开不开了',
-          owner: '客户王二'
-        },
-        {
-          id: 1,
-          date: '2016-05-02-19:35',
-          content: '你好，请提交机型，并描述在发生故障前的情况',
-          owner: '客服小何'
-        }
-      ],
-      options: [
-        {
-          value: 1,
-          label: '你好，请问有什么可以帮你？'
-        },
-        {
-          value: 2,
-          label: '正在为您查询相关信息，请稍等'
-        },
-        {
-          value: 3,
-          label: '请问您对这次服务满意吗？'
-        },
-        {
-          value: 4,
-          label: '再见，祝您生活愉快'
-        },
-        {
-          value: 5,
-          label: '自定义'
-        }
-      ]
+      left: true,
+      right: false,
+      send_txt: ''
     }
   },
   methods: {
     send() {
       console.log()
-      this.right=true
-      this.left=false
+      this.right = true
+      this.left = false
       let myDate = new Date()
       // console.log(this.send_txt)
       var chat_ul = document.getElementById('chat_ul')
@@ -115,8 +82,8 @@ export default {
       this.tabelData.sort()
     },
     kehusend() {
-      this.right=false
-      this.left=true
+      this.right = false
+      this.left = true
       console.log()
       let myDate = new Date()
       // console.log(this.send_txt)
@@ -139,18 +106,17 @@ export default {
     }
   },
 
-   created(){
-    this.$store.state.currentOrder=this.$store.state.SData_Company[0].order[0]
+  created() {
+    this.$store.state.currentOrder = this.$store.state.SData_Company[0].order[0]
     console.log(this.$store.state.currentOrder)
-   }
-
+  }
 }
 </script>
 
 <style>
-.right{
+.right {
   float: right;
-  clear:both;
+  clear: both;
 }
 .HuiHuaItem2_container {
   background-color: gainsboro !important;
@@ -223,8 +189,8 @@ export default {
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 5px;
-  float:right;
-  clear:both;
+  float: right;
+  clear: both;
 }
 .speechright:before {
   content: ' ';

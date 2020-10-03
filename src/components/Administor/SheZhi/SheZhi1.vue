@@ -358,6 +358,41 @@
       </div>
       <el-divider></el-divider>
     </div>
+
+    <div class="settingArea" id="setting9">
+      <el-divider></el-divider>
+      <div class="settingHead">
+        添加管理员
+      </div>
+      <el-divider></el-divider>
+      <el-form
+        style="width:500px;text-align:left;text-align: left;"
+        label-width="120px"
+        :rules="rules"
+        :model="formData"
+        ref="ruleForm"
+      >
+        <el-form-item label="管理员名称" prop="adminName">
+          <el-input v-model="formData.adminName"></el-input>
+        </el-form-item>
+        <el-form-item label="输入账号" prop="adminAcc">
+          <el-input v-model="formData.adminAcc"></el-input>
+        </el-form-item>
+        <el-form-item label="输入密码" prop="adminPwd">
+          <el-input v-model="formData.adminPwd"></el-input>
+        </el-form-item>
+        <el-form-item label="邮箱" prop="adminEmail">
+          <el-input v-model="formData.adminEmail"></el-input>
+        </el-form-item>
+      </el-form>
+      <el-button
+        type="primary"
+        style="width:350px;margin-top:50px"
+        @click="ShowInfo"
+        >提交</el-button
+      >
+      <el-divider></el-divider>
+    </div>
   </div>
 </template>
 
@@ -405,7 +440,21 @@ export default {
 
       value6: true,
       radio1: 0,
-      posList: []
+      posList: [],
+
+      clauseVisible: false,
+      formData: {
+        adminName: '',
+        adminAcc: '',
+        adminPwd: '',
+        adminEmail: ''
+      },
+      rules: {
+        adminName: [{ required: true, message: '管理员姓名', trigger: 'blur' }],
+        adminAcc: [{ required: true, message: '管理员账户', trigger: 'blur' }],
+        adminPwd: [{ required: true, message: '管理员密码', trigger: 'blur' }],
+        adminEmail: [{ required: true, message: '管理员邮箱', trigger: 'blur' }]
+      }
     }
   },
   methods: {
@@ -429,6 +478,23 @@ export default {
       }
 
       this.$parent.PageScroll(Number(pos))
+    },
+    ShowInfo() {
+      this.$refs['ruleForm'].validate(valid => {
+        if (valid) {
+          this.formData.adminName = ''
+          this.formData.adminAcc = ''
+          this.formData.adminPwd = ''
+          this.formData.adminEmail = ''
+          this.$message({
+            message: '添加管理员成功',
+            type: 'success'
+          })
+        } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
     }
   },
   updated: function() {
@@ -454,6 +520,9 @@ export default {
     )
     this.posList.push(
       document.getElementById('setting8').getBoundingClientRect().top - t
+    )
+    this.posList.push(
+      document.getElementById('setting9').getBoundingClientRect().top - t
     )
     console.log(this.posList)
   }
