@@ -102,7 +102,8 @@
 
         </div>
     </div>
-    <el-table v-if="this.$store.state.currentOrder_List"  border style="width: 100%" height="300">
+    <div v-if="this.$store.state.currentOrder_List" >
+    <el-table  :data="this.$store.state.currentOrder_List" border style="width: 100%" height="300">
       <el-table-column fixed prop="id" label="工单ID" width="100" align="center"> </el-table-column>
       <el-table-column prop="title" label="工单标题" width="140" align="center"> </el-table-column>
       <el-table-column prop="client" label="客户ID" width="100" align="center"> </el-table-column>
@@ -114,6 +115,7 @@
         <el-button type="text" @click="open1" style="float:left">接单</el-button>
       </el-table-column>
     </el-table>
+    </div>
     <div class="block1">
       <el-pagination 
       background 
@@ -121,13 +123,14 @@
       :total="1000">
       </el-pagination>
   </div>
-  <el-button @click="test()">测试</el-button>
+  <!-- <el-button @click="test()">测试</el-button> -->
 
   </div>
 </template>
 
 <script>
 export default {
+  
   
   
   methods: {
@@ -170,7 +173,6 @@ export default {
 
   data() {
     return {
-      // order:[],
        fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}],
       customers:[],
        options: [{
