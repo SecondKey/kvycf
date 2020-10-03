@@ -1,5 +1,7 @@
 <template>
-  <el-container class="AdminPage_el_container">
+  <el-container
+    style="height:100%;width: 100%;background-color: rgb(180, 212, 231);position:fixed;"
+  >
     <el-header style="padding:0px">
       <el-menu
         class="el-menu-demo"
@@ -33,9 +35,7 @@
               ].name
             }}管理员
           </template>
-          <el-menu-item index="1" route="/ServicePage/SheZhi"
-            >设置</el-menu-item
-          >
+          <el-menu-item index="1" route="/AdminPage/SheZhi">设置</el-menu-item>
           <el-menu-item index="2" route="/">退出</el-menu-item>
         </el-submenu>
       </el-menu>

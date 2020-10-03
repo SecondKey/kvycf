@@ -97,7 +97,7 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
 .settingArea {
   margin-left: 30px;
   padding-top: 30px;

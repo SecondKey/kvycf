@@ -1,63 +1,123 @@
 <template>
-    
-<el-container class="">
-    
-  <el-aside class="SheZhi_aside" style="overflow:unset;width: 400px;">
-      <div class="part">
-
+  <div style="width:100%;">
+    <div
+      style="
+      margin-left:1px;
+      height:100%;
+      width:400px;
+      background:white;
+      position: fixed;
+      border-left: solid black 1px;
+      border-right: solid black 1px;"
+    >
+      <div
+        style="padding-top:20px;
+        padding-bottom:20px;
+        padding-left:16px;
+        border-bottom: solid black 0.2px;
+        font-size:30px;"
+      >
+        管理员设置
       </div>
-    <div class="part">
+      <el-menu
+        :default-active="nowPos"
+        class="el-menu-vertical-demo"
+        style="height:100%;width:400px;position: absolute;border:none"
+        @select="ChangeSelect"
+      >
+        <el-menu-item index="1" style="font-size:25px">
+          <i class="el-icon-menu"></i>
+          <span slot="title">账户</span>
+        </el-menu-item>
 
-      </div>
-      <div class="part">
-
-      </div>
-
-  </el-aside>
-
-  <el-main  class="SheZhi_main">
-      
-  </el-main>
-
-</el-container>
-
+        <el-menu-item index="2" style="font-size:25px">
+          <i class="el-icon-document"></i>
+          <span slot="title">公司信息</span>
+        </el-menu-item>
+        <el-menu-item index="3" style="font-size:25px">
+          <i class="el-icon-document"></i>
+          <span slot="title">自动回复</span>
+        </el-menu-item>
+        <el-menu-item index="4" style="font-size:25px">
+          <i class="el-icon-menu"></i>
+          <span slot="title">客户信息</span>
+        </el-menu-item>
+        <el-menu-item index="5" style="font-size:25px">
+          <i class="el-icon-document"></i>
+          <span slot="title">黑名单</span>
+        </el-menu-item>
+      </el-menu>
+      <el-steps
+        :active="nowStep"
+        align-center
+        finish-status="process"
+        direction="vertical"
+        style="float:right;width:25px;margin-right:25px;margin-top:16px;height:280px"
+      >
+        <el-step></el-step>
+        <el-step></el-step>
+        <el-step></el-step>
+        <el-step></el-step>
+        <el-step></el-step>
+      </el-steps>
+    </div>
+    <SheZhi1></SheZhi1>
+  </div>
 </template>
 
-
 <script>
+import SheZhi1 from './SheZhi1'
+
 export default {
-    
+  data() {
+    return {
+      nowPos: '1',
+      nowStep: 0
+    }
+  },
+  methods: {
+    ChangeSelect(index) {
+      this.nowStep = Number(index) - 1
+      document.getElementById('setting' + index).scrollIntoView()
+    },
+    AddChangYongYu() {
+      this.$store.commit('SData_AddChangYongYu', this.nowChangYongYu)
+      this.nowChangYongYu = ''
+      this.sortList.sort()
+    },
+    PageScroll(i) {
+      this.nowStep = i
+      this.nowPos = i + 1 + ''
+    }
+  },
+
+  components: {
+    SheZhi1: SheZhi1
+  }
 }
 </script>
 
-<style>
-
-.SheZhi_aside{
-    height: 1120px;
-    background-color: rgb(130, 164, 236);
-
+<style scope>
+.settingArea {
+  margin-left: 30px;
+  padding-top: 30px;
 }
 
-
-.part{
-    width: 400px;
-    height: 370px;
-    margin-top: 5px;
-    margin-bottom: 3px;
-    border-color: cornsilk;
-    border-width: 1px;
-    background-color: rgb(241, 218, 122);
-
+.settingHead {
+  font-size: 50px;
+  color: black;
 }
 
-.SheZhi_main{
-    width: 700px;
-    height: 1120px;
-    left: 0;
-    background-color: rgb(183, 122, 223);
-    margin-left: 10px;
-
+.inputTitle {
+  font-size: 25px;
+  width: 400px;
 }
-
-
+.el-form-item__label {
+  text-align: left !important;
+  font-size: 30px !important;
+}
+.autoMargin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 </style>
