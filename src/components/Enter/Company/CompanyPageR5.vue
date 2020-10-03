@@ -39,9 +39,12 @@ export default {
           this.show = true
           clearInterval(this.timer)
           this.timer = null
-          //跳转的页面写在此处
-          this.$router.push({ path: '/' })
+
           this.$store.commit('Layout_EnterPage_ChangeChoisePage', '1')
+          this.$router.push({ path: '/' })
+          // setTimeout(() => {
+          // }, 5000)
+          // :default-active="$route.path  this.$store.state.LayOut_EnterPage_NowChoisePage"
         }
       }, 1000)
     }
