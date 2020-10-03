@@ -42,7 +42,7 @@ export default {
   background-color: rgb(115, 115, 126);
 }
 .shouye-box2 {
-  width: 270px;
+  width: 380px;
   height: 423px;
   position: absolute;
   top: 85px;

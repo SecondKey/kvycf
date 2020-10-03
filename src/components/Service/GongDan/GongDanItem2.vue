@@ -9,7 +9,7 @@
         <el-input placeholder="请输入关键词搜索" v-model="input2">
           <template slot="append">搜索</template>
         </el-input>
-      </div>
+      </div>        
       <div class="add">
         <el-button type="text">批量修改状态</el-button>
       </div>
@@ -20,7 +20,7 @@
         <el-button
           type="primary"
           @click="dialogFormVisible = true"
-          style="position: relative; top: -65px; left: -380px"
+          style="position: relative; top: -65px; left: -445px"
           >添加工单</el-button
         >
         <el-dialog
@@ -140,13 +140,13 @@
         :data="this.$store.state.currentOrder_List"
         border
         style="width: 100%"
-        height="300"
+        height="380"
       >
         <el-table-column
           fixed
           prop="id"
           label="工单ID"
-          width="100"
+          width="140"
           align="center"
         >
         </el-table-column>
@@ -160,21 +160,21 @@
         <el-table-column
           prop="client"
           label="客户ID"
-          width="100"
+          width="140"
           align="center"
         >
         </el-table-column>
         <el-table-column
           prop="category"
           label="分类"
-          width="100"
+          width="140"
           align="center"
         >
         </el-table-column>
         <el-table-column
           prop="priority"
           label="优先级"
-          width="100"
+          width="140"
           align="center"
         >
         </el-table-column>
@@ -184,7 +184,7 @@
           width="140"
           align="center"
         ></el-table-column>
-        <el-table-column fixed="right" label="操作" width="140">
+        <el-table-column fixed="right" label="操作" width="130">
           <el-button type="text" style="float:left">查看详情</el-button>
           <el-button type="text" @click="open1" style="float:left"
             >接单</el-button
@@ -325,7 +325,6 @@ export default {
         ]
       },
       value1: '',
-
       input2: '',
       textarea: ''
     }
@@ -389,7 +388,8 @@ export default {
 .block {
   position: relative;
   top: 65px;
-  left: -85px;
+  left: -150px;
+  
 }
 .search {
   position: relative;

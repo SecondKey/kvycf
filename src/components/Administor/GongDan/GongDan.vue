@@ -24,18 +24,18 @@ export default {
 }
 .gongdan-box1 {
   width: 300px;
-  height: 400px;
+  height: 550px;
   position: absolute;
   background-color: chocolate;
-  top: 70px;
+  top: 40px;
   left: 50px;
 }
 .gongdan-box2 {
-  width: 1030px;
-  height: 1070px;
+  width: 1000px!important;
+  height: 550px!important;
   position: absolute;
   background-color: cornflowerblue;
-  top: 70px;
+  top: 40px;
   left: 370px;
 }
 </style>
