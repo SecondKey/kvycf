@@ -167,7 +167,16 @@ export default new Vuex.Store({
             email: '2278228786@qq.com'
           }
         ], //客服人员
-        nService: [], //正在注册的客服人员
+        nService: [
+          {
+            name: '何锦涛',
+            tName: '123',
+            pwd: '123',
+            account: '123',
+            tel: '13',
+            email: '1725@qq.com'
+          }
+        ], //正在注册的客服人员
         client: [
           {
             id: 0, //k客户编号
@@ -440,6 +449,7 @@ export default new Vuex.Store({
     //注册一个客服
     Service_SignUp(state, data) {
       state.SData_Company[data.id].nService.push(data.newService)
+      console.log(state.SData_Company[0].nService)
     },
     //#endregion
     //#region 登录
