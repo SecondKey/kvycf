@@ -236,7 +236,8 @@ export default {
     return {
       nowChangYongYu: '',
 
-      sortList: [1, 2, 3, 4]
+      sortList: [1, 2, 3, 4],
+      posList: []
     }
   },
   methods: {
@@ -246,22 +247,34 @@ export default {
       this.sortList.sort()
     },
     onScroll(event) {
-      let i = 0
-      if (document.getElementById('123').scrollTop < 850) {
-        i = 0
-      } else if (document.getElementById('123').scrollTop < 1255) {
-        i = 1
-      } else if (document.getElementById('123').scrollTop < 2020) {
-        i = 2
-      } else if (document.getElementById('123').scrollTop < 2400) {
-        i = 3
-      } else {
-        i = 4
+      let pos = 0
+      for (let i in this.posList) {
+        if (document.getElementById('123').scrollTop < this.posList[i] - 70) {
+          pos = i
+          break
+        }
       }
-      this.$parent.PageScroll(i)
+
+      this.$parent.PageScroll(Number(pos))
     }
   },
-  mounted() {}
+  updated: function() {
+    let t = document.getElementById('setting1').getBoundingClientRect().top - 90
+    this.posList = []
+    this.posList.push(
+      document.getElementById('setting2').getBoundingClientRect().top - t
+    )
+    this.posList.push(
+      document.getElementById('setting3').getBoundingClientRect().top - t
+    )
+    this.posList.push(
+      document.getElementById('setting4').getBoundingClientRect().top - t
+    )
+    this.posList.push(
+      document.getElementById('setting5').getBoundingClientRect().top - t
+    )
+    console.log(this.posList)
+  }
 }
 </script>
 
