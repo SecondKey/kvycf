@@ -103,7 +103,7 @@
         </div>
     </div>
     <div v-if="this.$store.state.currentOrder_List" >
-    <el-table  :data="this.$store.state.currentOrder_List" border style="width: 100%" height="300">
+    <el-table  :data="this.$store.state.currentOrder_List" border style="width: 100%" height="300" >
       <el-table-column fixed prop="id" label="工单ID" width="100" align="center"> </el-table-column>
       <el-table-column prop="title" label="工单标题" width="140" align="center"> </el-table-column>
       <el-table-column prop="client" label="客户ID" width="100" align="center"> </el-table-column>
