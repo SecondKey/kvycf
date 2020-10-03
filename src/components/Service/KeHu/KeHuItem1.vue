@@ -22,23 +22,23 @@
                 <br>
 
                 <!-- #region -->
-                <el-button type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</el-button>
-                <el-dialog title="收货地址" :visible.sync="dialogFormVisible">
-                <el-form :model="form">
-                  <el-form-item label="活动名称" :label-width="formLabelWidth">
-                    <el-input v-model="form.name" autocomplete="off"></el-input>
+                <el-button type="text" @click="dialogFormVisible = true">提交修改黑名单申请</el-button>
+                <el-dialog title="黑名单申请" :visible.sync="dialogFormVisible">
+
+                <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
+                  <el-form-item label="客服ID" prop="name">
+                    <el-input v-model="ruleForm.name"></el-input>
+                    </el-form-item>
+                  <el-form-item label="修改理由" :label-width="formLabelWidth" placeholder="请输入修改理由" prop="reason">
+                     <el-input type="textarea" v-model="ruleForm.desc"></el-input>
                   </el-form-item>
-                  <el-form-item label="活动区域" :label-width="formLabelWidth">
-                    <el-select v-model="form.region" placeholder="请选择活动区域">
-                      <el-option label="区域一" value="shanghai"></el-option>
-                      <el-option label="区域二" value="beijing"></el-option>
-                    </el-select>
+               
+
+                 <el-form-item>
+                    <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
+                    <el-button @click="resetForm('ruleForm')">重置</el-button>
                   </el-form-item>
-                </el-form>
-                <div slot="footer" class="dialog-footer">
-                  <el-button @click="dialogFormVisible = false">取 消</el-button>
-                  <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
-                </div>
+                   </el-form>
               </el-dialog>
               <!-- #endregion -->
                
@@ -91,28 +91,50 @@ export default {
                 VisitEq:'pc',
                 VisitRt:'非常满意'
               };
+              
       return { 
 
             customers:this.$store.state.SData_Company[0].client,
             List_data: Array(15).fill(List_data),
             value: true,
 
-          dialogFormVisible: false,
-          form: {
-          name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
-        },
-        formLabelWidth: '120px'
-            }
-        }
-      
-}
+            dialogFormVisible: false,
+            ruleForm: {
+            name: '',
+            delivery: false,
+            desc: '',
+                },
+            rules: {
+            name: [
+              { required: true, message: '请输入客服ID', trigger: 'blur' },
+              { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+            ],
+            reason: [
+              { required: true, message: '请选择修改理由', trigger: 'blur' }
+            ],
+          },
+          formLabelWidth: '120px'
+              
+          }
+   },
+       
+        methods: {
+      submitForm(formName) {
+        this.$refs[formName].validate((valid) => {
+          if (valid) {
+            alert('submit!');
+          } else {
+            console.log('error submit!!');
+            return false;
+          }
+        });
+      },
+      resetForm(formName) {
+        this.$refs[formName].resetFields();
+      }
+    }
+  }
+  
       
 </script>
 
