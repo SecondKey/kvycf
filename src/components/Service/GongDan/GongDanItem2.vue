@@ -23,7 +23,7 @@
         @click="dialogFormVisible = true"
         style="position: relative; top: -65px; left: -380px"
         >添加工单</el-button>
-        <el-dialog title="新建工单" :visible.sync="dialogFormVisible" style="text-align:left!important;">
+        <el-dialog title="新建工单" :visible.sync="dialogFormVisible" style="text-align:left!important;" append-to-body>
   <el-form :model="form">
     <el-form-item label="工单分类" :label-width="formLabelWidth" >
         <el-select v-model="form.grade" placeholder="请选择">
@@ -96,7 +96,7 @@
   </el-form>
   <div slot="footer" class="dialog-footer">
     <el-button @click="dialogFormVisible = false">取 消</el-button>
-    <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+    <el-button type="primary" @click="open5" :plain="true"  >确 定</el-button>
   </div>
 </el-dialog>
 
@@ -134,6 +134,12 @@ export default {
   
   
   methods: {
+    open5(){
+       this.$message({
+          message: '恭喜你，一个工单新建成功！',
+          type: 'success'
+        });
+    },
      handleRemove(file, fileList) {
         console.log(file, fileList);
       },
@@ -241,7 +247,7 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
 .el-form-item__label {
   text-align: right !important;
   font-size: 14px !important;

@@ -310,7 +310,7 @@ export default new Vuex.Store({
             id: 1, //工单id
             title: '手机维修', //工单标题
             state: 0, //工单状态，工单是否已经完成
-            client: 0, //发起工单的客户的id
+            client: 2, //发起工单的客户的id
             category: 0, //分类
             priority: 3, //优先级
             createTime: '2019.12.05', //创建时间
@@ -332,7 +332,7 @@ export default new Vuex.Store({
             id: 2, //工单id
             title: '手机维修', //工单标题
             state: 1, //工单状态，工单是否已经完成
-            client: 0, //发起工单的客户的id
+            client: 3, //发起工单的客户的id
             category: 0, //分类
             priority: 3, //优先级
             createTime: '2019.12.05', //创建时间
@@ -354,7 +354,7 @@ export default new Vuex.Store({
             id: 3, //工单id
             title: '手机维修', //工单标题
             state: 2, //工单状态，工单是否已经完成
-            client: 0, //发起工单的客户的id
+            client: 4, //发起工单的客户的id
             category: 0, //分类
             priority: 3, //优先级
             createTime: '2019.12.05', //创建时间
@@ -376,7 +376,7 @@ export default new Vuex.Store({
             id: 4, //工单id
             title: '手机维修', //工单标题
             state: 2, //工单状态，工单是否已经完成
-            client: 0, //发起工单的客户的id
+            client: 5, //发起工单的客户的id
             category: 0, //分类
             priority: 3, //优先级
             createTime: '2019.12.05', //创建时间
@@ -398,7 +398,7 @@ export default new Vuex.Store({
             id: 5, //工单id
             title: '手机维修', //工单标题
             state: 2, //工单状态，工单是否已经完成
-            client: 0, //发起工单的客户的id
+            client: 6, //发起工单的客户的id
             category: 0, //分类
             priority: 3, //优先级
             createTime: '2019.12.05', //创建时间
