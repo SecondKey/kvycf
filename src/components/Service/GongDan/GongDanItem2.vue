@@ -293,13 +293,13 @@ export default {
 .block {
   position: relative;
   top: 65px;
-  left: 160px;
+  left: -85px;
   
 }
 .search {
   position: relative;
   top: 25px;
-  left: 230px;
+  left: 5px;
   width: 230px;
 }
 

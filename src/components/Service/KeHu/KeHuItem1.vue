@@ -27,10 +27,10 @@
 
                 <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
                   <el-form-item label="客服ID" prop="name">
-                    <el-input v-model="ruleForm.name"></el-input>
+                    <el-input v-model="ruleForm.name" placeholder="请输入客户ID"></el-input>
                     </el-form-item>
                   <el-form-item label="修改理由" :label-width="formLabelWidth" placeholder="请输入修改理由" prop="reason">
-                     <el-input type="textarea" v-model="ruleForm.desc"></el-input>
+                     <el-input type="textarea" v-model="ruleForm.desc" placeholder="请输入修改理由"></el-input>
                   </el-form-item>
                
 
