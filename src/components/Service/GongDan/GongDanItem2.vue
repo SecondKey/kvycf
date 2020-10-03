@@ -21,7 +21,7 @@
       <el-button
         type="primary"
         @click="dialogFormVisible = true"
-        style="position: relative; top: -65px; left: -380px"
+        style="position: relative; top: -65px; left: -445px"
         >添加工单</el-button>
         <el-dialog title="新建工单" :visible.sync="dialogFormVisible" style="text-align:left!important;" append-to-body>
   <el-form :model="form">
@@ -103,12 +103,12 @@
         </div>
     </div>
     <div v-if="this.$store.state.currentOrder_List" >
-    <el-table  :data="this.$store.state.currentOrder_List" border style="width: 100%" height="300" >
-      <el-table-column fixed prop="id" label="工单ID" width="100" align="center"> </el-table-column>
+    <el-table  :data="this.$store.state.currentOrder_List" border style="width: 100%" height="380" >
+      <el-table-column fixed prop="id" label="工单ID" width="140" align="center"> </el-table-column>
       <el-table-column prop="title" label="工单标题" width="140" align="center"> </el-table-column>
-      <el-table-column prop="client" label="客户ID" width="100" align="center"> </el-table-column>
-      <el-table-column prop="category" label="分类" width="100" align="center"> </el-table-column>
-      <el-table-column prop="priority" label="优先级" width="100" align="center"> </el-table-column>
+      <el-table-column prop="client" label="客户ID" width="140" align="center"> </el-table-column>
+      <el-table-column prop="category" label="分类" width="140" align="center"> </el-table-column>
+      <el-table-column prop="priority" label="优先级" width="140" align="center"> </el-table-column>
        <el-table-column prop="createTime" label="创建时间" width="140" align="center"></el-table-column>
       <el-table-column fixed="right" label="操作" width="140" >
         <el-button type="text"  style="float:left">查看详情</el-button>
@@ -237,7 +237,6 @@ export default {
           }]
         },
         value1: '',                                                                                                                                                                                                                                                                                                                                                         
- 
         input2: '',
         textarea: ''
     }
@@ -303,7 +302,7 @@ export default {
 .block {
   position: relative;
   top: 65px;
-  left: -85px;
+  left: -150px;
   
 }
 .search {

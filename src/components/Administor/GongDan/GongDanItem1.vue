@@ -71,4 +71,9 @@ methods:{
 </script>
 
 <style>
+.el-menu-item{
+   margin-top:60px;
+   font-size:30px!important;
+   font-weight: normal;
+}
 </style>

@@ -21,7 +21,7 @@
       <el-button
         type="primary"
         @click="dialogFormVisible = true"
-        style="position: relative; top: -65px; left: -380px"
+        style="position: relative; top: -65px; left: -445px"
         >添加工单</el-button>
         <el-dialog title="新建工单" :visible.sync="dialogFormVisible" style="text-align:left!important;">
   <el-form :model="form">
@@ -303,7 +303,7 @@ export default {
 .block {
   position: relative;
   top: 65px;
-  left: -85px;
+  left: -150px;
   
 }
 .search {
