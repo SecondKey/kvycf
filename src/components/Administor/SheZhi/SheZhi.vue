@@ -36,7 +36,7 @@
         </el-menu-item>
         <el-menu-item index="3" style="font-size:25px">
           <i class="el-icon-document"></i>
-          <span slot="title">自动回复</span>
+          <span slot="title">通知公告</span>
         </el-menu-item>
         <el-menu-item index="4" style="font-size:25px">
           <i class="el-icon-menu"></i>
@@ -45,6 +45,14 @@
         <el-menu-item index="5" style="font-size:25px">
           <i class="el-icon-document"></i>
           <span slot="title">黑名单</span>
+        </el-menu-item>
+        <el-menu-item index="6" style="font-size:25px">
+          <i class="el-icon-document"></i>
+          <span slot="title">对话规则</span>
+        </el-menu-item>
+        <el-menu-item index="7" style="font-size:25px">
+          <i class="el-icon-document"></i>
+          <span slot="title">分配规则</span>
         </el-menu-item>
       </el-menu>
       <el-steps
