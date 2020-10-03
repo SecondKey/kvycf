@@ -18,7 +18,7 @@ export default {
     return {
       option: {
         title: {
-          text: '折线图堆叠',
+          text: '订单量来源',
         },
         // 为图表配置标题
         tooltip: {
@@ -27,7 +27,7 @@ export default {
         },
         // 提示框
         legend: {
-          data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎'],
+          data: ['京东', '淘宝', '小程序', '微店', '公众号'],
         },
         // 图例数据
         grid: {
@@ -60,32 +60,32 @@ export default {
         // Y轴：配置要在Y轴显示的项
         series: [
           {
-            name: '邮件营销',
+            name: '京东',
             type: 'line',
             stack: '总量',
             data: [120, 132, 101, 134, 90, 230, 210],
           },
           // 系列列表：每个系列通过type决定自己的图表类型
           {
-            name: '联盟广告',
+            name: '淘宝',
             type: 'line',
             stack: '总量',
             data: [220, 182, 191, 234, 290, 330, 310],
           },
           {
-            name: '视频广告',
+            name: '小程序',
             type: 'line',
             stack: '总量',
             data: [150, 232, 201, 154, 190, 330, 410],
           },
           {
-            name: '直接访问',
+            name: '微店',
             type: 'line',
             stack: '总量',
             data: [320, 332, 301, 334, 390, 330, 320],
           },
           {
-            name: '搜索引擎',
+            name: '公众号',
             type: 'line',
             stack: '总量',
             data: [820, 932, 901, 934, 1290, 1330, 1320],

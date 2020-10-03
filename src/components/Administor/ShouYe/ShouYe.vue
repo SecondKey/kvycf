@@ -144,6 +144,9 @@ export default {
   data: function() {
     return {
     option: {
+      title: {
+          text: '本周用户量',
+        },
     xAxis: {
         type: 'category',
         data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
@@ -152,7 +155,7 @@ export default {
         type: 'value'
     },
     series: [{
-        data: [120, 200, 150, 80, 70, 110, 130],
+        data: [1205, 2104, 1050, 1308, 1794, 1106, 1305],
         type: 'bar'
     }]
 },
