@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="containedDiv">
     <el-container>
       <el-header> </el-header>
       <el-main>
@@ -130,4 +130,13 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.containedDiv{
+   background-color: #d3dce6;
+    background-image: url(../../../img/fz1.jpg);
+        width: 100%;
+        height: 443px;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+</style>
