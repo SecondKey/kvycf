@@ -207,7 +207,7 @@ export default new Vuex.Store({
         client: [
           {
             id: 0, //k客户编号
-            name: '客户00', //客户名称
+            name: '你最珍贵（姜总）', //客户名称
             tel: '13912345670', //手机
             email: '12345678@qq.com', //邮箱
             position: '北京市', //地址
@@ -218,7 +218,7 @@ export default new Vuex.Store({
           },
           {
             id: 1,
-            name: '客户01',
+            name: '马云',
             tel: '13912345671',
             email: '12345678@qq.com',
             position: '北京市',
@@ -229,7 +229,7 @@ export default new Vuex.Store({
           },
           {
             id: 2,
-            name: '客户02',
+            name: '马化腾',
             tel: '13912345672',
             email: '12345678@qq.com',
             position: '北京市',
@@ -240,7 +240,7 @@ export default new Vuex.Store({
           },
           {
             id: 3,
-            name: '客户03',
+            name: '李彦宏',
             tel: '13912345673',
             email: '12345678@qq.com',
             position: '北京市',
@@ -251,7 +251,7 @@ export default new Vuex.Store({
           },
           {
             id: 4,
-            name: '客户04',
+            name: 'zio',
             tel: '1391234567',
             email: '12345678@qq.com',
             position: '北京市',
@@ -262,7 +262,7 @@ export default new Vuex.Store({
           },
           {
             id: 5,
-            name: '客户05',
+            name: '盖兹',
             tel: '13912345678',
             email: '12345678@qq.com',
             position: '北京市',

@@ -12,10 +12,10 @@
         v-for="item in this.$store.state.currentOrder.convers[0].msg"
         :key="item.id"
       >
-        <li :class="{ right: right }">{{ item.owner }},{{ item.time }}:</li>
+        <li>{{ item.owner }},{{ item.time }}:</li>
         <li
           style="list-style-type:none"
-          :class="{ speech: left, speechright: right }"
+          class="speech"
         >
           {{ item.contant }}
         </li>
