@@ -32,6 +32,8 @@ export default {
 
   top: 70px;
   left: 70px;
-  border: 1px solid;
+  /* border: 1px solid; */
+  border:none!important;
+  margin-left: 40px;
 }
 </style>

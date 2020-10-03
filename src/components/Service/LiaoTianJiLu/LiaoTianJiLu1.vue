@@ -22,7 +22,7 @@ export default {
 }
 .liaotianjilu1-box{
     width: 1450px;
-    height: 800px;
+    height: 600px;
     position: absolute;
     top: 60px;
     left: 25px;

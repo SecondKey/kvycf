@@ -35,7 +35,7 @@ export default {
 }
 .liaotianjilu-box2 {
   width: 1200px!important;
-  height: 600px!important;
+  height: 540px!important;
   position: absolute;
   top: 40px!important;
   left: 70px;

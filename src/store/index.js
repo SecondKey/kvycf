@@ -169,6 +169,7 @@ export default new Vuex.Store({
         ], //客服人员
         nService: [
           {
+            id:3,
             name: '何锦涛',
             tName: '123',
             pwd: '123',

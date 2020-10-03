@@ -31,7 +31,7 @@
       </el-main>
         </el-container>
         <!-- </el-main>  -->
-      <el-footer height="160px" class="jilufooter">
+      <el-footer height="120px" class="jilufooter">
         <div></div>
       </el-footer>
     </el-container>

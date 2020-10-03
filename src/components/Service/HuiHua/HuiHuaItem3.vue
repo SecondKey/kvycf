@@ -6,8 +6,8 @@
     </el-header>
     <el-main class="HuiHua_main" v-if="this.$store.state.currentCustomer">
       <ul class="HuiHua_ul">
-        <li class="HuiHua_li" v-for="(value,key) in this.$store.state.currentCustomer"
-       :key="key">{{key}}：{{value}}</li>
+        <li class="HuiHua_li" v-for="(value,key,index) in this.$store.state.currentCustomer"
+       :key="key" v-if="index<6">{{key}}：{{value}}</li>
       </ul>
     </el-main>
     <el-footer class="HuiHua_footer">
