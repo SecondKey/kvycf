@@ -54,7 +54,12 @@ export default {
         createTime: '2019.12.05', //创建时间
       }
     }
-  }
+  },
+  // methods:{
+  //   created(){
+  //   this.$store.state.currentOrder=this.$store.state.SData_Company[0].order[0]
+  // },
+  // }
 
 }
 </script>

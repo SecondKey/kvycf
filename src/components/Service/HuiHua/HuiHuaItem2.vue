@@ -138,12 +138,12 @@ export default {
       this.tabelData.sort()
     }
   },
-  created(){
+
+   created(){
     this.$store.state.currentOrder=this.$store.state.SData_Company[0].order[0]
-  },
-  created(){
-    this.$store.state.currentCustomer=this.$store.state.SData_Company[0].client[0]
-  }
+    console.log(this.$store.state.currentOrder)
+   }
+
 }
 </script>
 
