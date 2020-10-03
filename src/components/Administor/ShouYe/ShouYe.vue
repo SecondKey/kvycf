@@ -25,32 +25,32 @@
           <tbody>
             <tr>
               <td class="ShouYe-td"><u>WCT-24新品上线 </u></td>
-              <td class="ShouYe-td1">2019/09/12 10:99</td>
+              <td class="ShouYe-td1">2020/10/3 上午10:00:14</td>
             </tr>
             <br />
             <tr>
               <td class="ShouYe-td"><u>WCT-24新品上线 </u></td>
-              <td class="ShouYe-td1">2019/09/12 10:99</td>
+              <td class="ShouYe-td1">2020/10/3 上午10:00:14</td>
             </tr>
             <br />
             <tr>
               <td class="ShouYe-td"><u>WCT-24新品上线 </u></td>
-              <td class="ShouYe-td1">2019/09/12 10:99</td>
+              <td class="ShouYe-td1">2020/10/3 上午10:00:14</td>
             </tr>
             <br />
             <tr>
               <td class="ShouYe-td"><u>WCT-24新品上线 </u></td>
-              <td class="ShouYe-td1">2019/09/12 10:99</td>
+              <td class="ShouYe-td1">2020/10/3 上午10:00:14</td>
             </tr>
             <br />
             <tr>
               <td class="ShouYe-td"><u>WCT-24新品上线 </u></td>
-              <td class="ShouYe-td1">2019/09/12 10:99</td>
+              <td class="ShouYe-td1">2020/10/3 上午10:00:14</td>
             </tr>
             <br />
             <tr>
               <td class="ShouYe-td"><u>WCT-24新品上线 </u></td>
-              <td class="ShouYe-td1">2019/09/12 10:99</td>
+              <td class="ShouYe-td1">2020/10/3 上午10:00:14</td>
             </tr>
             <br />
           </tbody>

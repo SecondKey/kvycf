@@ -54,14 +54,21 @@
           <i class="el-icon-document"></i>
           <span slot="title">分配规则</span>
         </el-menu-item>
+        <el-menu-item index="8" style="font-size:25px">
+          <i class="el-icon-document"></i>
+          <span slot="title">工单设置</span>
+        </el-menu-item>
       </el-menu>
       <el-steps
         :active="nowStep"
         align-center
         finish-status="process"
         direction="vertical"
-        style="float:right;width:25px;margin-right:25px;margin-top:16px;height:280px"
+        style="float:right;width:25px;margin-right:25px;margin-top:16px;height:450px"
       >
+        <el-step></el-step>
+        <el-step></el-step>
+        <el-step></el-step>
         <el-step></el-step>
         <el-step></el-step>
         <el-step></el-step>
@@ -119,10 +126,6 @@ export default {
 .inputTitle {
   font-size: 25px;
   width: 400px;
-}
-.el-form-item__label {
-  text-align: left !important;
-  font-size: 30px !important;
 }
 .autoMargin {
   margin-top: 10px;
