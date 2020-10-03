@@ -5,17 +5,17 @@
     </el-header>
     <el-main class="HuiHuaItem2_main" v-if="this.$store.state.currentOrder">
       <el-button id="send_btn" @click="kehusend" style="float:right"
-        >测试</el-button
-      >
+        >测试</el-button>
       <ul
         id="chat_ul"
         v-for="item in this.$store.state.currentOrder.convers[0].msg"
         :key="item.id"
       >
-        <li>{{ item.owner }},{{ item.time }}:</li>
-        <li style="list-style-type:none" class="speech">
+        <li :class="{'right':right}">{{ item.owner }},{{ item.time }}:</li>
+        <li style="list-style-type:none" :class="{'speech':left,'speechright':right}">
           {{ item.contant }}
         </li>
+
       </ul>
     </el-main>
     <el-footer class="HuiHuaItem2_footer" height="30%">
@@ -49,6 +49,8 @@
 export default {
   data() {
     return {
+      left:true,
+      right:false,
       send_txt: '',
       tabelData: [
         {
@@ -91,6 +93,8 @@ export default {
   methods: {
     send() {
       console.log()
+      this.right=true
+      this.left=false
       let myDate = new Date()
       // console.log(this.send_txt)
       var chat_ul = document.getElementById('chat_ul')
@@ -111,6 +115,8 @@ export default {
       this.tabelData.sort()
     },
     kehusend() {
+      this.right=false
+      this.left=true
       console.log()
       let myDate = new Date()
       // console.log(this.send_txt)
@@ -132,16 +138,20 @@ export default {
       this.tabelData.sort()
     }
   },
-  created(){
+
+   created(){
     this.$store.state.currentOrder=this.$store.state.SData_Company[0].order[0]
-  },
-  created(){
-    this.$store.state.currentCustomer=this.$store.state.SData_Company[0].client[0]
-  }
+    console.log(this.$store.state.currentOrder)
+   }
+
 }
 </script>
 
 <style>
+.right{
+  float: right;
+  clear:both;
+}
 .HuiHuaItem2_container {
   background-color: gainsboro !important;
   text-align: left;
@@ -192,6 +202,36 @@ export default {
   width: 0;
   height: 0;
   left: 0px;
+  top: 0px;
+  border: 8px solid;
+  border-color: rgb(255, 255, 255);
+}
+.speechright {
+  position: relative;
+  width: fit-content;
+  height: auto;
+  text-align: center;
+  line-height: 50px;
+  background-color: #fff;
+  border: none;
+  /* -webkit-border-radius: 5px;
+-moz-border-radius: 5px; */
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 5px;
+  float:right;
+  clear:both;
+}
+.speechright:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 0px;
   top: 0px;
   border: 8px solid;
   border-color: rgb(255, 255, 255);

@@ -25,7 +25,7 @@
         >添加工单</el-button>
         <el-dialog title="新建工单" :visible.sync="dialogFormVisible" style="text-align:left!important;">
   <el-form :model="form">
-    <el-form-item label="工单分类" :label-width="formLabelWidth">
+    <el-form-item label="工单分类" :label-width="formLabelWidth" >
         <el-select v-model="form.grade" placeholder="请选择">
     <el-option
       v-for="item in options"
@@ -96,13 +96,14 @@
   </el-form>
   <div slot="footer" class="dialog-footer">
     <el-button @click="dialogFormVisible = false">取 消</el-button>
-    <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+    <el-button type="primary" @click="open5" :plain="true"  >确 定</el-button>
   </div>
 </el-dialog>
 
         </div>
     </div>
-    <el-table v-if="this.$store.state.currentOrder_List"  border style="width: 100%" height="300">
+    <div v-if="this.$store.state.currentOrder_List" >
+    <el-table  :data="this.$store.state.currentOrder_List" border style="width: 100%" height="300">
       <el-table-column fixed prop="id" label="工单ID" width="100" align="center"> </el-table-column>
       <el-table-column prop="title" label="工单标题" width="140" align="center"> </el-table-column>
       <el-table-column prop="client" label="客户ID" width="100" align="center"> </el-table-column>
@@ -114,6 +115,7 @@
         <el-button type="text" @click="open1" style="float:left">接单</el-button>
       </el-table-column>
     </el-table>
+    </div>
     <div class="block1">
       <el-pagination 
       background 
@@ -121,7 +123,7 @@
       :total="1000">
       </el-pagination>
   </div>
-  <el-button @click="test()">测试</el-button>
+  <!-- <el-button @click="test()">测试</el-button> -->
 
   </div>
 </template>
@@ -130,7 +132,14 @@
 export default {
   
   
+  
   methods: {
+    open5(){
+       this.$message({
+          message: '恭喜你，一个工单新建成功！',
+          type: 'success'
+        });
+    },
      handleRemove(file, fileList) {
         console.log(file, fileList);
       },
@@ -170,7 +179,6 @@ export default {
 
   data() {
     return {
-      // order:[],
        fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}],
       customers:[],
        options: [{
@@ -239,7 +247,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+.el-form-item__label {
+  text-align: right !important;
+  font-size: 14px !important;
+}
 .el-select .el-input {
     width: 130px;
   }
@@ -291,13 +303,13 @@ export default {
 .block {
   position: relative;
   top: 65px;
-  left: 160px;
+  left: -85px;
   
 }
 .search {
   position: relative;
   top: 25px;
-  left: 230px;
+  left: 5px;
   width: 230px;
 }
 
@@ -309,6 +321,7 @@ export default {
   width: 200px;
 }
 .tt{
-  text-indent:1.2em!important
+  text-indent:1.2em!important;
 }
+
 </style>
