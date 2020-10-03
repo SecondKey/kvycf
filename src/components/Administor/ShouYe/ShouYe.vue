@@ -1,5 +1,5 @@
 <template>
-  <div class="ShouYe-frame">
+  <div class="containedDiv">
     <div class="ShouYe-count-box">
       <div class="ShouYe-count-item" v-for="item in navItems" :key="item.title">
         <div class="ShouYe-title">{{ item.title }}</div>
@@ -13,7 +13,7 @@
 
       <div class="ShouYe-tongzhi">
         <h4 class="ShouYe-h4">通知</h4>
-        <hr>
+        <hr />
         <table>
           <thead style="display:none;">
             <tr>
@@ -104,7 +104,7 @@ export default {
 .ShouYe-frame {
   width: 1200px;
   height: 1620px;
-  background-color:rgb(163, 196, 248);
+  background-color: rgb(163, 196, 248);
 }
 
 .ShouYe-count-box {
@@ -123,7 +123,7 @@ export default {
   height: 120px;
   width: 500px;
   border: 1px;
-  background-color:rgb(238, 241, 245);
+  background-color: rgb(238, 241, 245);
 
   font-size: 14px;
   margin: 10px;
@@ -162,7 +162,7 @@ export default {
   height: 400px;
   margin-left: 5px;
   float: right;
-  background-color:white;
+  background-color: white;
 }
 .ShouYe-h4 {
   font-size: 20px;
