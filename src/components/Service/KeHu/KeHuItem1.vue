@@ -73,7 +73,7 @@
               </el-table-column>
               <el-table-column prop="VisitEq" label="历史访问设备" width="210">
               </el-table-column>
-              <el-table-column prop="order" label="服务工单" width="210">
+              <el-table-column prop="order" label="服务工单" width="170">
               </el-table-column>
             </el-table>
           </el-main>

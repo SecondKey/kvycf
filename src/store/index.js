@@ -1328,7 +1328,7 @@ export default new Vuex.Store({
                     id: 2,
                     owner: '客户01',
                     time: '2019.12.05 13:25',
-                    contant: '我8G内存'
+                    contant: '我华为畅享'
                   }
                 ]
               }
@@ -1348,9 +1348,22 @@ export default new Vuex.Store({
                 service: 0, //接待客服id
                 msg: [
                   {
-                    talker: 0, //说话的人，0客户，1客服
+                    id: 0,
+                    owner: '客户01',
                     time: '2019.12.05 13:23',
-                    contant: '我手机坏了'
+                    contant: '你好,你们这提供电池更换的服务嘛？'
+                  },
+                  {
+                    id: 1,
+                    owner: '客服房镇',
+                    time: '2019.12.05 13:24',
+                    contant: '你的电池什么型号？'
+                  },
+                  {
+                    id: 2,
+                    owner: '客户01',
+                    time: '2019.12.05 13:25',
+                    contant: '华为mate9专用电池'
                   }
                 ]
               }
@@ -1370,9 +1383,22 @@ export default new Vuex.Store({
                 service: 0, //接待客服id
                 msg: [
                   {
-                    talker: 0, //说话的人，0客户，1客服
+                    id: 0,
+                    owner: '客户02',
                     time: '2019.12.05 13:23',
-                    contant: '我手机坏了'
+                    contant: '你好,我需要购买你们的新机'
+                  },
+                  {
+                    id: 1,
+                    owner: '客服房镇',
+                    time: '2019.12.05 13:24',
+                    contant: '你需要哪种价位的？'
+                  },
+                  {
+                    id: 2,
+                    owner: '客户02',
+                    time: '2019.12.05 13:25',
+                    contant: '最贵的'
                   }
                 ]
               }
@@ -1392,9 +1418,22 @@ export default new Vuex.Store({
                 service: 0, //接待客服id
                 msg: [
                   {
-                    talker: 0, //说话的人，0客户，1客服
+                    id: 0,
+                    owner: '客户03',
                     time: '2019.12.05 13:23',
-                    contant: '我手机坏了'
+                    contant: '你好,我昨天从你们公司收购了一批设备存在问题'
+                  },
+                  {
+                    id: 1,
+                    owner: '客服房镇',
+                    time: '2019.12.05 13:24',
+                    contant: '请问您的历史单号？'
+                  },
+                  {
+                    id: 2,
+                    owner: '客户03',
+                    time: '2019.12.05 13:25',
+                    contant: '2019-11-11'
                   }
                 ]
               }
@@ -1414,9 +1453,22 @@ export default new Vuex.Store({
                 service: 0, //接待客服id
                 msg: [
                   {
-                    talker: 0, //说话的人，0客户，1客服
+                    id: 0,
+                    owner: '客户04',
                     time: '2019.12.05 13:23',
-                    contant: '我手机坏了'
+                    contant: '你好,我想购买充电器？'
+                  },
+                  {
+                    id: 1,
+                    owner: '客服房镇',
+                    time: '2019.12.05 13:24',
+                    contant: '你什么配置？'
+                  },
+                  {
+                    id: 2,
+                    owner: '客户04',
+                    time: '2019.12.05 13:25',
+                    contant: 'oneplus'
                   }
                 ]
               }
@@ -1436,9 +1488,22 @@ export default new Vuex.Store({
                 service: 0, //接待客服id
                 msg: [
                   {
-                    talker: 0, //说话的人，0客户，1客服
+                    id: 0,
+                    owner: '客户04',
                     time: '2019.12.05 13:23',
-                    contant: '我手机坏了'
+                    contant: '你好,你们的手机摄像头发生了故障可以保修嘛？'
+                  },
+                  {
+                    id: 1,
+                    owner: '客服房镇',
+                    time: '2019.12.05 13:24',
+                    contant: '麻烦请提供保修卡？'
+                  },
+                  {
+                    id: 2,
+                    owner: '客户04',
+                    time: '2019.12.05 13:25',
+                    contant: 'xx-xx-xx'
                   }
                 ]
               }

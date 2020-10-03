@@ -6,7 +6,7 @@
     </el-header>
     <el-main class="HuiHua_main" v-if="this.$store.state.currentCustomer">
       <ul class="HuiHua_ul">
-        <li class="HuiHua_li" v-for="(value,key) in this.$store.state.currentCustomer"
+        <li class="HuiHua_li"  v-for="(value,key) in this.$store.state.currentCustomer"  v-if="key!='history'"
        :key="key">{{key}}：{{value}}</li>
       </ul>
     </el-main>
@@ -15,19 +15,19 @@
     </el-footer>
 
   </el-container>
-  <!-- <el-container class="HuiHua_container">
+  <el-container class="HuiHua_container">
     <el-header class="HuiHua_header">
       <h2>工单信息</h2>
     </el-header>
     <el-main class="HuiHua_main" v-if="this.$store.state.currentOrder">
       <ul class="HuiHua_ul">
-        <li class="HuiHua_li" v-for="(value,key) in this.$store.state.currentOrder" :key="key">{{key}}：{{value}}</li>
+        <li class="HuiHua_li" v-for="(value,key) in this.$store.state.currentOrder" v-if="key!='convers'" :key="key">{{key}}：{{value}}</li>
       </ul>
     </el-main>
     <el-footer class="HuiHua_footer">
 
     </el-footer>
-  </el-container> -->
+  </el-container>
   </div>
 </template>
 
@@ -67,7 +67,7 @@ export default {
 <style>
   .HuiHua_container{
     background-color: whitesmoke;
-    height: 100%;
+    height: 50%;
   }
   .HuiHua_header{
     background-color: white;
