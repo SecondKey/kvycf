@@ -23,14 +23,14 @@
 
                 <!-- #region -->
                 <el-button type="text" @click="dialogFormVisible = true">提交修改黑名单申请</el-button>
-                <el-dialog title="黑名单申请" :visible.sync="dialogFormVisible">
+                <el-dialog title="黑名单申请" :visible.sync="dialogFormVisible" append-to-body >
 
                 <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
                   <el-form-item label="客服ID" prop="name">
                     <el-input v-model="ruleForm.name" placeholder="请输入客户ID"></el-input>
                     </el-form-item>
                   <el-form-item label="修改理由" :label-width="formLabelWidth" placeholder="请输入修改理由" prop="reason">
-                     <el-input type="textarea" v-model="ruleForm.desc" placeholder="请输入修改理由"></el-input>
+                     <el-input v-model="ruleForm.reason" placeholder="请输入修改理由"></el-input>
                   </el-form-item>
                
 
@@ -102,27 +102,26 @@ export default {
             ruleForm: {
             name: '',
             delivery: false,
-            desc: '',
+            reason: '',
                 },
             rules: {
             name: [
               { required: true, message: '请输入客服ID', trigger: 'blur' },
-              { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+              { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' },
             ],
             reason: [
-              { required: true, message: '请选择修改理由', trigger: 'blur' }
+              { required: true, message: '请选择修改理由', trigger: 'blur' },
             ],
           },
           formLabelWidth: '120px'
               
           }
    },
-       
         methods: {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            alert('submit!');
+            alert('successful submit!');
           } else {
             console.log('error submit!!');
             return false;

@@ -27,6 +27,7 @@
           title="新建工单"
           :visible.sync="dialogFormVisible"
           style="text-align:left!important;"
+          append-to-body
         >
           <el-form :model="form">
             <el-form-item label="工单分类" :label-width="formLabelWidth">
@@ -332,7 +333,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
 .el-form-item__label {
   text-align: right !important;
   font-size: 14px !important;
