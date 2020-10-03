@@ -5,8 +5,7 @@
       <!-- 客户资料代码 -->
       <!-- 客户静态数据 -->
       <el-container >
-       
-          <el-aside v-if="this.$store.state.currentCustomer">
+            <el-aside v-if="this.$store.state.currentCustomer">
               <div>
                 <el-image
                   style="width: 200px; height: 200px;margin-top:20px ;"
