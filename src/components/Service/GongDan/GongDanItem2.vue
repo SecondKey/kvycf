@@ -102,8 +102,7 @@
 
         </div>
     </div>
-    <el-table :data="this.$store.state.SData_Company[this.$store.state.Data_Login_Conpany]
-        .order"  border style="width: 100%" height="300">
+    <el-table v-if="this.$store.state.currentOrder_List"  border style="width: 100%" height="300">
       <el-table-column fixed prop="id" label="工单ID" width="100" align="center"> </el-table-column>
       <el-table-column prop="title" label="工单标题" width="140" align="center"> </el-table-column>
       <el-table-column prop="client" label="客户ID" width="100" align="center"> </el-table-column>
@@ -122,11 +121,14 @@
       :total="1000">
       </el-pagination>
   </div>
+  <el-button @click="test()">测试</el-button>
+
   </div>
 </template>
 
 <script>
 export default {
+  
   
   methods: {
      handleRemove(file, fileList) {
@@ -158,10 +160,17 @@ export default {
         })
         
     },
+  //   test(){
+
+  //   console.log(this.$store.state.currentOrder_List)
+  //   this.order.push(this.$store.state.currentOrder_List)
+  //   console.log(this.order)
+  // },
   },
 
   data() {
     return {
+      // order:[],
        fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}],
       customers:[],
        options: [{
