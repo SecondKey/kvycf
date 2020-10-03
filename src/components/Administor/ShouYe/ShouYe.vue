@@ -331,4 +331,12 @@ option1 :{
   background-color: white;
   float: right;
 }
+.containedDiv{
+   background-color: #d3dce6;
+    background-image: url(../../../img/fz1.jpg);
+        width: 100%;
+        height: 443px;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
 </style>
