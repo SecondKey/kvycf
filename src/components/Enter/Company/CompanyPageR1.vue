@@ -1,20 +1,22 @@
 <template>
   <div class="signUpInputDiv" style="height:650px">
-    <el-form label-width="120px">
-      <el-form-item label="企业名称">
-        <el-input
-          placeholder="请输入完整企业名称"
-          v-model="companyName"
-        ></el-input>
+    <el-form
+      label-width="120px"
+      :rules="rules"
+      :model="formData"
+      ref="ruleForm"
+    >
+      <el-form-item label="企业名称" prop="companyName">
+        <el-input v-model="formData.companyName"></el-input>
       </el-form-item>
-      <el-form-item label="负责人">
-        <el-input v-model="principalName"></el-input>
+      <el-form-item label="负责人" prop="principalName">
+        <el-input v-model="formData.principalName"></el-input>
       </el-form-item>
-      <el-form-item label="联系电话">
-        <el-input v-model="tel"></el-input>
+      <el-form-item label="联系电话" prop="tel">
+        <el-input v-model="formData.tel"></el-input>
       </el-form-item>
-      <el-form-item label="邮箱">
-        <el-input v-model="email"></el-input
+      <el-form-item label="邮箱" prop="email">
+        <el-input v-model="formData.email"></el-input
       ></el-form-item>
       <el-form-item label="上传营业执照">
         <el-upload class="avatar-uploader" :show-file-list="false" action="">
@@ -37,7 +39,7 @@
     <el-button
       type="primary"
       style="width:350px;margin-top:30px"
-      @click="infoVisible = true"
+      @click="ShowInfo"
       :disabled="!readClause"
     >
       提交
@@ -50,10 +52,10 @@
       center=""
     >
       <span style="text-align:center">
-        <div style="font-size:20px">企业名称：{{ companyName }}</div>
-        <div style="font-size:20px">负责人：{{ principalName }}</div>
-        <div style="font-size:20px">联系电话：{{ tel }}</div>
-        <div style="font-size:20px">邮箱：{{ email }}</div>
+        <div style="font-size:20px">企业名称：{{ formData.companyName }}</div>
+        <div style="font-size:20px">负责人：{{ formData.principalName }}</div>
+        <div style="font-size:20px">联系电话：{{ formData.tel }}</div>
+        <div style="font-size:20px">邮箱：{{ formData.email }}</div>
       </span>
       <span slot="footer" class="dialog-footer">
         <el-button type="primary" @click="ToNextPage">确 定</el-button>
@@ -84,20 +86,48 @@ export default {
       imageUrl: '',
       readClause: false,
 
-      companyName: '',
-      principalName: '',
-      tel: '',
-      email: ''
+      formData: {
+        companyName: '',
+        principalName: '',
+        tel: '',
+        email: ''
+      },
+
+      rules: {
+        companyName: [
+          { required: true, message: '请输入完整企业名称', trigger: 'blur' }
+        ],
+        principalName: [
+          { required: true, message: '请输入企业负责人名称', trigger: 'blur' }
+        ],
+        tel: [
+          { required: true, message: '请输入企业联系电话', trigger: 'blur' }
+        ],
+        email: [
+          { required: true, message: '请输入企业邮箱账户', trigger: 'blur' }
+        ]
+      }
     }
   },
   methods: {
+    ShowInfo() {
+      this.$refs['ruleForm'].validate(valid => {
+        if (valid) {
+          this.infoVisible = true
+        } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
+    },
+
     ToNextPage() {
       this.infoVisible = false
       let companyInfo = {
-        name: this.companyName,
-        principalName: this.principalName,
-        tel: this.tel,
-        email: this.email
+        name: this.formData.companyName,
+        principalName: this.formData.principalName,
+        tel: this.formData.tel,
+        email: this.formData.email
       }
       this.$store.commit('Company_SignUp', companyInfo)
       this.$router.push('/EnterSignUpPage/EnterCompanyPage/EnterCompanyPageR2')
