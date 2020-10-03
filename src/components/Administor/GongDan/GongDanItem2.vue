@@ -139,7 +139,7 @@
         :data="this.$store.state.currentOrder_List"
         border
         style="width: 100%"
-        height="300"
+        height="380"
       >
         <el-table-column
           fixed
