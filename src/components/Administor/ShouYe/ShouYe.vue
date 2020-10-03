@@ -59,8 +59,72 @@
     </div>
 
     <div class="ShouYe-monitor">
-      <div></div>
+      <el-container>
+        <el-main style="padding:0px;">
+          <el-table
+                :data="this.$store.state.SData_Company[0].service"
+                max-height="500px"
+                style="width:1200px">
+                <el-table-column
+                prop="id"
+                label="客服ID"
+                width="100"
+                align="center">
+                </el-table-column>
+                <el-table-column
+                prop="name"
+                label="客服昵称"
+                width="130"
+                align="center">
+                </el-table-column>
+                <el-table-column
+                prop="tName"
+                label="客服姓名"
+                width="130"
+                align="center">
+                </el-table-column>
+                <el-table-column
+                prop="account"
+                label="客服账户"
+                width="150"
+                align="center">
+                </el-table-column>
+                <el-table-column
+                prop="pwd"
+                label="客服密码"
+                width="150"
+                align="center">
+                </el-table-column>
+                <el-table-column
+                prop="tel"
+                label="客服电话"
+                width="150"
+                align="center">
+                </el-table-column>
+                <el-table-column
+                prop="email"
+                label="客服邮箱"
+                width="200"
+                align="center">
+                </el-table-column>
+                <el-table-column
+                label="客服状态"
+                width="180"
+                align="center">
+                离线</el-table-column>
+                </el-table>
+        </el-main>
+        <el-footer>
+          <div class="shouye_echarts1">
+
+          </div>
+          <div class="shouye_echarts2">
+
+          </div>
+        </el-footer>
+      </el-container>
     </div>
+    
   </div>
 </template>
 
@@ -188,8 +252,20 @@ export default {
 
 .ShouYe-monitor {
   width: 1200px;
-  height: 1000px;
+  height: 500px;
   margin-top: 10px;
-  background-color: rgb(243, 228, 208);
+  background-color:black;
+}
+.shouye_echarts1{
+  width: 900px;
+  height: 250px;
+  background-color: white;
+  float: left;
+}
+.shouye_echarts2{
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  float: right;
 }
 </style>
