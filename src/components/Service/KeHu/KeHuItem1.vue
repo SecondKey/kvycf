@@ -30,7 +30,7 @@
                     <el-input v-model="ruleForm.name" placeholder="请输入客户ID"></el-input>
                     </el-form-item>
                   <el-form-item label="修改理由" :label-width="formLabelWidth" placeholder="请输入修改理由" prop="reason">
-                     <el-input v-model="ruleForm.reason" placeholder="请输入修改理由"></el-input>
+                     <el-input type="textarea" v-model="ruleForm.reason" placeholder="请输入修改理由"></el-input>
                   </el-form-item>
                
 
@@ -57,14 +57,23 @@
       <!-- 客户动态数据 -->
       <el-container>
           <el-main>
-            <el-table border style="width: 100%" :data="List_data">
+
+            <!-- <table>
+              <tr>
+                <th>历史访问时间</th>
+                <th>历史访问ip</th>
+                <th>历史访问设备</th>
+                <th>服务满意度</th>
+              </tr>
+            </table> -->
+            <el-table border style="width: 100%" :data="this.$store.state.currentCustomer.history" >
               <el-table-column prop="VisitTime" label="历史访问时间" width="210">
               </el-table-column>
-              <el-table-column prop="VisitIp" label="历史访问ip" width="210">
+              <el-table-column prop="VisitIp" label="历史访问IP" width="210">
               </el-table-column>
               <el-table-column prop="VisitEq" label="历史访问设备" width="210">
               </el-table-column>
-              <el-table-column prop="VisitRt" label="服务满意度" width="210">
+              <el-table-column prop="order" label="服务工单" width="210">
               </el-table-column>
             </el-table>
           </el-main>
@@ -85,17 +94,10 @@ export default {
 
 
    data() {
-     const List_data={
-                VisitTime:'2018-9-20',
-                VisitIp:'192-168-9-251',
-                VisitEq:'pc',
-                VisitRt:'非常满意'
-              };
-              
+     
       return { 
 
-            customers:this.$store.state.SData_Company[0].client,
-            List_data: Array(15).fill(List_data),
+            
             value: true,
 
             dialogFormVisible: false,

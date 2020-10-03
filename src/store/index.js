@@ -208,56 +208,504 @@ export default new Vuex.Store({
           {
             id: 0, //k客户编号
             name: '你最珍贵（姜总）', //客户名称
-            tel: '13912345670', //手机
-            email: '12345678@qq.com', //邮箱
-            position: '北京市', //地址
-            rate: 10, //信誉评级
-            visitTime: '2020.9.28', //访问时间
-            order: [0, 1, 2, 3], //订单
+            tel: '19119820801', //手机
+            email: '419436@qq.com', //邮箱
+            position: '大理', //地址
+            rate: '8星', //信誉评级
+            history:[
+            {
+            VisitTime:'2020.9.28', //访问时间
+            VisitIp:'192.168.9.113',
+            VisitEq:'pc',
+            order: [0], //订单
+            },
+            {
+              VisitTime:'2020.9.29', //访问时间
+              VisitIp:'192.168.9.152',
+              VisitEq:'pc',
+              order: [0], //订单
+            },
+            {
+                VisitTime:'2020.10.2', //访问时间
+                VisitIp:'192.168.9.123',
+                VisitEq:'pc',
+                order: [0], //订单
+            },
+            {
+                  VisitTime:'2020.10.28', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'pc',
+                  order: [0], //订单
+            },{
+              VisitTime:'2020.11.2', //访问时间
+              VisitIp:'192.168.9.113',
+              VisitEq:'pc',
+              order: [0], //订单
+              },
+              {
+                VisitTime:'2020.11.3', //访问时间
+                VisitIp:'192.168.9.152',
+                VisitEq:'pc',
+                order: [0], //订单
+              },
+              {
+                  VisitTime:'2020.11.22', //访问时间
+                  VisitIp:'192.168.9.123',
+                  VisitEq:'pc',
+                  order: [0], //订单
+              },
+              {
+                    VisitTime:'2020.12.28', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'pc',
+                    order: [0], //订单
+              },{
+                VisitTime:'2021.11.2', //访问时间
+                VisitIp:'192.168.9.113',
+                VisitEq:'pc',
+                order: [0], //订单
+                },
+                {
+                  VisitTime:'2021.11.3', //访问时间
+                  VisitIp:'192.168.9.152',
+                  VisitEq:'pc',
+                  order: [0], //订单
+                },
+                {
+                    VisitTime:'2021.11.22', //访问时间
+                    VisitIp:'192.168.9.123',
+                    VisitEq:'pc',
+                    order: [0], //订单
+                },
+                {
+                      VisitTime:'2021.12.28', //访问时间
+                      VisitIp:'192.168.9.113',
+                      VisitEq:'pc',
+                      order: [0], //订单
+                },
+              
+          ],
             isBlack: false
           },
           {
             id: 1,
             name: '马云',
-            tel: '13912345671',
-            email: '12345678@qq.com',
-            position: '北京市',
-            rate: 10,
-            visitTime: '2020.9.28',
-            order: [4, 5, 6],
+            tel: '8832969',
+            email: '8848@163.com',
+            position: '杭州市',
+            rate: '10星',
+           history:[
+            {
+            VisitTime:'2020.9.28', //访问时间
+            VisitIp:'192.168.9.113',
+            VisitEq:'web',
+            order: [1], //订单
+            },
+            {
+              VisitTime:'2020.9.29', //访问时间
+              VisitIp:'192.168.9.152',
+              VisitEq:'pc',
+              order: [1], //订单
+            },
+            {
+                VisitTime:'2020.10.2', //访问时间
+                VisitIp:'192.168.9.123',
+                VisitEq:'ios',
+                order: [1], //订单
+            },
+            {
+                  VisitTime:'2020.10.28', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'pc',
+                  order: [1], //订单
+            },{
+              VisitTime:'2020.11.2', //访问时间
+              VisitIp:'192.168.9.113',
+              VisitEq:'pc',
+              order: [1], //订单
+              },
+              {
+                VisitTime:'2020.11.3', //访问时间
+                VisitIp:'192.168.9.152',
+                VisitEq:'ios',
+                order: [1], //订单
+              },
+              {
+                  VisitTime:'2020.11.22', //访问时间
+                  VisitIp:'192.168.9.123',
+                  VisitEq:'pc',
+                  order: [1], //订单
+              },
+              {
+                    VisitTime:'2020.12.28', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'pc',
+                    order: [1], //订单
+              },{
+                VisitTime:'2021.11.2', //访问时间
+                VisitIp:'192.168.9.113',
+                VisitEq:'web',
+                order: [1], //订单
+                },
+                {
+                  VisitTime:'2021.11.3', //访问时间
+                  VisitIp:'192.168.9.152',
+                  VisitEq:'pc',
+                  order: [1], //订单
+                },
+                {
+                    VisitTime:'2021.11.22', //访问时间
+                    VisitIp:'192.168.9.123',
+                    VisitEq:'mac',
+                    order: [1], //订单
+                },
+                {
+                      VisitTime:'2021.12.28', //访问时间
+                      VisitIp:'192.168.9.113',
+                      VisitEq:'pc',
+                      order: [1], //订单
+                },
+              
+          ],
             isBlack: false
           },
           {
             id: 2,
             name: '马化腾',
-            tel: '13912345672',
-            email: '12345678@qq.com',
-            position: '北京市',
+            tel: '12344321',
+            email: 'QQ@qq.com',
+            position: '深圳',
             rate: 10,
-            visitTime: '2020.9.28',
-            order: [7, 8, 9],
+            rate: '10星',
+            history:[
+              {
+              VisitTime:'2020.9.28', //访问时间
+              VisitIp:'192.168.9.13',
+              VisitEq:'QQweb',
+              order: [2], //订单
+              },
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [2], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [2], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [2], //订单
+              },
+              {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [2], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [2], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [2], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [2], //订单
+                },
+                {
+                  VisitTime:'2022.9.28', //访问时间
+                  VisitIp:'192.168.9.13',
+                  VisitEq:'QQweb',
+                  order: [2], //订单
+                  },
+                  {
+                    VisitTime:'2022.9.29', //访问时间
+                    VisitIp:'192.168.9.52',
+                    VisitEq:'QQ',
+                    order: [2], //订单
+                  },
+                  {
+                      VisitTime:'2022.10.2', //访问时间
+                      VisitIp:'192.168.9.113',
+                      VisitEq:'TIM',
+                      order: [2], //订单
+                  },
+                  {
+                        VisitTime:'2022.10.28', //访问时间
+                        VisitIp:'192.168.9.103',
+                        VisitEq:'Wechat',
+                        order: [2], //订单
+                  },
+               {
+              VisitTime:'2020.9.28', //访问时间
+              VisitIp:'192.168.9.13',
+              VisitEq:'QQweb',
+              order: [1], //订单
+              },
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [1], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [1], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [1], //订单
+              }, {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [1], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [1], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [1], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [1], //订单
+                },
+            ],
             isBlack: false
           },
           {
             id: 3,
             name: '李彦宏',
-            tel: '13912345673',
-            email: '12345678@qq.com',
+            tel: '12121212',
+            email: '2233@qq.com',
             position: '北京市',
-            rate: 10,
-            visitTime: '2020.9.28',
-            order: [7, 8, 9],
+            rate: '6星',
+            history:[
+              {
+              VisitTime:'2020.9.24', //访问时间
+              VisitIp:'192.168.9.113',
+              VisitEq:'web',
+              order: [3], //订单
+              },
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.152',
+                VisitEq:'web',
+                order: [3], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.123',
+                  VisitEq:'web',
+                  order: [3], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'web',
+                    order: [3], //订单
+              },
+              {
+                VisitTime:'2020.9.24', //访问时间
+                VisitIp:'192.168.9.113',
+                VisitEq:'web',
+                order: [3], //订单
+                },
+                {
+                  VisitTime:'2020.9.29', //访问时间
+                  VisitIp:'192.168.9.152',
+                  VisitEq:'web',
+                  order: [3], //订单
+                },
+                {
+                    VisitTime:'2020.10.2', //访问时间
+                    VisitIp:'192.168.9.123',
+                    VisitEq:'web',
+                    order: [3], //订单
+                },
+                {
+                      VisitTime:'2020.10.28', //访问时间
+                      VisitIp:'192.168.9.113',
+                      VisitEq:'web',
+                      order: [3], //订单
+                },
+                {
+                  VisitTime:'2020.9.24', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'web',
+                  order: [3], //订单
+                  },
+                  {
+                    VisitTime:'2020.9.29', //访问时间
+                    VisitIp:'192.168.9.152',
+                    VisitEq:'web',
+                    order: [3], //订单
+                  },
+                  {
+                      VisitTime:'2020.10.2', //访问时间
+                      VisitIp:'192.168.9.123',
+                      VisitEq:'web',
+                      order: [3], //订单
+                  },
+                  {
+                        VisitTime:'2020.10.28', //访问时间
+                        VisitIp:'192.168.9.113',
+                        VisitEq:'web',
+                        order: [3], //订单
+                  },
+            ],
+            
             isBlack: false
           },
           {
             id: 4,
-            name: 'zio',
+            name: '吉良吉影',
             tel: '1391234567',
             email: '12345678@qq.com',
-            position: '北京市',
-            rate: 10,
-            visitTime: '2020.9.28',
-            order: [7, 8, 9],
+            position: '杜王町',
+            rate: '9星',
+            history:[
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [2], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [2], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [2], //订单
+              },
+              {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [2], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [2], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [2], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [2], //订单
+                },
+                {
+                  VisitTime:'2022.9.28', //访问时间
+                  VisitIp:'192.168.9.13',
+                  VisitEq:'QQweb',
+                  order: [2], //订单
+                  },
+                  {
+                    VisitTime:'2022.9.29', //访问时间
+                    VisitIp:'192.168.9.52',
+                    VisitEq:'QQ',
+                    order: [2], //订单
+                  },
+                  {
+                      VisitTime:'2022.10.2', //访问时间
+                      VisitIp:'192.168.9.113',
+                      VisitEq:'TIM',
+                      order: [2], //订单
+                  },
+                  {
+                        VisitTime:'2022.10.28', //访问时间
+                        VisitIp:'192.168.9.103',
+                        VisitEq:'Wechat',
+                        order: [2], //订单
+                  },
+               {
+              VisitTime:'2020.9.28', //访问时间
+              VisitIp:'192.168.9.13',
+              VisitEq:'QQweb',
+              order: [1], //订单
+              },
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [1], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [1], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [1], //订单
+              }, {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [1], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [1], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [1], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [1], //订单
+                },
+            ],
             isBlack: false
           },
           {
@@ -266,11 +714,616 @@ export default new Vuex.Store({
             tel: '13912345678',
             email: '12345678@qq.com',
             position: '北京市',
-            rate: 10,
-            visitTime: '2020.9.28',
-            order: [7, 8, 9],
+            history:[
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [4], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [4], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [4], //订单
+              },
+              {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [4], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [4], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [4], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [4], //订单
+                },
+                {
+                  VisitTime:'2022.9.28', //访问时间
+                  VisitIp:'192.168.9.13',
+                  VisitEq:'QQweb',
+                  order: [4], //订单
+                  },
+                  {
+                    VisitTime:'2022.9.29', //访问时间
+                    VisitIp:'192.168.9.52',
+                    VisitEq:'QQ',
+                    order: [4], //订单
+                  },
+                  {
+                      VisitTime:'2022.10.2', //访问时间
+                      VisitIp:'192.168.9.113',
+                      VisitEq:'TIM',
+                      order: [4], //订单
+                  },
+                  {
+                        VisitTime:'2022.10.28', //访问时间
+                        VisitIp:'192.168.9.103',
+                        VisitEq:'Wechat',
+                        order: [4], //订单
+                  },
+               {
+              VisitTime:'2020.9.28', //访问时间
+              VisitIp:'192.168.9.13',
+              VisitEq:'QQweb',
+              order: [4], //订单
+              },
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [4], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [4], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [4], //订单
+              }, {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [4], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [4], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [4], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [4], //订单
+                },
+            ],
             isBlack: false
-          }
+          },
+          {
+            id: 6,
+            name: '古加',
+            tel: '152236513685',
+            email: '125143521@qq.com',
+            position: '南京市',
+            history:[
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [5], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [5], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [5], //订单
+              },
+              {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [5], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [5], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [5], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [5], //订单
+                },
+                {
+                  VisitTime:'2022.9.28', //访问时间
+                  VisitIp:'192.168.9.13',
+                  VisitEq:'QQweb',
+                  order: [5], //订单
+                  },
+                  {
+                    VisitTime:'2022.9.29', //访问时间
+                    VisitIp:'192.168.9.52',
+                    VisitEq:'QQ',
+                    order: [5], //订单
+                  },
+                  {
+                      VisitTime:'2022.10.2', //访问时间
+                      VisitIp:'192.168.9.113',
+                      VisitEq:'TIM',
+                      order: [5], //订单
+                  },
+                  {
+                        VisitTime:'2022.10.28', //访问时间
+                        VisitIp:'192.168.9.103',
+                        VisitEq:'Wechat',
+                        order: [5], //订单
+                  },
+               {
+              VisitTime:'2020.9.28', //访问时间
+              VisitIp:'192.168.9.13',
+              VisitEq:'QQweb',
+              order: [5], //订单
+              },
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [5], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [5], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [5], //订单
+              }, {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [5], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [5], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [5], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [5], //订单
+                },
+            ],
+            isBlack: false
+          },
+          {
+            id: 7,
+            name: '铠武',
+            tel: '113412565489',
+            email: '21053615@qq.com',
+            position: '中山市',
+            history:[
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [6], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [6], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [6], //订单
+              },
+              {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [6], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [6], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [6], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [6], //订单
+                },
+                {
+                  VisitTime:'2022.9.28', //访问时间
+                  VisitIp:'192.168.9.13',
+                  VisitEq:'QQweb',
+                  order: [6], //订单
+                  },
+                  {
+                    VisitTime:'2022.9.29', //访问时间
+                    VisitIp:'192.168.9.52',
+                    VisitEq:'QQ',
+                    order: [6], //订单
+                  },
+                  {
+                      VisitTime:'2022.10.2', //访问时间
+                      VisitIp:'192.168.9.113',
+                      VisitEq:'TIM',
+                      order: [6], //订单
+                  },
+                  {
+                        VisitTime:'2022.10.28', //访问时间
+                        VisitIp:'192.168.9.103',
+                        VisitEq:'Wechat',
+                        order: [6], //订单
+                  },
+               {
+              VisitTime:'2020.9.28', //访问时间
+              VisitIp:'192.168.9.13',
+              VisitEq:'QQweb',
+              order: [6], //订单
+              },
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [6], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [6], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [6], //订单
+              }, {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [6], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [6], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [6], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [6], //订单
+                },
+            ],
+            isBlack: false
+          },
+          {
+            id: 8,
+            name: '埃克塞德',
+            tel: '152365152415',
+            email: '32611562@qq.com',
+            position: '哈尔滨市',
+            history:[
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [7], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [7], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [7], //订单
+              },
+              {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [7], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [7], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [7], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [7], //订单
+                },
+                {
+                  VisitTime:'2022.9.28', //访问时间
+                  VisitIp:'192.168.9.13',
+                  VisitEq:'QQweb',
+                  order: [7], //订单
+                  },
+                  {
+                    VisitTime:'2022.9.29', //访问时间
+                    VisitIp:'192.168.9.52',
+                    VisitEq:'QQ',
+                    order: [7], //订单
+                  },
+                  {
+                      VisitTime:'2022.10.2', //访问时间
+                      VisitIp:'192.168.9.113',
+                      VisitEq:'TIM',
+                      order: [7], //订单
+                  },
+                  {
+                        VisitTime:'2022.10.28', //访问时间
+                        VisitIp:'192.168.9.103',
+                        VisitEq:'Wechat',
+                        order: [7], //订单
+                  },
+               {
+              VisitTime:'2020.9.28', //访问时间
+              VisitIp:'192.168.9.13',
+              VisitEq:'QQweb',
+              order: [7], //订单
+              },
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [7], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [7], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [7], //订单
+              }, {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [7], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [7], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [7], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [7], //订单
+                },
+            ],
+            isBlack: false
+          },
+          {
+            id: 9,
+            name: '陈明珠',
+            tel: '125254113651',
+            email: '25123204@qq.com',
+            position: '无锡市',
+            history:[
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [8], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [8], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [8], //订单
+              },
+              {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [8], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [8], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [8], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [8], //订单
+                },
+                {
+                  VisitTime:'2022.9.28', //访问时间
+                  VisitIp:'192.168.9.13',
+                  VisitEq:'QQweb',
+                  order: [8], //订单
+                  },
+                  {
+                    VisitTime:'2022.9.29', //访问时间
+                    VisitIp:'192.168.9.52',
+                    VisitEq:'QQ',
+                    order: [8], //订单
+                  },
+                  {
+                      VisitTime:'2022.10.2', //访问时间
+                      VisitIp:'192.168.9.113',
+                      VisitEq:'TIM',
+                      order: [8], //订单
+                  },
+                  {
+                        VisitTime:'2022.10.28', //访问时间
+                        VisitIp:'192.168.9.103',
+                        VisitEq:'Wechat',
+                        order: [8], //订单
+                  },
+               {
+              VisitTime:'2020.9.28', //访问时间
+              VisitIp:'192.168.9.13',
+              VisitEq:'QQweb',
+              order: [8], //订单
+              },
+              {
+                VisitTime:'2020.9.29', //访问时间
+                VisitIp:'192.168.9.52',
+                VisitEq:'QQ',
+                order: [8], //订单
+              },
+              {
+                  VisitTime:'2020.10.2', //访问时间
+                  VisitIp:'192.168.9.113',
+                  VisitEq:'TIM',
+                  order: [8], //订单
+              },
+              {
+                    VisitTime:'2020.10.28', //访问时间
+                    VisitIp:'192.168.9.103',
+                    VisitEq:'Wechat',
+                    order: [8], //订单
+              }, {
+                VisitTime:'2021.9.28', //访问时间
+                VisitIp:'192.168.9.13',
+                VisitEq:'QQweb',
+                order: [8], //订单
+                },
+                {
+                  VisitTime:'2021.9.29', //访问时间
+                  VisitIp:'192.168.9.52',
+                  VisitEq:'QQ',
+                  order: [8], //订单
+                },
+                {
+                    VisitTime:'2021.10.2', //访问时间
+                    VisitIp:'192.168.9.113',
+                    VisitEq:'TIM',
+                    order: [8], //订单
+                },
+                {
+                      VisitTime:'2021.10.28', //访问时间
+                      VisitIp:'192.168.9.103',
+                      VisitEq:'Wechat',
+                      order: [8], //订单
+                },
+            ],
+            isBlack: false
+          },
+          
         ],
         order: [
           {
@@ -278,9 +1331,9 @@ export default new Vuex.Store({
             title: '手机维修', //工单标题
             state: 0, //工单状态，0/1/2 0:完成 1：处理中 2：待处理
             client: 1, //发起工单的客户的id
-            category: 0, //分类
-            priority: 3, //优先级
-            createTime: '2019.12.05', //创建时间
+            category: '维修工单', //分类
+            priority: '紧急', //优先级
+            createTime: '2020.12.05', //创建时间
             convers: [
               {
                 id: 0, //会话的id
@@ -310,12 +1363,12 @@ export default new Vuex.Store({
           },
           {
             id: 1, //工单id
-            title: '手机维修', //工单标题
+            title: '更换电池', //工单标题
             state: 0, //工单状态，工单是否已经完成
             client: 2, //发起工单的客户的id
-            category: 0, //分类
-            priority: 3, //优先级
-            createTime: '2019.12.05', //创建时间
+            category: '维修工单', //分类
+            priority: '中', //优先级
+            createTime: '2020.05.23', //创建时间
             convers: [
               {
                 id: 0, //会话的id
@@ -332,12 +1385,12 @@ export default new Vuex.Store({
           },
           {
             id: 2, //工单id
-            title: '手机维修', //工单标题
+            title: '更换新机', //工单标题
             state: 1, //工单状态，工单是否已经完成
             client: 3, //发起工单的客户的id
-            category: 0, //分类
-            priority: 3, //优先级
-            createTime: '2019.12.05', //创建时间
+            category: '新购工单', //分类
+            priority: '高', //优先级
+            createTime: '2020.06.15', //创建时间
             convers: [
               {
                 id: 0, //会话的id
@@ -354,12 +1407,12 @@ export default new Vuex.Store({
           },
           {
             id: 3, //工单id
-            title: '手机维修', //工单标题
+            title: '手机贴膜', //工单标题
             state: 2, //工单状态，工单是否已经完成
             client: 4, //发起工单的客户的id
-            category: 0, //分类
-            priority: 3, //优先级
-            createTime: '2019.12.05', //创建时间
+            category: '服务工单', //分类
+            priority: '低', //优先级
+            createTime: '2020.09.21', //创建时间
             convers: [
               {
                 id: 0, //会话的id
@@ -376,12 +1429,12 @@ export default new Vuex.Store({
           },
           {
             id: 4, //工单id
-            title: '手机维修', //工单标题
+            title: '购买充电器', //工单标题
             state: 2, //工单状态，工单是否已经完成
             client: 5, //发起工单的客户的id
-            category: 0, //分类
-            priority: 3, //优先级
-            createTime: '2019.12.05', //创建时间
+            category: '新购工单', //分类
+            priority: '中', //优先级
+            createTime: '2020.11.25', //创建时间
             convers: [
               {
                 id: 0, //会话的id
@@ -398,12 +1451,12 @@ export default new Vuex.Store({
           },
           {
             id: 5, //工单id
-            title: '手机维修', //工单标题
+            title: '保修摄像头', //工单标题
             state: 2, //工单状态，工单是否已经完成
             client: 6, //发起工单的客户的id
-            category: 0, //分类
-            priority: 3, //优先级
-            createTime: '2019.12.05', //创建时间
+            category: '维修工单', //分类
+            priority: '中', //优先级
+            createTime: '2020.07.16', //创建时间
             convers: [
               {
                 id: 0, //会话的id
