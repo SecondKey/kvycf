@@ -23,7 +23,7 @@
         @click="dialogFormVisible = true"
         style="position: relative; top: -65px; left: -380px"
         >添加工单</el-button>
-        <el-dialog title="新建工单" :visible.sync="dialogFormVisible" style="text-align:left!important;">
+        <el-dialog title="新建工单" :visible.sync="dialogFormVisible" style="text-align:left!important;" append-to-body>
   <el-form :model="form">
     <el-form-item label="工单分类" :label-width="formLabelWidth" >
         <el-select v-model="form.grade" placeholder="请选择">
@@ -247,7 +247,7 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
 .el-form-item__label {
   text-align: right !important;
   font-size: 14px !important;
