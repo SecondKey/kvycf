@@ -31,7 +31,7 @@ export default {
   margin: 0 auto;
   width: 1410px;
   height: 1160px;
-  background-color: rgb(226, 23, 23);
+  background-image: url(../../../img/fz1.jpg);
 }
 .shouye-box1 {
   width: 700px;

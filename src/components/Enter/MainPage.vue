@@ -79,7 +79,7 @@
             管理员登录<i class="el-icon-right"></i>
           </div>
         </el-button>
-        <router-link to="/ServicePage/KeHu">客服跳转</router-link>
+        <!-- <router-link to="/ServicePage/KeHu">客服跳转</router-link> -->
       </div>
     </div>
     <el-drawer
@@ -304,16 +304,16 @@ export default {
 }
 
 .el-carousel__item:nth-child(1) {
-  background-image: url('../../img/EnterImage1.png');
+  background-image: url('../../img/fz15.jpg');
   background-size: cover;
 }
 
 .el-carousel__item:nth-child(2) {
-  background-image: url('../../img/EnterImage1.png');
+  background-image: url('../../img/fz13.jpg');
   background-size: cover;
 }
 .el-carousel__item:nth-child(3) {
-  background-image: url('../../img/EnterImage2.png');
+  background-image: url('../../img/fz14.jpg');
   background-size: cover;
 }
 
@@ -327,7 +327,7 @@ export default {
 
 .zmdText {
   position: absolute;
-  left: 500px;
+  left: 30px;
   top: 50px;
   opacity: 0.7;
 
