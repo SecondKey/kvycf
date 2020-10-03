@@ -22,11 +22,29 @@ export default {
 methods:{
     handleClick_all:function(state){
       // 从数组中找出和当前选择的用户的Order_List相同的元素
+    this.$store.state.currentOrder_List.length=0
     let Order_List = null;
     for(let i in this.Order_Lists){
       if(this.Order_Lists[i].state >= state){
         Order_List = this.Order_Lists[i];
-        this.$store.commit('currentOrder_List',Order_List)//将找出来的客户提交到state中
+        // this.$store.commit('currentOrder_List',Order_List)//将找出来的客户提交到state中
+        this.$store.state.currentOrder_List.push(Order_List)
+    console.log(this.$store.state.currentOrder_List);
+        }
+        if(i>7)
+        break;
+    }
+    
+  },
+  handleClick:function(state){
+    this.$store.state.currentOrder_List.length=0
+      // 从数组中找出和当前选择的用户的Order_List相同的元素
+    let Order_List = null;
+    for(let i in this.Order_Lists){
+      if(this.Order_Lists[i].state === state){
+        Order_List = this.Order_Lists[i];
+        // this.$store.commit('currentOrder_List',Order_List)//将找出来的客户提交到state中
+        this.$store.state.currentOrder_List.push(Order_List)
     console.log(this.$store.state.currentOrder_List);
         }
         if(i>7)

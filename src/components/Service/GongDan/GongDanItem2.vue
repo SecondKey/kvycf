@@ -121,11 +121,14 @@
       :total="1000">
       </el-pagination>
   </div>
+  <el-button @click="test()">测试</el-button>
+
   </div>
 </template>
 
 <script>
 export default {
+  
   
   methods: {
      handleRemove(file, fileList) {
@@ -157,10 +160,17 @@ export default {
         })
         
     },
+  //   test(){
+
+  //   console.log(this.$store.state.currentOrder_List)
+  //   this.order.push(this.$store.state.currentOrder_List)
+  //   console.log(this.order)
+  // },
   },
 
   data() {
     return {
+      // order:[],
        fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}],
       customers:[],
        options: [{

@@ -210,7 +210,7 @@ export default {
               })
               this.$store.commit('Login_ServiceLogin', {
                 cid: comp,
-                di: serv
+                id: serv
               })
               this.$router.push('/ServicePage')
               return
@@ -256,7 +256,7 @@ export default {
               })
               this.$store.commit('Login_AdminLogin', {
                 cid: comp,
-                di: serv
+                id: admin
               })
               this.$router.push('/AdminPage')
               return
