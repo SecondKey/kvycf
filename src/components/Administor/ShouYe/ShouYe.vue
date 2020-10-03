@@ -64,7 +64,8 @@
           <el-table
                 :data="this.$store.state.SData_Company[0].service"
                 max-height="500px"
-                style="width:1200px">
+                style="width:1200px"
+                >
                 <el-table-column
                 prop="id"
                 label="客服ID"

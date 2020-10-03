@@ -20,7 +20,7 @@
         <el-button
           type="primary"
           @click="dialogFormVisible = true"
-          style="position: relative; top: -65px; left: -380px"
+          style="position: relative; top: -65px; left: -445px"
           >添加工单</el-button
         >
         <el-dialog
@@ -139,7 +139,7 @@
         :data="this.$store.state.currentOrder_List"
         border
         style="width: 100%"
-        height="300"
+        height="380"
       >
         <el-table-column
           fixed
@@ -388,7 +388,8 @@ export default {
 .block {
   position: relative;
   top: 65px;
-  left: -85px;
+  left: -150px;
+  
 }
 .search {
   position: relative;
